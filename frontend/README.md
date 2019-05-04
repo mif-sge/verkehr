@@ -1,3 +1,22 @@
+## Installation
+### NPX
+npx is a npm package runner
+~~~~
+npm install -g npx
+~~~~
+If PC/User name contains whitespaces
+~~~~
+npm install -g create-react-app
+~~~~
+
+## ReactJS
+### Create project
+~~~~
+npx create-react-app frontend
+~~~~
+<hr><br>
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
