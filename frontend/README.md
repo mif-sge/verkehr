@@ -14,6 +14,18 @@ npm install -g create-react-app
 ~~~~
 npx create-react-app frontend
 ~~~~
+### Material UI
+~~~~
+npm install @material-ui/core
+~~~~
+### Material UI Icons
+~~~~
+npm install @material-ui/icons
+~~~~
+### React Router
+~~~~
+npm install react-router-dom
+~~~~
 <hr><br>
 
 
