@@ -1,7 +1,8 @@
 import Home from '../views/Home';
-import StreetMap from '../views/StreetMap';
+import StreetMap from '../views/StreetMaps';
 import Plan from '../views/Plan';
 
+//the routes to each subscreen
 const routes = [
     {
         path: "/",
