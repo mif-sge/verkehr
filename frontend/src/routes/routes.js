@@ -1,5 +1,5 @@
 import Home from '../views/Home';
-import Map from '../views/Map';
+import StreetMap from '../views/StreetMap';
 import Plan from '../views/Plan';
 
 const routes = [
@@ -10,7 +10,7 @@ const routes = [
     },
     {
         path: "/map",
-        component: Map
+        component: StreetMap
     },
     {
         path: "/plan",
