@@ -3,7 +3,7 @@ import logo from '../assest/img/logo.svg';
 import '../assest/css/App.css';
 
 import Home from './Home';
-import Map from './Map';
+import Streetmap from './Streetmap';
 import Plan from './Plan';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -15,7 +15,7 @@ const routes = [
   },
   {
     path: "/map",
-    component: Map
+    component: Streetmap
   },
   {
     path: "/plan",

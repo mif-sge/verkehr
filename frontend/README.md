@@ -26,6 +26,14 @@ npm install @material-ui/icons
 ~~~~
 npm install react-router-dom
 ~~~~
+### Leaflet
+~~~~
+npm install leaflet
+~~~~
+### React-Leaflet
+~~~~
+npm install react-leaflet
+~~~~
 <hr><br>
 
 
