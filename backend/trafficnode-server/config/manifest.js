@@ -2,6 +2,10 @@
 
 const Confidence = require('confidence');
 
+/**
+ * The manifest.
+ * @see {@link https://github.com/hapijs/glue/blob/master/API.md}
+ */
 module.exports = new Confidence.Store({
     server: {
         host: 'localhost',
@@ -9,16 +13,6 @@ module.exports = new Confidence.Store({
             $env: 'PORT',
             $coerce: 'number',
             $default: 8080
-        },
-        debug: {
-            $filter: { $env: 'NODE_ENV' },
-            $default: {
-                log: ['error'],
-                request: ['error']
-            },
-            production: {
-                request: ['implementation']
-            }
         }
     },
     register: {

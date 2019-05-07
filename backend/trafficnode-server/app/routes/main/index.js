@@ -2,9 +2,28 @@
 
 const Boom = require('@hapi/Boom');
 
+/**
+ * The main plugin.
+ */
 let plugin = {
+
+    /**
+     * The name of the plugin.
+     * @type {string}
+     */
     name: 'Main routes',
+
+    /**
+     * The version of the plugin.
+     * @type {string}
+     */
     version: require('./../../../package.json').version,
+    
+    /**
+     * Registers all routes.
+     * @param {Server} server The main application server.
+     * @param {RegisterOptions} options All options passed during registration.
+     */
     register: async (server, options) => {
 
         server.route([
@@ -18,11 +37,11 @@ let plugin = {
                 path: '/{any*}',
                 options: {
                     handler: (request, h) => {
-                        return Boom.notFound()
+                        return Boom.notFound();
                     }
                 }
             }
-        ])
+        ]);
     }
 };
 
