@@ -1,5 +1,5 @@
 import Home from '../views/Home';
-import StreetMap from '../views/StreetMaps';
+import StreetMap from '../views/StreetMap';
 import Plan from '../views/Plan';
 
 //the routes to each subscreen
