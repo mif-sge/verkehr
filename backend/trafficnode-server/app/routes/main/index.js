@@ -34,6 +34,11 @@ let plugin = {
             },
             {
                 method: 'GET',
+                path: '/demo',
+                options: require('./handlers/demo')
+            },
+            {
+                method: 'GET',
                 path: '/{any*}',
                 options: {
                     handler: (request, h) => {

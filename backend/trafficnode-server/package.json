@@ -27,7 +27,8 @@
     "@hapi/boom": "7.4.2",
     "winston": "3.2.1",
     "confidence": "4.0.1",
-    "dotenv": "8.0.0"
+    "dotenv": "8.0.0",
+    "neode": "0.2.15"
   },
   "devDependencies": {
     "@hapi/code": "5.3.1",
