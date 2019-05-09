@@ -22,15 +22,15 @@
     "access": "config"
   },
   "dependencies": {
-    "@hapi/hapi": "18.x.x",
-    "@hapi/glue": "6.x.x",
-    "@hapi/boom": "7.x.x",
-    "winston": "3.x.x",
-    "confidence": "4.x.x",
-    "dotenv": "8.x.x"
+    "@hapi/hapi": "18.3.1",
+    "@hapi/glue": "6.1.0",
+    "@hapi/boom": "7.4.2",
+    "winston": "3.2.1",
+    "confidence": "4.0.1",
+    "dotenv": "8.0.0"
   },
   "devDependencies": {
-    "@hapi/code": "5.x.x",
-    "@hapi/lab": "18.x.x"
+    "@hapi/code": "5.3.1",
+    "@hapi/lab": "18.1.2"
   }
 }
