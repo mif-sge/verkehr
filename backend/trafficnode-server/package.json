@@ -1,0 +1,37 @@
+{
+  "name": "@smart-city/trafficnode-server",
+  "version": "0.0.1",
+  "description": "A backend server for the traffic node of SmartCityOrganism.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "lab -t 100 --assert @hapi/code",
+    "test-cov-html": "lab -r html -o coverage.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mif-sge/verkehr.git"
+  },
+  "author": "mif-sge#trafficnode",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mif-sge/verkehr/issues"
+  },
+  "homepage": "https://github.com/mif-sge/verkehr#readme",
+  "publishConfig": {
+    "access": "config"
+  },
+  "dependencies": {
+    "@hapi/hapi": "18.3.1",
+    "@hapi/glue": "6.1.0",
+    "@hapi/boom": "7.4.2",
+    "winston": "3.2.1",
+    "confidence": "4.0.1",
+    "dotenv": "8.0.0",
+    "neode": "0.2.15"
+  },
+  "devDependencies": {
+    "@hapi/code": "5.3.1",
+    "@hapi/lab": "18.1.2"
+  }
+}

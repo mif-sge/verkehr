@@ -1,3 +1,8 @@
+# Build Status
+| master | dev |
+| --- | --- |
+| [![Build Status](https://travis-ci.org/mif-sge/verkehr.svg?branch=master)](https://travis-ci.org/mif-sge/verkehr "master") | [![Build Status](https://travis-ci.org/mif-sge/verkehr.svg?branch=dev)](https://travis-ci.org/mif-sge/verkehr "dev") |
+
 # Verkehrs-Node
 
  - [Regeln zur Mit- und Zusammenarbeit](CONTRIBUTING.md)
