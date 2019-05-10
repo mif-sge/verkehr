@@ -1,0 +1,14 @@
+services:
+  - docker
+matrix:
+  include:
+
+    - language: node_js
+      node_js:
+        - "10.15.3"
+      before_install:
+        - cd frontend
+        - docker build -t nodetestapp .
+#        - docker run -it --rm --name nodetestapp-running nodetestapp
+      script:
+        - npm test
