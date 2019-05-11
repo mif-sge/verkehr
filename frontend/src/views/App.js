@@ -19,7 +19,7 @@ import routes from '../routes/routes';
 
 import Grid from '@material-ui/core/Grid';
 
-import style from '../assest/styles/AppStyle';
+import { style } from '../assest/styles/AppStyle';
 
 import ListItemLink from '../components/ListItemLink';
 
@@ -65,8 +65,11 @@ function App(props) {
 
             <List className={classes.sidebarBody}>
               <ListItemLink to="/" primary="Home" icon={<HomeOutlined />} />
+              <Divider />
               <ListItemLink to="/map" primary="Map" icon={<MapOutlined />} />
+              <Divider />
               <ListItemLink to="/plan" primary="Plan" icon={<DirectionsOutlined />} />
+              <Divider />
             </List>
 
             {routes.map((route, index) => (

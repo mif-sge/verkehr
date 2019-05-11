@@ -1,12 +1,14 @@
-const styles = {
+const appBarHeight = 64;
+
+const style = {
     root: {
         flexGrow: 1,
     },
     header: {
-
+        height: appBarHeight,
     },
     body: {
-        minHeight: 'calc(100vh - 64px)',
+        minHeight: `calc(100vh - ${appBarHeight}px)`,
     },
     sidebar: {
 
@@ -26,4 +28,6 @@ const styles = {
     },
 };
 
-export default styles;
+
+
+export { style, appBarHeight };
