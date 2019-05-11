@@ -26,6 +26,15 @@ const style = {
         marginLeft: -12,
         marginRight: 20,
     },
+    subMenu: {
+        padding: 10,
+    },
+    busDropDown: {
+        width: '100%',
+    },
+    poiContainer: {
+        padding: 10,
+    },
 };
 
 
