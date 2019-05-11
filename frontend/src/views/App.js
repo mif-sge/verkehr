@@ -1,64 +1,102 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React, { useState } from 'react';
 
 import '../assest/css/App.css';
 
-import routes from '../routes/routes';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import Drawer from '@material-ui/core/Drawer';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import { HomeOutlined, MapOutlined, ChevronLeft, DirectionsOutlined } from '@material-ui/icons';
 
-/**
- * creates the application
- */
-function App() {
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { routes, routeNames } from '../routes/routes';
 
-  // structure of DOM-tree
+import Grid from '@material-ui/core/Grid';
+
+import { style } from '../assest/styles/AppStyle';
+
+import ListItemLink from '../components/ListItemLink';
+
+function App(props) {
+  const { classes } = props;
+
+  const [open, setOpen] = useState(true);
+  const [pathname, setPathname] = useState("/");
+
+  function toggleDrawer(open) {
+    setOpen(open);
+  }
+
   return (
-    < Router >
-      <div style={{ display: "flex" }}>
-        {/* sidebar div */}
-        <div
-          style={{
-            padding: "10px",
-            width: "40%",
-            background: "#f0f0f0"
-          }}
-        >
-          <ul style={{ listStyleType: "none", padding: 0 }}>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/map">Map</Link>
-            </li>
-            <li>
-              <Link to="/plan">Plan</Link>
-            </li>
-          </ul>
+    <Router>
+      <div className={classes.root}>
+        <AppBar className={classes.header} position="static">
+          <Toolbar>
+            <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" onClick={() => toggleDrawer(true)}>
+              <MenuIcon />
+            </IconButton>
+            <Route>
+              {({ location }) => (<Typography variant="h6" color="inherit">{setPathname(location.pathname)}{routeNames[pathname]}</Typography>)}
+            </Route>
+          </Toolbar>
+        </AppBar>
 
-          {routes.map((route, index) => (
-            <Route
-              key={index}
-              path={route.path}
-              exact={route.exact}
-              component={route.sidebar}
-            />
-          ))}
-        </div>
+        <Drawer className={classes.sidebar} open={open} onClose={() => toggleDrawer(false)}>
+          <div
+            tabIndex={0}
+            role="button"
 
-        {/* main div */}
-        <div style={{ flex: 1, padding: "10px" }}>
+            onKeyDown={() => toggleDrawer(false)}
+          >
+            <div className={classes.sidebarHeader}>
+              <IconButton onClick={() => toggleDrawer(false)}>
+                <ChevronLeft />
+              </IconButton>
+            </div>
+            <List className={classes.sidebarBody}>
+              <Divider />
+              <ListItemLink to="/" primary={routeNames["/"]} icon={<HomeOutlined />} />
+              <Divider />
+              <ListItemLink to="/map" primary={routeNames["/map"]} icon={<MapOutlined />} />
+              {pathname === "/map" ? <Divider /> : null}
+              {pathname === "/map" ? <Grid container>
+                <Grid item xs={12}></Grid>
+              </Grid> : null}
+              <Divider />
+              <ListItemLink to="/plan" primary={routeNames["/plan"]} icon={<DirectionsOutlined />} />
+              {pathname === "/plan" ? <Divider /> : null}
+              {pathname === "/plan" ? <Grid container>
+                <Grid item xs={12}></Grid>
+              </Grid> : null}
+              <Divider />
+
+            </List>
+
+            {routes.map((route, index) => (
+              <Route key={index} path={route.path} exact={route.exact} component={route.sidebar} />
+            ))}
+          </div>
+        </Drawer>
+
+        <Grid container className={classes.body}>
           {routes.map((route, index) => (
-            <Route
-              key={index}
-              path={route.path}
-              exact={route.exact}
-              component={route.component}
-            />
+            <Route key={index} path={route.path} exact={route.exact} component={route.component} />
           ))}
-        </div>
+        </Grid>
       </div>
-    </Router >
+    </Router>
 
   );
 }
 
-export default App;
+App.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(style)(App);
