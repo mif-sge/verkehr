@@ -19,4 +19,10 @@ const routes = [
     }
 ];
 
-export default routes;
+const routeNames = {
+    "/": "Home",
+    "/map": "Karte",
+    "/plan": "Plan"
+}
+
+export { routes, routeNames };

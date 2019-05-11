@@ -15,7 +15,7 @@ import Divider from '@material-ui/core/Divider';
 import { HomeOutlined, MapOutlined, ChevronLeft, DirectionsOutlined } from '@material-ui/icons';
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import routes from '../routes/routes';
+import { routes, routeNames } from '../routes/routes';
 
 import Grid from '@material-ui/core/Grid';
 
@@ -40,9 +40,9 @@ function App(props) {
             <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" onClick={() => toggleDrawer(true)}>
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" color="inherit" className={classes.grow}>
-              Home
-          </Typography>
+            <Route>
+              {({ location }) => (<Typography variant="h6" color="inherit">{routeNames[location.pathname]}</Typography>)}
+            </Route>
           </Toolbar>
         </AppBar>
 
@@ -55,20 +55,19 @@ function App(props) {
           >
             <div className={classes.sidebarHeader}>
               <IconButton onClick={() => toggleDrawer(false)}>
-                <Typography variant="h6" color="inherit" className={classes.grow}>
+                <Typography variant="h6" color="inherit">
                   Schließen
               </Typography>&nbsp;&nbsp;
               <ChevronLeft />
               </IconButton>
             </div>
             <Divider />
-
             <List className={classes.sidebarBody}>
-              <ListItemLink to="/" primary="Home" icon={<HomeOutlined />} />
+              <ListItemLink to="/" primary={routeNames["/"]} icon={<HomeOutlined />} />
               <Divider />
-              <ListItemLink to="/map" primary="Map" icon={<MapOutlined />} />
+              <ListItemLink to="/map" primary={routeNames["/map"]} icon={<MapOutlined />} />
               <Divider />
-              <ListItemLink to="/plan" primary="Plan" icon={<DirectionsOutlined />} />
+              <ListItemLink to="/plan" primary={routeNames["/plan"]} icon={<DirectionsOutlined />} />
               <Divider />
             </List>
 
