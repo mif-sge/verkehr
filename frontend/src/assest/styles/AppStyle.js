@@ -16,11 +16,11 @@ const style = {
     sidebarHeader: {
         display: 'flex',
         alignItems: 'center',
-        padding: '0 8px',
         justifyContent: 'flex-end',
     },
     sidebarBody: {
         width: 250,
+        padding: '0 0px',
     },
     menuButton: {
         marginLeft: -12,

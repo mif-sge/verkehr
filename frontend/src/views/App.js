@@ -26,7 +26,8 @@ import ListItemLink from '../components/ListItemLink';
 function App(props) {
   const { classes } = props;
 
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
+  const [pathname, setPathname] = useState("/");
 
   function toggleDrawer(open) {
     setOpen(open);
@@ -41,7 +42,7 @@ function App(props) {
               <MenuIcon />
             </IconButton>
             <Route>
-              {({ location }) => (<Typography variant="h6" color="inherit">{routeNames[location.pathname]}</Typography>)}
+              {({ location }) => (<Typography variant="h6" color="inherit">{setPathname(location.pathname)}{routeNames[pathname]}</Typography>)}
             </Route>
           </Toolbar>
         </AppBar>
@@ -50,25 +51,31 @@ function App(props) {
           <div
             tabIndex={0}
             role="button"
-            onClick={() => toggleDrawer(false)}
+
             onKeyDown={() => toggleDrawer(false)}
           >
             <div className={classes.sidebarHeader}>
               <IconButton onClick={() => toggleDrawer(false)}>
-                <Typography variant="h6" color="inherit">
-                  Schließen
-              </Typography>&nbsp;&nbsp;
-              <ChevronLeft />
+                <ChevronLeft />
               </IconButton>
             </div>
-            <Divider />
             <List className={classes.sidebarBody}>
+              <Divider />
               <ListItemLink to="/" primary={routeNames["/"]} icon={<HomeOutlined />} />
               <Divider />
               <ListItemLink to="/map" primary={routeNames["/map"]} icon={<MapOutlined />} />
+              {pathname === "/map" ? <Divider /> : null}
+              {pathname === "/map" ? <Grid container>
+                <Grid item xs={12}></Grid>
+              </Grid> : null}
               <Divider />
               <ListItemLink to="/plan" primary={routeNames["/plan"]} icon={<DirectionsOutlined />} />
+              {pathname === "/plan" ? <Divider /> : null}
+              {pathname === "/plan" ? <Grid container>
+                <Grid item xs={12}></Grid>
+              </Grid> : null}
               <Divider />
+
             </List>
 
             {routes.map((route, index) => (
