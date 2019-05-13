@@ -8,7 +8,10 @@ const Confidence = require('confidence');
  */
 module.exports = new Confidence.Store({
     server: {
-        host: 'localhost',
+        host: {
+            $env: 'SERVER_HOST',
+            $default: '0.0.0.0'
+        },
         port: {
             $env: 'SERVER_PORT',
             $coerce: 'number',
