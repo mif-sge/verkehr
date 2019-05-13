@@ -1,5 +1,6 @@
 'use strict';
 
+const path = require('path');
 const Glue = require('@hapi/glue');
 const Manifest = require('./config/manifest');
 const PluginCollector = require('./bin/plugin-collector');
@@ -19,7 +20,7 @@ class Server {
 
         // Collects all plugins from '/app/routes'.
         let pluginCollector = new PluginCollector();
-        let plugins = await pluginCollector.collect('.\\app\\routes');
+        let plugins = await pluginCollector.collect(path.join('app', 'routes'));
 
         // Registers all plugins.
         for(var plugin of plugins) {
