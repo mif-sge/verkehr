@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import logo from '../assest/img/logo.svg';
 import Button from "@material-ui/core/Button";
 
-import { DEMO } from '../urls/urls';
+import { DEMO, API } from '../urls/urls';
 
 /**
  * generates color codes for text and background color dependent on day time
@@ -45,18 +45,18 @@ function Home() {
     const [colorCodes, setColorCode] = useState(gernerateColorCodes());
     const [response, setResponse] = useState("");
 
-    function buttonClicked() {
-        fetch(DEMO, {
+    async function buttonClicked() {
+        const answer = await fetch(API, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
-            },
-        }).then(response => setResponse(response))
-            .catch(error => {
-                setResponse(JSON.stringify(error));
-                console.error(error, "Failed!");
-            });
+            }
+        });
+        setResponse(await answer.text());
+
+
+
     }
 
     //gets called at page load once
@@ -73,7 +73,7 @@ function Home() {
             <header className="App-header" style={{ color: colorCodes[0], backgroundColor: colorCodes[1] }}>
                 <img src={logo} className="App-logo" alt="logo" />
                 <p>Hello World!</p>
-                <Button simple onClick={buttonClicked}>Test</Button>
+                <Button onClick={buttonClicked}>Test</Button>
                 <p>Response:{response}</p>
             </header>
         </div>
