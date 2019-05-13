@@ -24,7 +24,8 @@ module.exports = new Confidence.Store({
                     $coerce: 'number',
                     $default: 30000
                 }
-            }
+            },
+            cors: true
         }
     },
     register: {
