@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import logo from '../assest/img/logo.svg';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import style from '../assest/styles/HomeStyle';
+
+import logo from '../assest/img/logo.png';
+
+import Grid from '@material-ui/core/Grid';
 
 /**
  * generates color codes for text and background color dependent on day time
@@ -37,7 +43,8 @@ function gernerateColorCodes() {
 /**
  * creates the home screen
  */
-function Home() {
+function Home(props) {
+    const { classes } = props;
 
     const [colorCodes, setColorCode] = useState(gernerateColorCodes());
 
@@ -51,15 +58,15 @@ function Home() {
 
     // structure of DOM-tree
     return (
-        <div className="App">
-            <header className="App-header" style={{ color: colorCodes[0], backgroundColor: colorCodes[1] }}>
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Hello World!
-        </p>
-            </header>
-        </div>
+        <Grid container className={classes.root} style={{ color: colorCodes[0], backgroundColor: colorCodes[1] }}>
+            <img src={logo} className={classes.logo} alt="logo" />
+            <p>Hello World!</p>
+        </Grid>
     );
 }
 
-export default Home;
+Home.propTypes = {
+    classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(style)(Home);
