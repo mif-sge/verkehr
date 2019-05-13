@@ -1,49 +1,43 @@
 import React, { useState } from 'react';
-
-import '../assest/css/App.css';
-
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import { HomeOutlined, MapOutlined, ChevronLeft, DirectionsOutlined } from '@material-ui/icons';
+import { style } from '../assest/styles/AppStyle';
+import '../assest/css/App.css';
 
-
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import FormGroup from '@material-ui/core/FormGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
+import { AppBar, Button, Checkbox, Divider, Drawer, FormControl, FormControlLabel, FormGroup, Grid, IconButton, List, MenuItem, Paper, Select, Toolbar, Typography } from '@material-ui/core';
+import ListItemLink from '../components/ListItemLink';
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { routes, routeNames } from '../routes/routes';
 
-import Grid from '@material-ui/core/Grid';
+import { HomeOutlined, MapOutlined, ChevronLeft, DirectionsOutlined, Menu } from '@material-ui/icons';
 
-import { style } from '../assest/styles/AppStyle';
 
-import ListItemLink from '../components/ListItemLink';
-import { Paper, Button } from '@material-ui/core';
-
+/**
+ * creates the main screen
+ */
 function App(props) {
   const { classes } = props;
 
+  // show/hide drawer (sidebar)
   const [open, setOpen] = useState(false);
+
+  // path of current page
   const [pathname, setPathname] = useState("/");
+
+  // busline to show at the map
   const [busline, setBusline] = useState("");
+
+  // show/hide hospital, mall and bus stop markers
   const [hospitalMarker, setHospitalMarker] = useState(true);
   const [mallMarker, setMallMarker] = useState(true);
   const [busStopMarker, setBusStopMarker] = useState(true);
+
+  // bus stops for calculate the route from busstop to busstop
   const [busStopFrom, setBusStopFrom] = useState("");
   const [busStopTo, setBusStopTo] = useState("");
 
+  //onclick
   function calculateRoute() {
     console.log("Route caluclation started");
   }
@@ -51,7 +45,7 @@ function App(props) {
   const appHeader = <AppBar className={classes.header} position="static">
     <Toolbar>
       <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" onClick={() => setOpen(true)}>
-        <MenuIcon />
+        <Menu />
       </IconButton>
       <Route>
         {({ location }) => (<Typography variant="h6" color="inherit">{setPathname(location.pathname)}{routeNames[pathname]}</Typography>)}
@@ -134,6 +128,7 @@ function App(props) {
     </Grid>
   </Paper>
 
+  //main page where all components wre put together
   return (
     <Router>
       <div className={classes.root}>
