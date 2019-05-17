@@ -3,7 +3,7 @@ import { appBarHeight } from './AppStyle';
 const style = {
     map: {
         //position: 'absolute',
-        height: `calc(100vh - ${appBarHeight}px)`,
+        height: `calc(100vh - ${appBarHeight}px- 8px)`,
         width: '100%',
     },
 };
