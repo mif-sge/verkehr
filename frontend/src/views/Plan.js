@@ -11,6 +11,7 @@ function Plan(props) {
 
     const { classes } = props;
 
+
     //gets called at page load once
     useEffect(() => {
 

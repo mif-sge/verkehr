@@ -12,9 +12,17 @@
     NODE_ENV=dev
     PORT=8080
 
+    SERVER_HOST=0.0.0.0
+    SERVER_PORT=8080
+    SERVER_TIMEOUT_GLOBAL=30000
+
     LOGGING_LEVEL_FILE_HUMAN=info
     LOGGING_LEVEL_FILE_MACHINE=info
     LOGGING_LEVEL_CONSOLE=info
+
+    NEO4J_URI=bolt://localhost:7687
+    NEO4J_USERNAME=neo4j
+    NEO4J_PASSWORD=neo4j
     ```
 
 ## Anwendung

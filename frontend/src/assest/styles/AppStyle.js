@@ -19,13 +19,26 @@ const style = {
         justifyContent: 'flex-end',
     },
     sidebarBody: {
-        width: 250,
+        width: 270,
         padding: '0 0px',
     },
     menuButton: {
         marginLeft: -12,
         marginRight: 20,
     },
+    mapSubMenu: {
+        padding: 10,
+    },
+    busDropDown: {
+        width: '100%',
+    },
+    poiContainer: {
+        padding: 10,
+    },
+    planSubMenu: {
+        padding: 10,
+        margin: 10,
+    }
 };
 
 

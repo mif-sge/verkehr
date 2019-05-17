@@ -1,6 +1,6 @@
 'use strict';
 
-const Boom = require('@hapi/Boom');
+const Boom = require('@hapi/boom');
 
 /**
  * The main plugin.
