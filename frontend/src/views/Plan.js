@@ -20,7 +20,6 @@ function Plan(props) {
 
             var width = document.getElementById('tube-map').clientWidth;
             var height = document.getElementById('tube-map').clientHeight;
-            console.log(width, "  ", height)
 
             var map = tubeMap.tubeMap()
                 .width(width)
@@ -32,7 +31,6 @@ function Plan(props) {
                     left: width / 7,
                 });
 
-            console.log("Möp")
             container.datum(tubeData).call(map);
         }
 
@@ -44,7 +42,9 @@ function Plan(props) {
     });
 
     return (
-        <Grid container style={{ margin: "4px" }} className={classes.map}><Grid item xs id="tube-map"></Grid></Grid>
+        <Grid container className={classes.root}>
+            <Grid item xs id="tube-map" className={classes.map}></Grid>
+        </Grid>
     );
 }
 
