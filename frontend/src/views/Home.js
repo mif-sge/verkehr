@@ -52,7 +52,7 @@ function Home(props) {
     const [response, setResponse] = useState("");
 
     async function buttonClicked() {
-        const answer = await fetch(API, {
+        const answer = await fetch(DEMO, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',

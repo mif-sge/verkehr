@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, createRef } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -12,14 +12,15 @@ function Plan(props) {
 
     const { classes } = props;
     const [tubemapIsSet, setTubemapIsSet] = useState(false);
+    const tubeMapRef = createRef();
 
     function setTubemap() {
         if (!tubemapIsSet) {
             setTubemapIsSet(true);
-            var container = d3.select('#tube-map');
+            var container = d3.select('#tubeMap');
 
-            var width = document.getElementById('tube-map').clientWidth;
-            var height = document.getElementById('tube-map').clientHeight;
+            var width = tubeMapRef.current.clientWidth;
+            var height = tubeMapRef.current.clientHeight;
 
             var map = tubeMap.tubeMap()
                 .width(width)
@@ -43,7 +44,9 @@ function Plan(props) {
 
     return (
         <Grid container className={classes.root}>
-            <Grid item xs id="tube-map" className={classes.map}></Grid>
+            <Grid item xs className={classes.container}>
+                <div className={classes.map} id="tubeMap" ref={tubeMapRef} />
+            </Grid>
         </Grid>
     );
 }

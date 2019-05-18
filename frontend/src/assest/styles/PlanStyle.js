@@ -6,8 +6,12 @@ const style = {
         height: `calc(100vh - ${appBarHeight}px)`,
         width: '100%',
     },
-    map: {
+    container: {
         padding: "4px",
+    },
+    map: {
+        width: '100%', 
+        height: '100%',
     },
 };
 
