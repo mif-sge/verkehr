@@ -12,6 +12,8 @@ import { routes, routeNames } from '../routes/routes';
 
 import { HomeOutlined, MapOutlined, ChevronLeft, DirectionsOutlined, Menu } from '@material-ui/icons';
 
+import { DEMO } from '../urls/urls';
+
 
 /**
  * creates the main screen
@@ -38,8 +40,15 @@ function App(props) {
   const [busStopTo, setBusStopTo] = useState("");
 
   //onclick
-  function calculateRoute() {
-    console.log("Route caluclation started");
+  async function calculateRoute() {
+    const answer = await fetch(DEMO, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    });
+    console.log(await answer);
   }
 
   const appHeader = <AppBar className={classes.header} position="static">
