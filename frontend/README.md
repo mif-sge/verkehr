@@ -34,6 +34,10 @@ npm install leaflet
 ~~~~
 npm install react-leaflet
 ~~~~
+### Tubemap
+~~~~
+npm install d3-tube-map
+~~~~
 <hr><br>
 
 
