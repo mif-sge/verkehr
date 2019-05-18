@@ -8,11 +8,16 @@ matrix:
       node_js:
         - "10.15.3"
       before_install:
-        - cd frontend
-        - docker build -t nodetestapp .
+        - cd backend/trafficnode-server
+        - docker build -t verkehr-backend .
+        - docker run -d -v ${PWD}:/usr/src/app -v /usr/src/app/node_modules -e PORT=8080 -p 8080:8080 --name verkehr-backend verkehr-backend
+        - cd ../../frontend
+        - docker build -t frontend .
 #        - docker run -it --rm --name nodetestapp-running nodetestapp
       script:
         - npm test
+      after_script:
+        - docker stop verkehr-backend 
 
     # Testing backend.
     - language: node_js
