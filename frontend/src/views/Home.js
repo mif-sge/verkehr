@@ -5,8 +5,6 @@ import style from '../assest/styles/HomeStyle';
 
 import { Grid, Button } from '@material-ui/core/';
 
-import { DEMO, API } from '../urls/urls';
-
 import logo from '../assest/img/logo.png';
 
 /**
@@ -49,18 +47,6 @@ function Home(props) {
     const { classes } = props;
 
     const [colorCodes, setColorCode] = useState(gernerateColorCodes());
-    const [response, setResponse] = useState("");
-
-    async function buttonClicked() {
-        const answer = await fetch(DEMO, {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        });
-        setResponse(await answer.text());
-    }
 
     //gets called at page load once
     useEffect(() => {
@@ -75,8 +61,6 @@ function Home(props) {
         <Grid container className={classes.root} style={{ color: colorCodes[0], backgroundColor: colorCodes[1] }}>
             <img src={logo} className={classes.logo} alt="logo" />
             <p>Hello World!</p>
-            <Button onClick={buttonClicked}>Test</Button>
-            <p>Response:{response}</p>
         </Grid>
     );
 }
