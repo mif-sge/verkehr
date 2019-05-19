@@ -12,7 +12,7 @@ import { routes, routeNames } from '../routes/routes';
 
 import { HomeOutlined, MapOutlined, ChevronLeft, DirectionsOutlined, Menu } from '@material-ui/icons';
 
-import { DEMO } from '../urls/urls';
+import { calculateRoute, fetchBusstops } from '../backendCommunication/fetchRequests';
 
 
 /**
@@ -36,19 +36,26 @@ function App(props) {
   const [busStopMarker, setBusStopMarker] = useState(true);
 
   // bus stops for calculate the route from busstop to busstop
-  const [busStopFrom, setBusStopFrom] = useState("");
-  const [busStopTo, setBusStopTo] = useState("");
+  /* const [selectedBusstops, setSelectedBusstops] = useState({
+    busstopFrom: 0,
+    busstopTo: 0
+  }); */
+  const [busstopFrom, setBusstopFrom] = useState(0);
+  const [busstopTo, setBusstopTo] = useState(0);
+
+  const busstops = fetchBusstops();
 
   //onclick
-  async function calculateRoute() {
-    const answer = await fetch(DEMO, {
-      method: 'GET',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      }
-    });
-    console.log(await answer);
+  function calculateRouteClicked() {
+    calculateRoute();
+  }
+
+  function checkIfRouteCalculationButtonShouldBeDisabled() {
+    if (busstopFrom !== 0 && busstopTo !== 0 && busstopFrom !== busstopTo) {
+      return false;
+    }
+    //TODO add snackbar push
+    return true;
   }
 
   const appHeader = <AppBar className={classes.header} position="static">
@@ -104,12 +111,11 @@ function App(props) {
           </Grid>
           <Grid item xs={12}>
             <FormControl className={classes.busDropDown} >
-              <Select value={busStopFrom} onChange={(e) => setBusStopFrom(e.target.value)} displayEmpty name="age">
-                <MenuItem value="">
+              <Select value={busstopFrom} onChange={(e) => setBusstopFrom(e.target.value)} displayEmpty name="busstopFrom">
+                <MenuItem value={0}>
                   <em>- Haltestelle auswählen -</em>
                 </MenuItem>
-                <MenuItem value={1}>Haltestelle 1</MenuItem>
-                <MenuItem value={2}>Haltestelle 2</MenuItem>
+                {busstops.map((busstop) => (<MenuItem key={busstop.id} value={busstop.id}>{busstop.name}</MenuItem>))}
               </Select>
             </FormControl>
           </Grid>
@@ -120,18 +126,17 @@ function App(props) {
           </Grid>
           <Grid item xs={12}>
             <FormControl className={classes.busDropDown} >
-              <Select value={busStopTo} onChange={(e) => setBusStopTo(e.target.value)} displayEmpty name="age">
-                <MenuItem value="">
+              <Select value={busstopTo} onChange={(e) => setBusstopTo(e.target.value)} displayEmpty name="busstopTo">
+                <MenuItem value={0}>
                   <em>- Haltestelle auswählen -</em>
                 </MenuItem>
-                <MenuItem value={1}>Haltestelle 1</MenuItem>
-                <MenuItem value={2}>Haltestelle 2</MenuItem>
+                {busstops.map((busstop) => (<MenuItem key={busstop.id} value={busstop.id}>{busstop.name}</MenuItem>))}
               </Select>
             </FormControl>
           </Grid>
         </Grid>
         <Grid item xs={12}>
-          <Button variant="contained" color="primary" onClick={calculateRoute}>Route berechnen</Button>
+          <Button disabled={checkIfRouteCalculationButtonShouldBeDisabled() ? true : false} variant="contained" color="primary" onClick={calculateRouteClicked}>Route berechnen</Button>
         </Grid>
       </Grid>
     </Grid>
