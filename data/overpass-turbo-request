@@ -1,0 +1,51 @@
+[out:json][timeout:25][bbox:51.896,8.35,51.912,8.392];
+// gather results
+(
+  // query part for: “supermarket”
+  node["shop"="supermarket"]({{bbox}});
+  way["shop"="supermarket"]({{bbox}});
+  relation["shop"="supermarket"]({{bbox}});
+  
+   // query part for: “bus stop”
+  node["highway"="bus_stop"]({{bbox}});
+  //relation["route"="bus"]({{bbox}});
+  
+(
+  node["highway"="primary"]({{bbox}});
+  way["highway"="primary"]({{bbox}});
+  
+  node["highway"="secondary"]({{bbox}});
+way["highway"="secondary"]({{bbox}});
+  
+  node["highway"="tertiary"]({{bbox}});
+way["highway"="tertiary"]({{bbox}});
+  
+  node["highway"="residential"]({{bbox}});
+way["highway"="residential"]({{bbox}});
+  
+  node["highway"="primary_link"]({{bbox}});
+  way["highway"="primary_link"]({{bbox}});
+  
+  node["highway"="secondary_link"]({{bbox}});
+  way["highway"="secondary_link"]({{bbox}});
+  
+  node["highway"="tertiary_link"]({{bbox}});
+  way["highway"="tertiary_link"]({{bbox}});
+  
+  
+  );>;
+  // query part for: “school”
+  node["amenity"="school"]({{bbox}});
+  way["amenity"="school"]({{bbox}});
+  relation["amenity"="school"]({{bbox}});
+  
+  // query part for: “hospital”
+  node["amenity"="hospital"]({{bbox}});
+  way["amenity"="hospital"]({{bbox}});>;
+  relation["amenity"="hospital"]({{bbox}});
+  
+  
+  
+);
+// print results
+out body;
