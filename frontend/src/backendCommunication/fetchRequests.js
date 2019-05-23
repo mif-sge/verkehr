@@ -13,7 +13,6 @@ export async function calculateRoute() {
 
 export function fetchBusstops() {
     //TODO fetch bus stops
-    return []
     return [
         {
             id: 1,
