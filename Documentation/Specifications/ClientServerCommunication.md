@@ -16,16 +16,13 @@ Im Idealfall gilt für alle Requests, dass ein timestamp gesendet wird. Sofern d
 Benötigt werden die Bushaltestellen für das Menü, die Karte und den Fahrplan. Für das Menü sind lat/lon allerdings unerheblich.
 
 #### Normale Anfrage mit allen Daten
-URL = /api/busstops
+URL = /api/busstops?requestMode=extended
 ````
 fetch(URL, {
     method: 'GET',
     headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-    },
-    body: {
-        'requestMode': 'extended',
     },
 });
 ````
@@ -67,16 +64,13 @@ fetch(URL, {
 ````
 
 #### Kleine Anfrage mit weniger Daten für das Menü
-URL = /api/busstops
+URL = /api/busstops?requestMode=short
 ````
 fetch(URL, {
     method: 'GET',
     headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-    },
-    body: {
-        'requestMode': 'short',
     },
 });
 ````
@@ -173,7 +167,7 @@ fetch(URL, {
 Auch hier gibt es wieder zwei verschiedene Variaten. Einmal werden für die Karte die IDs der Haltestellen sowie die einzelnen Koordinaten der jeweiligen Buslinie benötigt. Für den Fahrplan hingegen sind nur die IDs relevant und die Koordinaten müssen nicht mit gesendet werden.
 
 ####  Beispiel-Anfrage für die Karte mit den Straßen-Koordianten
-URL = /api/lines
+URL = /api/lines?requestMode=extended
 ````
 fetch(URL, {
     method: 'GET',
@@ -234,16 +228,13 @@ fetch(URL, {
 ]
 ````
 ####  Beispiel-Anfrage für den Fahrplan ohne die Straßen-Koordianten
-URL = /api/lines
+URL = /api/lines?requestMode=short
 ````
 fetch(URL, {
     method: 'GET',
     headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-    },
-    body: {
-        'requestMode': 'short',
     }
 });
 ````
@@ -270,17 +261,13 @@ fetch(URL, {
 ### 4 - Route
 Dem Server werden mit der Anfrage die beiden Haltestellen per ID mitgeliefert, damit die kürzeste Route berechnet werden kann. Zurück kommt dann eine Liste der einzelnen Linien mit den jeweiligen Haltestellen, an denen ein/um/ausgestiegen werden muss.
 ####  Beispiel-Anfrage
-URL = /api/route
+URL = /api/route?busstopFrom=1&busstopTo=7
 ````
 fetch(URL, {
     method: 'GET',
     headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-    },
-    body: {
-        busstopFrom: 1,
-        busstomTo: 7,
     }
 });
 ````
