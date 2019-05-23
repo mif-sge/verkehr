@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { style } from '../assest/styles/AppStyle';
 import '../assest/css/App.css';
 
-import { AppBar, Button, Checkbox, Divider, Drawer, FormControl, FormControlLabel, FormGroup, Grid, IconButton, List, MenuItem, Paper, Select, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Button, Checkbox, Divider, Drawer, FormControl, FormControlLabel, FormGroup, Grid, IconButton, List, MenuItem, Paper, Select, Toolbar, Typography, Snackbar } from '@material-ui/core';
 import ListItemLink from '../components/ListItemLink';
+import InfoLabel from '../components/InfoLabel';
+import SnackbarContentWrapper from '../components/SnackbarContentWrapper';
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { routes, routeNames } from '../routes/routes';
@@ -13,7 +15,6 @@ import { routes, routeNames } from '../routes/routes';
 import { HomeOutlined, MapOutlined, ChevronLeft, DirectionsOutlined, Menu } from '@material-ui/icons';
 
 import { calculateRoute, fetchBusstops } from '../backendCommunication/fetchRequests';
-import InfoLabel from './InfoLabel';
 
 
 /**
@@ -40,7 +41,23 @@ function App(props) {
   const [busstopFrom, setBusstopFrom] = useState(0);
   const [busstopTo, setBusstopTo] = useState(0);
 
-  const busstops = fetchBusstops();
+  const [busstops, setBusstops] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  async function fetchData() {
+    console.log("Data detched");
+    setBusstops(await fetchBusstops());
+  }
+
+  function checkIfArrayHasContent(array) {
+    if (Array.isArray(array) && array.length) {
+      return true;
+    }
+    return false;
+  }
 
   //onclick
   function calculateRouteClicked() {
@@ -107,14 +124,14 @@ function App(props) {
       <Grid item xs={12}>
         <Typography variant="h6" gutterBottom style={{ paddingLeft: 8 }}>Route</Typography>
       </Grid>
-      <Grid item xs={12} container spacing={16} id="test" style={{ margin: 0 }}>
+      <Grid item xs={12} container spacing={16} style={{ margin: 0 }}>
         <Grid item xs={12} container spacing={0}>
           <Grid item xs={12}>
             <Typography variant="overline" gutterBottom>von</Typography>
           </Grid>
           <Grid item xs={12}>
             <FormControl className={classes.busDropDown} >
-              <Select value={busstopFrom} onChange={(e) => setBusstopFrom(e.target.value)} displayEmpty name="busstopFrom">
+              <Select disabled={checkIfArrayHasContent(busstops) ? false : true} value={busstopFrom} onChange={(e) => setBusstopFrom(e.target.value)} displayEmpty name="busstopFrom">
                 <MenuItem value={0}>
                   <em>- Haltestelle auswählen -</em>
                 </MenuItem>
@@ -129,7 +146,7 @@ function App(props) {
           </Grid>
           <Grid item xs={12}>
             <FormControl className={classes.busDropDown} >
-              <Select value={busstopTo} onChange={(e) => setBusstopTo(e.target.value)} displayEmpty name="busstopTo">
+              <Select disabled={checkIfArrayHasContent(busstops) ? false : true} value={busstopTo} onChange={(e) => setBusstopTo(e.target.value)} displayEmpty name="busstopTo">
                 <MenuItem value={0}>
                   <em>- Haltestelle auswählen -</em>
                 </MenuItem>
@@ -182,6 +199,21 @@ function App(props) {
           {routes.map((route, index) => (<Route key={index} path={route.path} exact={route.exact} component={route.component} />))}
         </Grid>
       </div>
+      <Snackbar
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'center',
+        }}
+        open={checkIfArrayHasContent(busstops) ? false : true}
+        autoHideDuration={0}
+        onClose={fetchData}
+      >
+        <SnackbarContentWrapper
+          onClose={() => setBusstops([{id: 1, name: "Test"}])}
+          variant="refresh"
+          message={<div>Daten konnte nicht geladen werden!<br /> Bitte versuchen Sie es erneut. </div>}
+        />
+      </Snackbar>
     </Router>
   );
 }
