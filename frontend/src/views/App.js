@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { style } from '../assest/styles/AppStyle';
 import '../assest/css/App.css';
 
-import { AppBar, Button, Checkbox, Divider, Drawer, FormControl, FormControlLabel, FormGroup, Grid, IconButton, List, MenuItem, Paper, Select, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Button, Checkbox, Divider, Drawer, FormControl, FormControlLabel, FormGroup, Grid, IconButton, List, MenuItem, Paper, Select, Toolbar, Typography, Snackbar } from '@material-ui/core';
 import ListItemLink from '../components/ListItemLink';
+import InfoLabel from '../components/InfoLabel';
+import SnackbarContentWrapper from '../components/SnackbarContentWrapper';
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { routes, routeNames } from '../routes/routes';
 
 import { HomeOutlined, MapOutlined, ChevronLeft, DirectionsOutlined, Menu } from '@material-ui/icons';
 
-import { DEMO } from '../urls/urls';
+import { calculateRoute, fetchBusstops } from '../backendCommunication/fetchRequests';
 
 
 /**
@@ -36,19 +38,44 @@ function App(props) {
   const [busStopMarker, setBusStopMarker] = useState(true);
 
   // bus stops for calculate the route from busstop to busstop
-  const [busStopFrom, setBusStopFrom] = useState("");
-  const [busStopTo, setBusStopTo] = useState("");
+  const [busstopFrom, setBusstopFrom] = useState(0);
+  const [busstopTo, setBusstopTo] = useState(0);
+
+  const [busstops, setBusstops] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  async function fetchData() {
+    console.log("Data detched");
+    setBusstops(await fetchBusstops());
+  }
+
+  function checkIfArrayHasContent(array) {
+    if (Array.isArray(array) && array.length) {
+      return true;
+    }
+    return false;
+  }
 
   //onclick
-  async function calculateRoute() {
-    const answer = await fetch(DEMO, {
-      method: 'GET',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      }
-    });
-    console.log(await answer);
+  function calculateRouteClicked() {
+    calculateRoute();
+  }
+
+  function checkIfRouteCalculationButtonShouldBeDisabled() {
+    if (busstopFrom !== 0 && busstopTo !== 0 && busstopFrom !== busstopTo) {
+      return false;
+    }
+    return true;
+  }
+
+  function checkIfInfoTextShouldBeShown() {
+    if (busstopFrom !== 0 && busstopTo !== 0 && busstopFrom === busstopTo) {
+      return true;
+    }
+    return false;
   }
 
   const appHeader = <AppBar className={classes.header} position="static">
@@ -95,21 +122,20 @@ function App(props) {
   const planSubMenu = <Paper className={classes.planSubMenu}>
     <Grid container spacing={0}>
       <Grid item xs={12}>
-        <Typography variant="h6" gutterBottom>Route</Typography>
+        <Typography variant="h6" gutterBottom style={{ paddingLeft: 8 }}>Route</Typography>
       </Grid>
-      <Grid item xs={12} container spacing={16}>
+      <Grid item xs={12} container spacing={16} style={{ margin: 0 }}>
         <Grid item xs={12} container spacing={0}>
           <Grid item xs={12}>
             <Typography variant="overline" gutterBottom>von</Typography>
           </Grid>
           <Grid item xs={12}>
             <FormControl className={classes.busDropDown} >
-              <Select value={busStopFrom} onChange={(e) => setBusStopFrom(e.target.value)} displayEmpty name="age">
-                <MenuItem value="">
+              <Select disabled={checkIfArrayHasContent(busstops) ? false : true} value={busstopFrom} onChange={(e) => setBusstopFrom(e.target.value)} displayEmpty name="busstopFrom">
+                <MenuItem value={0}>
                   <em>- Haltestelle auswählen -</em>
                 </MenuItem>
-                <MenuItem value={1}>Haltestelle 1</MenuItem>
-                <MenuItem value={2}>Haltestelle 2</MenuItem>
+                {busstops.map((busstop) => (<MenuItem key={busstop.id} value={busstop.id}>{busstop.name}</MenuItem>))}
               </Select>
             </FormControl>
           </Grid>
@@ -120,19 +146,21 @@ function App(props) {
           </Grid>
           <Grid item xs={12}>
             <FormControl className={classes.busDropDown} >
-              <Select value={busStopTo} onChange={(e) => setBusStopTo(e.target.value)} displayEmpty name="age">
-                <MenuItem value="">
+              <Select disabled={checkIfArrayHasContent(busstops) ? false : true} value={busstopTo} onChange={(e) => setBusstopTo(e.target.value)} displayEmpty name="busstopTo">
+                <MenuItem value={0}>
                   <em>- Haltestelle auswählen -</em>
                 </MenuItem>
-                <MenuItem value={1}>Haltestelle 1</MenuItem>
-                <MenuItem value={2}>Haltestelle 2</MenuItem>
+                {busstops.map((busstop) => (<MenuItem key={busstop.id} value={busstop.id}>{busstop.name}</MenuItem>))}
               </Select>
             </FormControl>
           </Grid>
         </Grid>
         <Grid item xs={12}>
-          <Button variant="contained" color="primary" onClick={calculateRoute}>Route berechnen</Button>
+          <Button disabled={checkIfRouteCalculationButtonShouldBeDisabled() ? true : false} variant="contained" color="primary" onClick={calculateRouteClicked}>Route berechnen</Button>
         </Grid>
+        {checkIfInfoTextShouldBeShown() ? <Grid item xs={12}>
+          <InfoLabel />
+        </Grid> : null}
       </Grid>
     </Grid>
   </Paper>
@@ -171,6 +199,21 @@ function App(props) {
           {routes.map((route, index) => (<Route key={index} path={route.path} exact={route.exact} component={route.component} />))}
         </Grid>
       </div>
+      <Snackbar
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'center',
+        }}
+        open={checkIfArrayHasContent(busstops) ? false : true}
+        autoHideDuration={0}
+        onClose={fetchData}
+      >
+        <SnackbarContentWrapper
+          onClose={() => setBusstops([{id: 1, name: "Test"}])}
+          variant="refresh"
+          message={<div>Daten konnte nicht geladen werden!<br /> Bitte versuchen Sie es erneut. </div>}
+        />
+      </Snackbar>
     </Router>
   );
 }
