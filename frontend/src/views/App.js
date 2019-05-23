@@ -13,6 +13,7 @@ import { routes, routeNames } from '../routes/routes';
 import { HomeOutlined, MapOutlined, ChevronLeft, DirectionsOutlined, Menu } from '@material-ui/icons';
 
 import { calculateRoute, fetchBusstops } from '../backendCommunication/fetchRequests';
+import InfoLabel from './InfoLabel';
 
 
 /**
@@ -36,10 +37,6 @@ function App(props) {
   const [busStopMarker, setBusStopMarker] = useState(true);
 
   // bus stops for calculate the route from busstop to busstop
-  /* const [selectedBusstops, setSelectedBusstops] = useState({
-    busstopFrom: 0,
-    busstopTo: 0
-  }); */
   const [busstopFrom, setBusstopFrom] = useState(0);
   const [busstopTo, setBusstopTo] = useState(0);
 
@@ -54,8 +51,14 @@ function App(props) {
     if (busstopFrom !== 0 && busstopTo !== 0 && busstopFrom !== busstopTo) {
       return false;
     }
-    //TODO add snackbar push
     return true;
+  }
+
+  function checkIfInfoTextShouldBeShown() {
+    if (busstopFrom !== 0 && busstopTo !== 0 && busstopFrom === busstopTo) {
+      return true;
+    }
+    return false;
   }
 
   const appHeader = <AppBar className={classes.header} position="static">
@@ -102,9 +105,9 @@ function App(props) {
   const planSubMenu = <Paper className={classes.planSubMenu}>
     <Grid container spacing={0}>
       <Grid item xs={12}>
-        <Typography variant="h6" gutterBottom>Route</Typography>
+        <Typography variant="h6" gutterBottom style={{ paddingLeft: 8 }}>Route</Typography>
       </Grid>
-      <Grid item xs={12} container spacing={16}>
+      <Grid item xs={12} container spacing={16} id="test" style={{ margin: 0 }}>
         <Grid item xs={12} container spacing={0}>
           <Grid item xs={12}>
             <Typography variant="overline" gutterBottom>von</Typography>
@@ -138,6 +141,9 @@ function App(props) {
         <Grid item xs={12}>
           <Button disabled={checkIfRouteCalculationButtonShouldBeDisabled() ? true : false} variant="contained" color="primary" onClick={calculateRouteClicked}>Route berechnen</Button>
         </Grid>
+        {checkIfInfoTextShouldBeShown() ? <Grid item xs={12}>
+          <InfoLabel />
+        </Grid> : null}
       </Grid>
     </Grid>
   </Paper>
