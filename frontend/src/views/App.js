@@ -7,7 +7,7 @@ import '../assest/css/App.css';
 import { AppBar, Button, Checkbox, Divider, Drawer, FormControl, FormControlLabel, FormGroup, Grid, IconButton, List, MenuItem, Paper, Select, Toolbar, Typography, Snackbar } from '@material-ui/core';
 import ListItemLink from '../components/ListItemLink';
 import InfoLabel from '../components/InfoLabel';
-import SnackbarContentWrapper from '../components/SnackbarContentWrapper';
+import SnackbarContent from '../components/SnackbarContent';
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { routes, routeNames } from '../routes/routes';
@@ -208,7 +208,7 @@ function App(props) {
         autoHideDuration={0}
         onClose={fetchData}
       >
-        <SnackbarContentWrapper
+        <SnackbarContent
           onClose={() => setBusstops([{id: 1, name: "Test"}])}
           variant="refresh"
           message={<div>Daten konnte nicht geladen werden!<br /> Bitte versuchen Sie es erneut. </div>}
