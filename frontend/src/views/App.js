@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { style } from '../assest/styles/AppStyle';
@@ -43,14 +43,19 @@ function App(props) {
 
   const [busstops, setBusstops] = useState([]);
 
+  const [isSubscribed, setIsSubscribed] = useState(true);
+
+  const fetchData = useCallback(async () => {
+    const tempBusstops = await fetchBusstops();
+    if (isSubscribed) {
+      setBusstops(tempBusstops);
+    }
+  }, [isSubscribed]);
+
   useEffect(() => {
     fetchData();
-  }, []);
-
-  async function fetchData() {
-    console.log("Data detched");
-    setBusstops(await fetchBusstops());
-  }
+    return () => (setIsSubscribed(false));
+  }, [fetchData]);
 
   function checkIfArrayHasContent(array) {
     if (Array.isArray(array) && array.length) {
@@ -209,7 +214,7 @@ function App(props) {
         onClose={fetchData}
       >
         <SnackbarContent
-          onClose={() => setBusstops([{id: 1, name: "Test"}])}
+          onClose={() => setBusstops([{ id: 1, name: "Test" }])}
           variant="refresh"
           message={<div>Daten konnte nicht geladen werden!<br /> Bitte versuchen Sie es erneut. </div>}
         />
