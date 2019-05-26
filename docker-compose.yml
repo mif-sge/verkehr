@@ -4,8 +4,10 @@ services:
     image: verkehr-frontend
     ports: 
       - 3000:3000
+    build: ./frontend
   backend:
     image: verkehr-backend
+    build: ./backend/trafficnode-server
     ports:
       - 8080:8080
     env_file:
