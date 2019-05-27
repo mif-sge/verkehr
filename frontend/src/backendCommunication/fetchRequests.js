@@ -1,7 +1,7 @@
 import { DEMO } from '../backendCommunication/urls';
 
 export async function calculateRoute() {
-    const answer = await fetch(DEMO, {
+    const answer = await fetch('/demo', {
         method: 'GET',
         headers: {
             'Accept': 'application/json',
