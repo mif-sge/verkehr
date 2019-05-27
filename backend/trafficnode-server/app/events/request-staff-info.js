@@ -4,7 +4,7 @@ module.exports = {
      * The topic.
      * @type {string}
      */
-    topic: 'LOCATION_CREATED',
+    topic: 'REQUEST_STAFF_INFO',
 
     /**
      * The callback for handling errors.
@@ -19,6 +19,16 @@ module.exports = {
      * @type {function}
      */
     onMessage: (payload, eventSystem) => {
-        console.log(payload.toString());
+        let json = JSON.parse(payload.toString());
+
+        eventSystem.client.publish('STAFF_INFO_REQUESTED', JSON.stringify({
+            id: 'traffic',
+            staff: [
+                {
+                    employee_type: "construction_worker",
+                    count: 42
+                }
+            ]
+        }));
     }
 };

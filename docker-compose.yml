@@ -3,7 +3,7 @@ services:
   frontend:
     build:
       context: ./frontend
-    ports: 
+    ports:
       - 80:80
   backend:
     build:
