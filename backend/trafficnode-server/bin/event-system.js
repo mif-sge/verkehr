@@ -39,9 +39,7 @@ class EventSystem extends EventEmitter {
         this._events = {};
 
         this.client.on('connect', (connack) => {
-            if (!connack.sessionPresent) {
-                this.emit('ready');
-            }
+            this.emit('ready');
         });
 
         this._onMessage();

@@ -28,13 +28,15 @@ Setup.main(async () => {
         }
     });
 
+    logger.info("Setting up EventSystem.");
+
     // Creates the event system.
-    let eventSystem = new EventSystem(process.env.EVENTSYSTEM_BROKER_HOST);
+    let eventSystem = new EventSystem(process.env.EVENTSYSTEM_BROKER_HOST || 'localhost');
 
     // Sets up events after the event system has successfully connected to the broker.
     eventSystem.on('ready', async () => {
 
-        logger.info(`Event system connected to: ${eventSystem.brokerHost}.`);
+        logger.info(`EventSystem connected to: ${eventSystem.brokerHost}.`);
 
         // Dynamically loads events from a directory.
         await eventSystem.withDirectory(path.join(__dirname, 'app', 'events'));

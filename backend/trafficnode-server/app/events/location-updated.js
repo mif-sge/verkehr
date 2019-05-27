@@ -4,7 +4,7 @@ module.exports = {
      * The topic.
      * @type {string}
      */
-    topic: 'LOCATION_CREATED',
+    topic: 'LOCATION_UPDATED',
 
     /**
      * The callback for handling errors.
