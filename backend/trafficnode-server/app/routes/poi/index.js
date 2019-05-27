@@ -11,7 +11,7 @@ let plugin = {
      * The name of the plugin.
      * @type {string}
      */
-    name: 'Main',
+    name: 'POI',
 
     /**
      * The version of the plugin.
@@ -34,11 +34,6 @@ let plugin = {
             },
             {
                 method: 'GET',
-                path: '/demo',
-                options: require('./handlers/demo')
-            },
-            {
-                method: 'GET',
                 path: '/{any*}',
                 options: {
                     handler: (request, h) => {
@@ -53,6 +48,6 @@ let plugin = {
 module.exports = {
     plugin,
     routes: {
-        prefix: '/api'
+        prefix: '/api/poi'
     }
 };
