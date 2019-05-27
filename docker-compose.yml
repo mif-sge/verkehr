@@ -1,13 +1,13 @@
 version: '3'
 services:
   frontend:
-    image: verkehr-frontend
-    ports: 
-      - 3000:3000
-    build: ./frontend
+    build:
+      context: ./frontend
+    ports:
+      - 80:80
   backend:
-    image: verkehr-backend
-    build: ./backend/trafficnode-server
+    build:
+      context: ./backend/trafficnode-server
     ports:
       - 8080:8080
     env_file:
