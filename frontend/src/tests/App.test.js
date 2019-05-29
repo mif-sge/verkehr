@@ -5,14 +5,14 @@ import App from '../views/App';
 import { mount, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import { Select, Drawer, Paper, ListItem, FormControl, Snackbar, Typography, AppBar, Toolbar, Fragment, MenuItem } from '@material-ui/core';
 import Home from '../views/Home';
 import StreetMap from '../views/StreetMap';
 import Plan from '../views/Plan';
+
 import { MemoryRouter } from "react-router";
-import { List } from '@material-ui/core';
-import ListItemLink from '../components/ListItemLink';
-import { createMount } from '@material-ui/core/test-utils';
+
+import { Select, Drawer, Paper, List, ListItem, Snackbar, FormGroup, FormControlLabel } from '@material-ui/core';
+import { fetchBusstops } from '../backendCommunication/fetchRequests';
 
 configure({ adapter: new Adapter() });
 
@@ -44,29 +44,40 @@ configure({ adapter: new Adapter() });
 
 describe("The App component", () => {
   let mountedApp;
-  const app = (route) => {
+  const app = () => {
     if (!mountedApp) {
       mountedApp = mount(
-        <MemoryRouter initialEntries={[`/${route}`]}>
+        <MemoryRouter initialEntries={['/']}>
           <App />
         </MemoryRouter>);
     }
     return mountedApp;
   }
 
-  const home = () => {
-    return app("");
-  }
-  const map = () => {
-    return app("map");
-  }
-  const plan = () => {
-    return app("plan");
-  }
-
   beforeEach(() => {
     mountedApp = undefined;
   });
+
+  const appWithOpenMenu = () => {
+    const component = app();
+    const button = component.find('button#openMenuButton');
+    button.simulate("click");
+    return component;
+  }
+
+  const appWithOpenMenuAtMapPage = () => {
+    const component = appWithOpenMenu();
+    const link = component.find("#mapLink").find('a');
+    link.simulate('click', { button: 0 });
+    return component;
+  }
+
+  const appWithOpenMenuAtPlanPage = () => {
+    const component = appWithOpenMenu();
+    const link = component.find("#planLink").find('a');
+    link.simulate('click', { button: 0 });
+    return component;
+  }
 
   describe('while testing the whole app page', () => {
     it('renders without crashing', () => {
@@ -79,20 +90,22 @@ describe("The App component", () => {
       expect(app().find("div").length).toBeGreaterThan(0);
     });
 
+    it("should contain two papers (appbar and error snackbar)", () => {
+      expect(app().find(Paper).length).toBe(2);
+    });
+
+    it('has a button to open the menu', () => {
+      expect(app().length).toBe(1);
+    });
+
     it("should contain the menu aka drawer", () => {
       expect(app().find(Drawer).length).toBe(1);
     });
 
-    it("should contain the menu list", () => {
-      expect(app().find(List).length).toBe(1);
-    });
-
-    it("should contain the three menu list entries", () => {
-      expect(app().find(ListItem).length).toBe(3);
-    });
-
-    it("should contain two papers for map and plan submenus", () => {
-      expect(app().find(Paper).length).toBe(2);
+    it("should contain the menu list with three entries", () => {
+      const component = appWithOpenMenu();
+      expect(component.find(List).length).toBe(1);
+      expect(component.find(ListItem).length).toBe(3);
     });
 
     it("should contain a snackbar", () => {
@@ -101,37 +114,104 @@ describe("The App component", () => {
   });
 
   describe('while testing the home page', () => {
-    it("should always render the home page", () => {
-      expect(home().find(Home).length).toBe(1);
+    it("should always render the home page with corret title", () => {
+      const component = app();
+      expect(component.find(Home).length).toBe(1);
+
+      const pageHeader = component.find("#pageHeaderTypography").first();
+      expect(pageHeader.text()).toEqual("Home");
+
+    });
+
+    it("should always render corret title after changing the page", () => {
+      const component = appWithOpenMenu();
+      const pageHeader = component.find("#pageHeaderTypography").first();
+
+      expect(pageHeader.text()).toEqual("Home");
+
+      component.find("#mapLink").find('a').simulate('click', { button: 0 });
+      expect(pageHeader.text()).not.toEqual("Home");
+
+      component.find("#homeLink").find('a').simulate('click', { button: 0 });
+      expect(pageHeader.text()).toEqual("Home");
+
+      component.find("#planLink").find('a').simulate('click', { button: 0 });
+      expect(pageHeader.text()).not.toEqual("Home");
+
+      component.find("#homeLink").find('a').simulate('click', { button: 0 });
+      expect(pageHeader.text()).toEqual("Home");
     });
   });
 
   describe('while testing the map page', () => {
-    it("should always render the map page", () => {
-      expect(map().find(StreetMap).length).toBe(1);
+    it("should always render the map page with corret title", () => {
+      const component = appWithOpenMenuAtMapPage();
+      expect(component.find(StreetMap).length).toBe(1);
+
+      const pageHeader = component.find("#pageHeaderTypography").first();
+      expect(pageHeader.text()).toEqual("Karte");
+    });
+
+    it('should always contain a dropdown menu (select) for selecting buslines with more than one entry', () => {
+      const mapSubMenu = appWithOpenMenuAtMapPage().find("#mapSubMenu").first();
+
+      expect(mapSubMenu.find(Select).length).toBe(1);
+      expect(mapSubMenu.find(Select).props().children.length).toBeGreaterThan(1);
+    });
+
+    it('should always contain three checkboxes (points of interest)', () => {
+      const mapSubMenu = appWithOpenMenuAtMapPage().find("#mapSubMenu").first();
+
+      expect(mapSubMenu.find(FormGroup).length).toBe(1);
+      expect(mapSubMenu.find(FormControlLabel).length).toBe(3);
     });
   });
 
   describe('while testing the plan page', () => {
-    it("should always render the plan page", () => {
-      expect(plan().find(Plan).length).toBe(1);
+    it("should always render the plan page with corret title", () => {
+      const component = appWithOpenMenuAtPlanPage();
+      expect(component.find(Plan).length).toBe(1);
+
+      const pageHeader = component.find("#pageHeaderTypography").first();
+      expect(pageHeader.text()).toEqual("Plan");
     });
 
-    it("contains two Selects", () => {
-      //expect(plan().find(Select).length).toBe(3);
-      //expect(plan().find(".Select").length).toBe(3);
-      //expect(plan().find(".Select-control").length).toBe(3);
-      //expect(plan().find(FormControl).length).toBe(3);
-      const mount = createMount();
-      const wrapper = mount(
-        <MemoryRouter>
-          <App />
-        </MemoryRouter>
-
-
-      );
-      expect(wrapper.find(Typography)[0].text()).toEqual('Home');
-      expect(wrapper.find(Select).length).toBe(1);
+    it('should always fetch the busstops from the server', () => { //async () needs to be set later on
+      //TODO format der antwort überprüfen
+      const response = fetchBusstops(); //await flag needs to be set later on 
+      expect(response).not.toEqual([]);
+      response.map((busstop) => {
+        expect(busstop.id.exists()).toEqual(true);
+      })
     });
+
+    it('should always contain a dropdown menu (select) for selecting the from and to busstops with busstops as entries', () => {
+      const planSubMenu = appWithOpenMenuAtPlanPage().find("#planSubMenu").first();
+
+      expect(planSubMenu.find(Select).length).toBe(2);
+      expect(planSubMenu.find(Select).first().props().children.length).toBeGreaterThan(1); //TODO COMPARE IT WITH BUSSTOP COUNT FROM FETCH REQUEST
+      expect(planSubMenu.find(Select).last().props().children.length).toBeGreaterThan(1);
+    });
+
+    it('should always contain a button to start a route calculation (initially disabled)', () => {
+      const button = appWithOpenMenuAtPlanPage().find('button#routeCalculationButton');
+      expect(button.length).toBe(1);
+      expect(button.props().disabled).toEqual(true);
+    });
+
+    it('should not calculate the route if the busstops are not selected correctly', () => {
+    });
+
+    it('should only calculate the route if the busstops are selected correctly', () => {
+    });
+
+    /*
+    * testen ob button pressed wenn nichts ausgewählt
+    * testen ob button pressed wenn erstes ausgewählt
+    * testen ob button pressed wenn zweites ausgewählt
+    * testen ob button pressed wenn beide gleich ausgewählt
+    * testen ob button pressed wenn unterschiedlich gleich ausgewählt
+    * testen ob funktion fetch durch button das richtige zurück gibt von der struktur her
+    */
   })
 });

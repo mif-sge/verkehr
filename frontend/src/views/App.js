@@ -85,19 +85,19 @@ function App(props) {
 
   const appHeader = <AppBar className={classes.header} position="static">
     <Toolbar>
-      <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" onClick={() => setOpen(true)}>
+      <IconButton id="openMenuButton" className={classes.menuButton} color="inherit" aria-label="Menu" onClick={() => setOpen(true)}>
         <Menu />
       </IconButton>
       <Route>
-        {({ location }) => (<Typography variant="h6" color="inherit">{setPathname(location.pathname)}{routeNames[pathname]}</Typography>)}
+        {({ location }) => (<Typography id="pageHeaderTypography" variant="h6" color="inherit">{setPathname(location.pathname)}{routeNames[pathname]}</Typography>)}
       </Route>
     </Toolbar>
   </AppBar>
 
-  const mapSubmenu = <Grid container spacing={16} className={classes.mapSubMenu}>
+  const mapSubMenu = <Grid id="mapSubMenu" container spacing={2} className={classes.mapSubMenu}>
     <Grid item xs={12}>
       <FormControl className={classes.busDropDown} >
-        <Select value={busline} onChange={(e) => setBusline(e.target.value)} displayEmpty name="age">
+        <Select value={busline} onChange={(e) => setBusline(e.target.value)} displayEmpty name="busline">
           <MenuItem value="">
             <em>- Buslinie auswählen -</em>
           </MenuItem>
@@ -107,7 +107,7 @@ function App(props) {
       </FormControl>
     </Grid>
     <Grid item xs={12}>
-      <Paper className={classes.poiContainer} id="FTW">
+      <Paper className={classes.poiContainer}>
         <Grid container spacing={0}>
           <Grid item xs={12}>
             <Typography variant="h6" gutterBottom>Markierungen</Typography>
@@ -124,12 +124,12 @@ function App(props) {
     </Grid>
   </Grid>
 
-  const planSubMenu = <Paper className={classes.planSubMenu} id="WTF">
+  const planSubMenu = <Paper id="planSubMenu" className={classes.planSubMenu}>
     <Grid container spacing={0}>
       <Grid item xs={12}>
         <Typography variant="h6" gutterBottom style={{ paddingLeft: 8 }}>Route</Typography>
       </Grid>
-      <Grid item xs={12} container spacing={16} style={{ margin: 0 }}>
+      <Grid item xs={12} container spacing={2} style={{ margin: 0 }}>
         <Grid item xs={12} container spacing={0}>
           <Grid item xs={12}>
             <Typography variant="overline" gutterBottom>von</Typography>
@@ -161,7 +161,7 @@ function App(props) {
           </Grid>
         </Grid>
         <Grid item xs={12}>
-          <Button disabled={checkIfRouteCalculationButtonShouldBeDisabled() ? true : false} variant="contained" color="primary" onClick={calculateRouteClicked}>Route berechnen</Button>
+          <Button id="routeCalculationButton" disabled={checkIfRouteCalculationButtonShouldBeDisabled() ? true : false} variant="contained" color="primary" onClick={calculateRouteClicked}>Route berechnen</Button>
         </Grid>
         {checkIfInfoTextShouldBeShown() ? <Grid item xs={12}>
           <InfoLabel />
@@ -179,19 +179,19 @@ function App(props) {
         <Drawer className={classes.sidebar} open={open} onClose={() => setOpen(false)}>
           <div tabIndex={0} role="button" onKeyDown={() => setOpen(false)}>
             <div className={classes.sidebarHeader}>
-              <IconButton onClick={() => setOpen(false)}>
+              <IconButton id="closeMenuButton" onClick={() => setOpen(false)}>
                 <ChevronLeft />
               </IconButton>
             </div>
             <List className={classes.sidebarBody}>
               <Divider />
-              <ListItemLink to="/" primary={routeNames["/"]} icon={<HomeOutlined />} />
+              <ListItemLink id="homeLink" to="/" primary={routeNames["/"]} icon={<HomeOutlined />} />
               <Divider />
-              <ListItemLink to="/map" primary={routeNames["/map"]} icon={<MapOutlined />} />
+              <ListItemLink id="mapLink" to="/map" primary={routeNames["/map"]} icon={<MapOutlined />} />
               {pathname === "/map" ? <Divider /> : null}
-              {pathname === "/map" ? mapSubmenu : null}
+              {pathname === "/map" ? mapSubMenu : null}
               <Divider />
-              <ListItemLink to="/plan" primary={routeNames["/plan"]} icon={<DirectionsOutlined />} />
+              <ListItemLink id="planLink" to="/plan" primary={routeNames["/plan"]} icon={<DirectionsOutlined />} />
               {pathname === "/plan" ? <Divider /> : null}
               {pathname === "/plan" ? planSubMenu : null}
               <Divider />
