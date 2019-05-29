@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { style } from '../assest/styles/AppStyle';
@@ -9,7 +9,7 @@ import ListItemLink from '../components/ListItemLink';
 import InfoLabel from '../components/InfoLabel';
 import SnackbarContent from '../components/SnackbarContent';
 
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { routes, routeNames } from '../routes/routes';
 
 import { HomeOutlined, MapOutlined, ChevronLeft, DirectionsOutlined, Menu } from '@material-ui/icons';
@@ -107,7 +107,7 @@ function App(props) {
       </FormControl>
     </Grid>
     <Grid item xs={12}>
-      <Paper className={classes.poiContainer}>
+      <Paper className={classes.poiContainer} id="FTW">
         <Grid container spacing={0}>
           <Grid item xs={12}>
             <Typography variant="h6" gutterBottom>Markierungen</Typography>
@@ -124,7 +124,7 @@ function App(props) {
     </Grid>
   </Grid>
 
-  const planSubMenu = <Paper className={classes.planSubMenu}>
+  const planSubMenu = <Paper className={classes.planSubMenu} id="WTF">
     <Grid container spacing={0}>
       <Grid item xs={12}>
         <Typography variant="h6" gutterBottom style={{ paddingLeft: 8 }}>Route</Typography>
@@ -172,7 +172,7 @@ function App(props) {
 
   //main page where all components wre put together
   return (
-    <Router>
+    <Fragment>
       <div className={classes.root}>
         {appHeader}
 
@@ -196,12 +196,13 @@ function App(props) {
               {pathname === "/plan" ? planSubMenu : null}
               <Divider />
             </List>
-            {routes.map((route, index) => (<Route key={index} path={route.path} exact={route.exact} component={route.sidebar} />))}
           </div>
         </Drawer>
 
         <Grid container className={classes.body}>
-          {routes.map((route, index) => (<Route key={index} path={route.path} exact={route.exact} component={route.component} />))}
+          <Switch>
+            {routes.map((route, index) => (<Route key={index} path={route.path} exact={route.exact} component={route.component} />))}
+          </Switch>
         </Grid>
       </div>
       <Snackbar
@@ -219,7 +220,7 @@ function App(props) {
           message={<div>Daten konnte nicht geladen werden!<br /> Bitte versuchen Sie es erneut. </div>}
         />
       </Snackbar>
-    </Router>
+    </Fragment>
   );
 }
 
