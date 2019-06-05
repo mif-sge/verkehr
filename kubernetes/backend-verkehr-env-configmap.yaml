@@ -10,6 +10,7 @@ data:
   SERVER_HOST: 0.0.0.0
   SERVER_PORT: "8080"
   SERVER_TIMEOUT_GLOBAL: "30000"
+  EVENTSYSTEM_BROKER_HOST: "mqtt://mqtt.fluux.io"
 kind: ConfigMap
 metadata:
   creationTimestamp: null

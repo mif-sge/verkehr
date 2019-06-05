@@ -1,21 +1,16 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    kompose.cmd: kompose convert
-    kompose.version: 1.16.0 (0c01309)
-  creationTimestamp: null
-  labels:
-    io.kompose.service: vk-backend
   name: vk-backend
-spec:
+spec: 
+  selector:
+    matchLabels: 
+      run: vk-backend
   replicas: 1
-  strategy: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
-        io.kompose.service: vk-backend
+        run: vk-backend
     spec:
       containers:
       - env:
@@ -69,10 +64,13 @@ spec:
             configMapKeyRef:
               key: SERVER_TIMEOUT_GLOBAL
               name: backend-verkehr-env
-        image: 558558437971.dkr.ecr.eu-central-1.amazonaws.com/verkehr_backend
-        name: vk-backend
+        - name: EVENTSYSTEM_BROKER_HOST
+          valueFrom:
+            configMapKeyRef:
+              key: EVENTSYSTEM_BROKER_HOST
+              name: backend-verkehr-env
+        name: vk-frontend
+        image: 558558437971.dkr.ecr.eu-central-1.amazonaws.com/verkehr_backend:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
-        resources: {}
-      restartPolicy: Always
-status: {}
