@@ -15,5 +15,6 @@ spec:
       containers:
       - name: vk-frontend
         image: 558558437971.dkr.ecr.eu-central-1.amazonaws.com/verkehr_frontend:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
