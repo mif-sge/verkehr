@@ -5,6 +5,8 @@ services:
       context: ./frontend
     ports:
       - 80:80
+    depends_on:
+      - vk-backend
   vk-backend:
     build:
       context: ./backend/trafficnode-server
