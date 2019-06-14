@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import classNames from 'classnames';
+import clsx from 'clsx';
 
 import { style, variantIcon } from '../assest/styles/SnackBarContentStyle';
 
@@ -14,11 +14,11 @@ function Content(props) {
 
   return (
     <SnackbarContent
-      className={classNames(classes[variant], className)}
+      className={clsx(classes[variant], className)}
       aria-describedby="client-snackbar"
       message={
         <span id="client-snackbar" className={classes.message}>
-          <Icon className={classNames(classes.icon, classes.iconVariant)} />
+          <Icon className={clsx(classes.icon, classes.iconVariant)} />
           {message}
         </span>
       }
