@@ -15,32 +15,6 @@ import { fetchBusstops } from '../backendCommunication/fetchRequests';
 
 configure({ adapter: new Adapter() });
 
-/*
-*	Abfragen, ob beim fetch eine empty list kommt, unter der bedigung, dass 200 status
-*	In der liste sind niemals gleiche ids
-*	Der name der haltestelle darf nicht gleich sein
-*	Einzeln trennen die beiden oberen punkte
-*/
-
-/* Was wollen wir überhaupt testen?
-* immer wenn wir eine anfrage an den server schicken, überprüfen wir, ob die antwort, die wir bekommen, unserem Format entspricht, welches wir empfangen wollen
-* einzelne tests für die funktionen
-* struktur tests, also ob buttons da ist
-* 
-* Testen ob Select 1 da ist
-* testen ob select 2 da ist
-* testen ob button da ist
-* testen ob button pressed wenn nichts ausgewählt
-* testen ob button pressed wenn erstes ausgewählt
-* testen ob button pressed wenn zweites ausgewählt
-* testen ob button pressed wenn beide gleich ausgewählt
-* testen ob button pressed wenn unterschiedlich gleich ausgewählt
-* testen ob funktion fetch durch button das richtige zurück gibt von der struktur her
-*/
-
-// this is a handy function that I would utilize for any component
-// that relies on the router being in context
-
 describe("The App component,", () => {
   let mountedApp;
   const app = () => {
@@ -191,10 +165,6 @@ describe("The App component,", () => {
         * eventuell soetwas wie status code testing?
         */
       });
-
-      it('And the fetch request should run at app start one to set the referencing hook.', () => {
-
-      });
     });
 
     it('should always contain a dropdown menu (select) for selecting the from and to busstops with busstops as entries.', () => {
@@ -202,21 +172,6 @@ describe("The App component,", () => {
       const selects = planSubMenu.find(Select);
 
       expect(selects.length).toBe(2);
-
-      const busstops = fetchBusstops();
-
-      selects.forEach((select) => {
-        expect(select.props().value).toBe(0);
-        busstops.forEach((busstop) => {
-          select.simulate('change', { target: { value: busstop.id } });
-          expect(select.props().value).toBe(busstop.id);
-        });
-        select.simulate('change', { target: { value: 0 } });
-        expect(select.props().value).toBe(0);
-      });
-
-      //expect(planSubMenu.find(Select).first().props().children.length).toBe(2); //TODO COMPARE IT WITH BUSSTOP COUNT FROM FETCH REQUEST
-      //expect(planSubMenu.find(Select).last().props().children.length).toBe(2);
     });
 
     it('should always contain a button to start a route calculation (initially disabled).', () => {
