@@ -1,29 +1,67 @@
-var r=require("request");
+var request=require("request");
 
 var fs = require('fs');
 
 require.extensions['.cypher'] = function (module, filename) {
     module.exports = fs.readFileSync(filename, 'utf8');
 };
-var cypherScriptsDir = "./cypher-scripts/";
-var cypherQuery1 = require(cypherScriptsDir+"import1.cypher");
-var cypherQuery2 = require(cypherScriptsDir+"import-bus-stops.cypher");
-var cypherQuery3 = require(cypherScriptsDir+"import-shops.cypher");
-var cypherQuery4 = require(cypherScriptsDir+"import-traffic-signals.cypher");
-var cypherQuery5 = require(cypherScriptsDir+"import-schools.cypher");
-var cypherQuery6 = require(cypherScriptsDir+"import-hospitals.cypher");
-var dataJSON = require("../../data/openstreetmap-data-osm.json");
+const dataJSON = require("../../data/openstreetmap-data-osm.json");
+const neo4jUrl = "http://neo4j:test@localhost:7474" + "/db/data/transaction/commit";
+let cypherScriptsDir = "./cypher-scripts/";
+let cypherQueries = fs.readdirSync('./cypher-scripts/');
+let initCypherScriptName= "import-init.cypher";
 
-var neo4jUrl = "http://neo4j:test@localhost:7474" + "/db/data/transaction/commit";
-
-function cypher(query,params,cb) {
-  r.post({uri:neo4jUrl,
-          json:{statements:[{statement:query,parameters:params}]}},
-         function(err,res) { cb(err,res.body)})
+if(!cypherQueries.includes(initCypherScriptName)){
+  console.log("InitScript " +initCypherScriptName+" not found" );
+  return;
 }
-cypher(cypherQuery1,{json:dataJSON},function(err, result) { console.log(err, JSON.stringify(result))});
-cypher(cypherQuery2,{json:dataJSON},function(err, result) { console.log(err, JSON.stringify(result))});
-cypher(cypherQuery3,{json:dataJSON},function(err, result) { console.log(err, JSON.stringify(result))});
-cypher(cypherQuery4,{json:dataJSON},function(err, result) { console.log(err, JSON.stringify(result))});
-cypher(cypherQuery5,{json:dataJSON},function(err, result) { console.log(err, JSON.stringify(result))});
-cypher(cypherQuery6,{json:dataJSON},function(err, result) { console.log(err, JSON.stringify(result))});
+cypherQueries = cypherQueries.filter(item => item !== initCypherScriptName)
+let cypherQueryInit = require(cypherScriptsDir+initCypherScriptName);
+
+/**
+ * Send data to neo4j data bank with initial cypher script  to import nodes and ways into data bank.
+ * If init script wars succeseful, send other cypherscripts and data to neo4j to create other items, that depends on nodes and ways
+ * @param  {[type]} cypherQueryInit initial script for neo4j, schould be processed before other scripts.
+ * @param  {[type]} json            data to import into neo4j
+ * @return {[type]}                 errors
+ */
+cypher(cypherQueryInit,{json:dataJSON})
+.then(json => {
+  for(let file of cypherQueries) {
+    query=require(cypherScriptsDir+file);
+    cypher(query,{json:dataJSON});
+  }
+})
+.catch(err => {
+  console.log(err);
+})
+
+/**
+ * POST-Method sending Cypher script with dataJSON to neo4j database.
+ *
+ * @param  {String} query  cypher script with querry for neo4j
+ * @param  {String} params data to import into neo4j
+ * @return {Promise}        Resolve: returning body of response; Reject: returning error description
+ */
+function cypher(query,params) {
+	const options = {
+		url: neo4jUrl,
+		method: "POST",
+		json: {statements:[{statement:query,parameters:params}]}
+	}
+
+	return new Promise((resolve, reject) => {
+		request(options, (err, res, body) => {
+			if(err) {
+				reject(err);
+				return;
+			}
+			if(res.statusCode >= 200 && res.statusCode < 300) {
+				resolve(body);
+				return;
+			}
+      reject(res.statusCode+"");
+      return;
+		})
+	})
+}
