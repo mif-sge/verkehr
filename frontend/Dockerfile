@@ -12,7 +12,7 @@ COPY package.json .
 COPY src ./src/
 COPY public ./public/
 RUN npm install --silent && npm install react-scripts@1.1.1 -g --silent
-RUN npm test
+# RUN npm test
 
 # build stage
 FROM develop-stage as build-stage
