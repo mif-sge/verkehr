@@ -19,6 +19,8 @@ export async function fetchBusstops() {
             'Content-Type': 'application/json'
         }
     });
-    //console.log(await answer);
-    return await answer.json();
+    console.log("1", SHORTBUSSTOPS)
+    const a = await answer.json();
+    console.log("2", a);
+    return a;
 }
