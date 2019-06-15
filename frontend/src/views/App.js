@@ -14,6 +14,7 @@ import { Route, Switch } from "react-router-dom";
 import { HomeOutlined, MapOutlined, ChevronLeft, DirectionsOutlined, Menu } from '@material-ui/icons';
 
 import { calculateRoute, fetchBusstops, fetchBuslines } from '../backendCommunication/fetchRequests';
+
 import StreetMap from './StreetMap';
 import Home from './Home';
 import Plan from './Plan';
@@ -212,7 +213,7 @@ function App(props) {
         <Grid container className={classes.body}>
           <Switch>
             <Route key={0} path={"/"} exact={true} render={(props) => <Home {...props} />} />
-            <Route key={1} path={"/map"} exact={false} render={(props) => <StreetMap {...props} busline={busline} />} />
+            <Route key={1} path={"/map"} exact={false} render={(props) => <StreetMap {...props} selectedBusline={busline} />} />
             <Route key={2} path={"/plan"} exact={false} render={(props) => <Plan {...props} />} />
           </Switch>
         </Grid>
