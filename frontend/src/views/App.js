@@ -57,7 +57,6 @@ function App(props) {
 
   const fetchData = useCallback(async () => {
     const tempBusstops = await fetchBusstops();
-    console.log(tempBusstops);
     const tempBuslines = await fetchBuslines("short");
     if (isSubscribed) {
       setBusstops(tempBusstops);
@@ -214,7 +213,7 @@ function App(props) {
         <Grid container className={classes.body}>
           <Switch>
             <Route key={0} path={"/"} exact={true} render={(props) => <Home {...props} />} />
-            <Route key={1} path={"/map"} exact={false} render={(props) => <StreetMap {...props} selectedBusline={busline} />} />
+            <Route key={1} path={"/map"} exact={false} render={(props) => <StreetMap {...props} selectedBusline={busline} showHospitals={hospitalMarker} showMalls={mallMarker} showBusstops={busStopMarker} />} />
             <Route key={2} path={"/plan"} exact={false} render={(props) => <Plan {...props} />} />
           </Switch>
         </Grid>

@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import style from '../assest/styles/StreetMapStyle';
 
 import { Map, Marker, Popup, TileLayer, Polyline } from 'react-leaflet'
-import { fetchBuslines } from '../backendCommunication/fetchRequests';
+import { fetchBuslines, fetchBusstops } from '../backendCommunication/fetchRequests';
 import { busstopIcon, hospitalIcon, mallIcon } from '../assest/img/Icons'
 
 //FH Bielefeld, Campus Minden
@@ -16,15 +16,18 @@ const position = [52.2965164, 8.9057191];
  * creates the Open Street Map
  */
 function StreetMap(props) {
+    const { classes, selectedBusline, showBusstops } = props;
 
-    const { classes, selectedBusline } = props;
     const [buslines, setBuslines] = useState([]);
+    const [busstops, setBusstops] = useState([]);
 
     const [isSubscribed, setIsSubscribed] = useState(true);
 
     const fetchData = useCallback(async () => {
+        const tempBusstops = await fetchBusstops();
         const tempBuslines = await fetchBuslines();
         if (isSubscribed) {
+            setBusstops(tempBusstops);
             setBuslines(tempBuslines);
         }
     }, [isSubscribed]);
@@ -40,9 +43,9 @@ function StreetMap(props) {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
             />
-            <Marker icon={hospitalIcon("cyan")} position={position}>
-                <Popup>FH Bielefeld,<br />Campus Minden</Popup>
-            </Marker>
+            {busstops.length > 0 && showBusstops == true ? busstops.map(busstop => (<Marker icon={busstopIcon("lightblue")} position={[busstop.lat, busstop.lon]}>
+                <Popup>{busstop.name}</Popup>
+            </Marker>)) : null}
             {buslines.length > 0 ? buslines.filter(function (busline) {
                 if (selectedBusline > 0) return busline["id"] === selectedBusline;
                 else return busline;

@@ -39,6 +39,8 @@ class BusstopIcon extends Component {
 export function busstopIcon(color) {
     const icon = L.divIcon({
         className: 'custom-icon',
+        iconAnchor: [24, 24],
+        popupAnchor: [0, -24],
         html: ReactDOMServer.renderToString(<BusstopIcon color={color} />)
     });
     return icon
