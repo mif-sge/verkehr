@@ -10,3 +10,11 @@
 ## Gesprächsprotokolle
 
  - [26-04-2019](./Documentation/Protocols/Protocol_2019-04-26.md)
+
+
+## Docker Compose 
+Bauen und starten mit Compose
+(sudo) docker-compose up --build
+
+Beenden von Compose 
+(sudo) docker-compose down

@@ -11,7 +11,7 @@ let plugin = {
      * The name of the plugin.
      * @type {string}
      */
-    name: 'Main routes',
+    name: 'Main',
 
     /**
      * The version of the plugin.

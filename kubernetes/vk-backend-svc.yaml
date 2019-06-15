@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: vk-backend
+  labels:
+    run: vk-backend
+spec:
+  ports:
+  - port: 8080
+    name: "8080"
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    run: vk-backend

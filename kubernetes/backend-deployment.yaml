@@ -1,0 +1,78 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.16.0 (0c01309)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: vk-backend
+  name: vk-backend
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: vk-backend
+    spec:
+      containers:
+      - env:
+        - name: LOGGING_LEVEL_CONSOLE
+          valueFrom:
+            configMapKeyRef:
+              key: LOGGING_LEVEL_CONSOLE
+              name: backend-verkehr-env
+        - name: LOGGING_LEVEL_FILE_HUMAN
+          valueFrom:
+            configMapKeyRef:
+              key: LOGGING_LEVEL_FILE_HUMAN
+              name: backend-verkehr-env
+        - name: LOGGING_LEVEL_FILE_MACHINE
+          valueFrom:
+            configMapKeyRef:
+              key: LOGGING_LEVEL_FILE_MACHINE
+              name: backend-verkehr-env
+        - name: NEO4J_PASSWORD
+          valueFrom:
+            configMapKeyRef:
+              key: NEO4J_PASSWORD
+              name: backend-verkehr-env
+        - name: NEO4J_URI
+          valueFrom:
+            configMapKeyRef:
+              key: NEO4J_URI
+              name: backend-verkehr-env
+        - name: NEO4J_USERNAME
+          valueFrom:
+            configMapKeyRef:
+              key: NEO4J_USERNAME
+              name: backend-verkehr-env
+        - name: NODE_ENV
+          valueFrom:
+            configMapKeyRef:
+              key: NODE_ENV
+              name: backend-verkehr-env
+        - name: SERVER_HOST
+          valueFrom:
+            configMapKeyRef:
+              key: SERVER_HOST
+              name: backend-verkehr-env
+        - name: SERVER_PORT
+          valueFrom:
+            configMapKeyRef:
+              key: SERVER_PORT
+              name: backend-verkehr-env
+        - name: SERVER_TIMEOUT_GLOBAL
+          valueFrom:
+            configMapKeyRef:
+              key: SERVER_TIMEOUT_GLOBAL
+              name: backend-verkehr-env
+        image: 558558437971.dkr.ecr.eu-central-1.amazonaws.com/verkehr_backend
+        name: vk-backend
+        ports:
+        - containerPort: 8080
+        resources: {}
+      restartPolicy: Always
+status: {}

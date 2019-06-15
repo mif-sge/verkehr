@@ -1,8 +1,10 @@
 'use strict';
 
 const dotenv = require('dotenv');
+const path = require('path');
 
 const Setup = require('./bin/setup');
+const EventSystem = require('./bin/event-system');
 
 const Server = require('./server');
 const Prompt = require('./prompt');
@@ -25,6 +27,28 @@ Setup.main(async () => {
             logger.error(`Server error: ${event.error ? event.error.message : 'unknown'}.`);
         }
     });
+
+    logger.info("Setting up EventSystem.");
+
+    // Creates the event system.
+    let eventSystem = new EventSystem(process.env.EVENTSYSTEM_BROKER_HOST || 'localhost');
+
+    // Sets up events after the event system has successfully connected to the broker.
+    eventSystem.on('ready', async () => {
+
+        logger.info(`EventSystem connected to: ${eventSystem.brokerHost}.`);
+
+        // Dynamically loads events from a directory.
+        await eventSystem.withDirectory(path.join(__dirname, 'app', 'events'));
+    });
+    
+    // Listens to all errors occuring within the event system.
+    eventSystem.on('error', (err) => {
+        logger.error(`Event system error: ${err}.`);
+    });
+
+    // Makes the event system available.
+    server.app.eventSystem = eventSystem;
 
     // Starts command prompt.
     Prompt.create(server);

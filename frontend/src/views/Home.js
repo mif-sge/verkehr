@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import style from '../assest/styles/HomeStyle';
 
-import { Grid, Button } from '@material-ui/core/';
+import { Grid } from '@material-ui/core/';
 
 import logo from '../assest/img/logo.png';
 

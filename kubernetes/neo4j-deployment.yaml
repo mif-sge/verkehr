@@ -1,0 +1,31 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.16.0 (0c01309)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: neo4j
+  name: neo4j
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: neo4j
+    spec:
+      containers:
+      - env:
+        - name: NEO4J_AUTH
+          value: neo4j/test
+        image: neo4j:3.5.5
+        name: neo4j
+        ports:
+        - containerPort: 7474
+        - containerPort: 7687
+        resources: {}
+      restartPolicy: Always
+status: {}

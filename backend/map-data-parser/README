@@ -1,0 +1,12 @@
+*** Verkehrs-node data importer ***
+The map-data-importer.js script takes osm data as JSON and send it along with cypher scripts to the neo4j REST API.
+Cypher scripts(import1.cypher, etc.) parse osm data from JSON and import selected data into neo4j data bank.
+
+Already installed Node.js and Neo4j are required.
+The osm data should lay under "../../data/openstreetmap-data-osrm.json" relative to map-data-importer.js,
+Cypher scripts schould lay in the same directory as map-data-importer.js file.
+
+To run importer script execute:
+ 	node map-data-importer.js
+
+
