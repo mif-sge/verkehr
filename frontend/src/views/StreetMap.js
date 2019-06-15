@@ -6,6 +6,7 @@ import style from '../assest/styles/StreetMapStyle';
 
 import { Map, Marker, Popup, TileLayer, Polyline } from 'react-leaflet'
 import { fetchBuslines } from '../backendCommunication/fetchRequests';
+import { busstopIcon, hospitalIcon, mallIcon } from '../assest/img/Icons'
 
 //FH Bielefeld, Campus Minden
 const position = [52.2965164, 8.9057191];
@@ -39,7 +40,7 @@ function StreetMap(props) {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
             />
-            <Marker position={position}>
+            <Marker icon={hospitalIcon("cyan")} position={position}>
                 <Popup>FH Bielefeld,<br />Campus Minden</Popup>
             </Marker>
             {buslines.length > 0 ? buslines.filter(function (busline) {

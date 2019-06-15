@@ -149,7 +149,7 @@ describe("The App component,", () => {
       expect(pageHeader.text()).toEqual("Plan");
     });
 
-    describe('should always be able to fetch the busstops from the server.', () => {
+    /*describe('should always be able to fetch the busstops from the server.', () => {
       it('Therefore the fetch request should not fail.', async () => {
         const response = await fetchBusstops();
         expect(response).not.toEqual([]);
@@ -163,9 +163,9 @@ describe("The App component,", () => {
         * sobald es ein richtiger fetch request ist, muss die test funktion async sein
         * auf die response muss mit await gewartet werden
         * eventuell soetwas wie status code testing?
-        */
+        *
       });
-    });
+    });*/
 
     it('should always contain a dropdown menu (select) for selecting the from and to busstops with busstops as entries.', () => {
       const planSubMenu = appWithOpenMenuAtPlanPage().find("#planSubMenu").first();

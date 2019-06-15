@@ -57,6 +57,7 @@ function App(props) {
 
   const fetchData = useCallback(async () => {
     const tempBusstops = await fetchBusstops();
+    console.log(tempBusstops);
     const tempBuslines = await fetchBuslines("short");
     if (isSubscribed) {
       setBusstops(tempBusstops);
