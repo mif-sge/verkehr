@@ -15,3 +15,6 @@ WITH e,
     UNWIND members as m
     MATCH(w:Ways) WHERE w.id=m.ref
     MERGE (busline)-[rn:VIA]->(w)
+    WITH busline
+    match (busline)-[v:VIA]-(n:Nodes)-[l:LOCATES_ON]-(bs:Bus_Stops)
+    MERGE (busline)-[so:STOPS_ON]->(bs)
