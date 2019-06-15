@@ -14,7 +14,7 @@ import { routes, routeNames } from '../routes/routes';
 
 import { HomeOutlined, MapOutlined, ChevronLeft, DirectionsOutlined, Menu } from '@material-ui/icons';
 
-import { calculateRoute, fetchBusstops } from '../backendCommunication/fetchRequests';
+import { calculateRoute, fetchBusstops, fetchBuslines } from '../backendCommunication/fetchRequests';
 
 
 /**
@@ -31,6 +31,7 @@ function App(props) {
 
   // busline to show at the map
   const [busline, setBusline] = useState("");
+  const [buslines, setBuslines] = useState([]);
 
   // show/hide hospital, mall and bus stop markers
   const [hospitalMarker, setHospitalMarker] = useState(true);
@@ -47,8 +48,10 @@ function App(props) {
 
   const fetchData = useCallback(async () => {
     const tempBusstops = await fetchBusstops();
+    const tempBuslines = await fetchBuslines("short");
     if (isSubscribed) {
       setBusstops(tempBusstops);
+      setBuslines(tempBuslines);
     }
   }, [isSubscribed]);
 
@@ -101,8 +104,7 @@ function App(props) {
           <MenuItem value="">
             <em>- Buslinie auswählen -</em>
           </MenuItem>
-          <MenuItem value={1}>Linie 1</MenuItem>
-          <MenuItem value={2}>Linie 2</MenuItem>
+          {buslines.map(busline => ( <MenuItem value={busline.id} key={busline.id}>{busline.name}</MenuItem>))}
         </Select>
       </FormControl>
     </Grid>

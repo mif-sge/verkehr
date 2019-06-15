@@ -31,8 +31,6 @@ function StreetMap(props) {
         fetchData();
         return () => (setIsSubscribed(false));
     }, [fetchData]);
-    const bla = buslines[0];
-    if (bla) console.log(bla["coordinates"]);
 
     return (
         <Map center={position} zoom={13} className={classes.map}>
@@ -43,8 +41,7 @@ function StreetMap(props) {
             <Marker position={position}>
                 <Popup>FH Bielefeld,<br />Campus Minden</Popup>
             </Marker>
-            <latLngList></latLngList>
-            {buslines ? <Polyline positions={buslines[0]["coordinates"].map(waypoint => [waypoint.lat, waypoint.lng])}></Polyline> : null}
+            {buslines.length > 0 ? buslines.map(busline => <Polyline positions={busline["coordinates"].map(waypoint => [waypoint.lat, waypoint.lon])}></Polyline>):null}
         </Map>
     );
 }
