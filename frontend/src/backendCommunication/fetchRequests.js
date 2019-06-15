@@ -28,14 +28,14 @@ export async function fetchBuslines(requestMode) {
         return [
             {
                 "id": 1,
-                "name": "Campus zu Bahnhof",
+                "name": "Vom Campus zum Bahnhof",
                 "busstops": [
                     1,
                     2
                 ]
             }, {
                 "id": 2,
-                "name": "Bahnhof zu Campus",
+                "name": "Vom Bahnhof zum Campus",
                 "busstops": [
                     2,
                     3
@@ -46,7 +46,7 @@ export async function fetchBuslines(requestMode) {
     else return [
         {
             "id": 1,
-            "name": "Campus zu Bahnhof",
+            "name": "Vom Campus zum Bahnhof",
             "busstops": [
                 1,
                 2
@@ -567,7 +567,7 @@ export async function fetchBuslines(requestMode) {
             ]
         }, {
             "id": 2,
-            "name": "Bahnhof zu Campus",
+            "name": "Vom Bahnhof zum Campus",
             "busstops": [
                 2,
                 3

@@ -15,6 +15,8 @@ const position = [52.2965164, 8.9057191];
  * creates the Open Street Map
  */
 function StreetMap(props) {
+
+    console.log(props);
     const { classes } = props;
     const [buslines, setBuslines] = useState([]);
 
@@ -41,7 +43,7 @@ function StreetMap(props) {
             <Marker position={position}>
                 <Popup>FH Bielefeld,<br />Campus Minden</Popup>
             </Marker>
-            {buslines.length > 0 ? buslines.map(busline => <Polyline positions={busline["coordinates"].map(waypoint => [waypoint.lat, waypoint.lon])}></Polyline>):null}
+            {buslines.length > 0 ? buslines.map(busline => <Polyline positions={busline["coordinates"].map(waypoint => [waypoint.lat, waypoint.lon])}></Polyline>) : null}
         </Map>
     );
 }
