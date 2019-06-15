@@ -150,8 +150,8 @@ describe("The App component,", () => {
     });
 
     describe('should always be able to fetch the busstops from the server.', () => {
-      it('Therefore the fetch request should not fail.', () => {
-        const response = fetchBusstops();
+      it('Therefore the fetch request should not fail.', async () => {
+        const response = await fetchBusstops();
         expect(response).not.toEqual([]);
         expect(response.length).toBeGreaterThan(0);
         response.forEach((busstop) => {
