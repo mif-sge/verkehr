@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: vk-frontend
+  labels:
+    run: vk-frontend
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+  selector:
+    run: vk-frontend
+  type: LoadBalancer

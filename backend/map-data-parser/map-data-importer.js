@@ -1,0 +1,67 @@
+var request=require("request");
+
+var fs = require('fs');
+
+require.extensions['.cypher'] = function (module, filename) {
+    module.exports = fs.readFileSync(filename, 'utf8');
+};
+const dataJSON = require("../../data/openstreetmap-data-osm.json");
+const neo4jUrl = "http://neo4j:test@localhost:7474" + "/db/data/transaction/commit";
+let cypherScriptsDir = "./cypher-scripts/";
+let cypherQueries = fs.readdirSync('./cypher-scripts/');
+let initCypherScriptName= "import-init.cypher";
+
+if(!cypherQueries.includes(initCypherScriptName)){
+  console.log("InitScript " +initCypherScriptName+" not found" );
+  return;
+}
+cypherQueries = cypherQueries.filter(item => item !== initCypherScriptName)
+let cypherQueryInit = require(cypherScriptsDir+initCypherScriptName);
+
+/**
+ * Send data to neo4j data bank with initial cypher script  to import nodes and ways into data bank.
+ * If init script wars succeseful, send other cypherscripts and data to neo4j to create other items, that depends on nodes and ways
+ * @param  {[type]} cypherQueryInit initial script for neo4j, schould be processed before other scripts.
+ * @param  {[type]} json            data to import into neo4j
+ * @return {[type]}                 errors
+ */
+cypher(cypherQueryInit,{json:dataJSON})
+.then(json => {
+  for(let file of cypherQueries) {
+    query=require(cypherScriptsDir+file);
+    cypher(query,{json:dataJSON});
+  }
+})
+.catch(err => {
+  console.log(err);
+})
+
+/**
+ * POST-Method sending Cypher script with dataJSON to neo4j database.
+ *
+ * @param  {String} query  cypher script with querry for neo4j
+ * @param  {String} params data to import into neo4j
+ * @return {Promise}        Resolve: returning body of response; Reject: returning error description
+ */
+function cypher(query,params) {
+	const options = {
+		url: neo4jUrl,
+		method: "POST",
+		json: {statements:[{statement:query,parameters:params}]}
+	}
+
+	return new Promise((resolve, reject) => {
+		request(options, (err, res, body) => {
+			if(err) {
+				reject(err);
+				return;
+			}
+			if(res.statusCode >= 200 && res.statusCode < 300) {
+				resolve(body);
+				return;
+			}
+      reject(res.statusCode+"");
+      return;
+		})
+	})
+}

@@ -1,4 +1,4 @@
-import { DEMO } from '../backendCommunication/urls';
+import { DEMO } from "./urls";
 
 export async function calculateRoute() {
     const answer = await fetch(DEMO, {

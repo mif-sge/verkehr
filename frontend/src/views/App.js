@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { style } from '../assest/styles/AppStyle';
@@ -7,9 +7,9 @@ import '../assest/css/App.css';
 import { AppBar, Button, Checkbox, Divider, Drawer, FormControl, FormControlLabel, FormGroup, Grid, IconButton, List, MenuItem, Paper, Select, Toolbar, Typography, Snackbar } from '@material-ui/core';
 import ListItemLink from '../components/ListItemLink';
 import InfoLabel from '../components/InfoLabel';
-import SnackbarContentWrapper from '../components/SnackbarContentWrapper';
+import SnackbarContent from '../components/SnackbarContent';
 
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { routes, routeNames } from '../routes/routes';
 
 import { HomeOutlined, MapOutlined, ChevronLeft, DirectionsOutlined, Menu } from '@material-ui/icons';
@@ -43,14 +43,19 @@ function App(props) {
 
   const [busstops, setBusstops] = useState([]);
 
+  const [isSubscribed, setIsSubscribed] = useState(true);
+
+  const fetchData = useCallback(async () => {
+    const tempBusstops = await fetchBusstops();
+    if (isSubscribed) {
+      setBusstops(tempBusstops);
+    }
+  }, [isSubscribed]);
+
   useEffect(() => {
     fetchData();
-  }, []);
-
-  async function fetchData() {
-    console.log("Data detched");
-    setBusstops(await fetchBusstops());
-  }
+    return () => (setIsSubscribed(false));
+  }, [fetchData]);
 
   function checkIfArrayHasContent(array) {
     if (Array.isArray(array) && array.length) {
@@ -80,19 +85,19 @@ function App(props) {
 
   const appHeader = <AppBar className={classes.header} position="static">
     <Toolbar>
-      <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" onClick={() => setOpen(true)}>
+      <IconButton id="openMenuButton" className={classes.menuButton} color="inherit" aria-label="Menu" onClick={() => setOpen(true)}>
         <Menu />
       </IconButton>
       <Route>
-        {({ location }) => (<Typography variant="h6" color="inherit">{setPathname(location.pathname)}{routeNames[pathname]}</Typography>)}
+        {({ location }) => (<Typography id="pageHeaderTypography" variant="h6" color="inherit">{setPathname(location.pathname)}{routeNames[pathname]}</Typography>)}
       </Route>
     </Toolbar>
   </AppBar>
 
-  const mapSubmenu = <Grid container spacing={16} className={classes.mapSubMenu}>
+  const mapSubMenu = <Grid id="mapSubMenu" container spacing={2} className={classes.mapSubMenu}>
     <Grid item xs={12}>
       <FormControl className={classes.busDropDown} >
-        <Select value={busline} onChange={(e) => setBusline(e.target.value)} displayEmpty name="age">
+        <Select value={busline} onChange={(e) => setBusline(e.target.value)} displayEmpty name="busline">
           <MenuItem value="">
             <em>- Buslinie auswählen -</em>
           </MenuItem>
@@ -119,12 +124,12 @@ function App(props) {
     </Grid>
   </Grid>
 
-  const planSubMenu = <Paper className={classes.planSubMenu}>
+  const planSubMenu = <Paper id="planSubMenu" className={classes.planSubMenu}>
     <Grid container spacing={0}>
       <Grid item xs={12}>
         <Typography variant="h6" gutterBottom style={{ paddingLeft: 8 }}>Route</Typography>
       </Grid>
-      <Grid item xs={12} container spacing={16} style={{ margin: 0 }}>
+      <Grid item xs={12} container spacing={2} style={{ margin: 0 }}>
         <Grid item xs={12} container spacing={0}>
           <Grid item xs={12}>
             <Typography variant="overline" gutterBottom>von</Typography>
@@ -156,7 +161,7 @@ function App(props) {
           </Grid>
         </Grid>
         <Grid item xs={12}>
-          <Button disabled={checkIfRouteCalculationButtonShouldBeDisabled() ? true : false} variant="contained" color="primary" onClick={calculateRouteClicked}>Route berechnen</Button>
+          <Button id="routeCalculationButton" disabled={checkIfRouteCalculationButtonShouldBeDisabled() ? true : false} variant="contained" color="primary" onClick={calculateRouteClicked}>Route berechnen</Button>
         </Grid>
         {checkIfInfoTextShouldBeShown() ? <Grid item xs={12}>
           <InfoLabel />
@@ -167,36 +172,37 @@ function App(props) {
 
   //main page where all components wre put together
   return (
-    <Router>
+    <Fragment>
       <div className={classes.root}>
         {appHeader}
 
         <Drawer className={classes.sidebar} open={open} onClose={() => setOpen(false)}>
           <div tabIndex={0} role="button" onKeyDown={() => setOpen(false)}>
             <div className={classes.sidebarHeader}>
-              <IconButton onClick={() => setOpen(false)}>
+              <IconButton id="closeMenuButton" onClick={() => setOpen(false)}>
                 <ChevronLeft />
               </IconButton>
             </div>
             <List className={classes.sidebarBody}>
               <Divider />
-              <ListItemLink to="/" primary={routeNames["/"]} icon={<HomeOutlined />} />
+              <ListItemLink id="homeLink" to="/" primary={routeNames["/"]} icon={<HomeOutlined />} />
               <Divider />
-              <ListItemLink to="/map" primary={routeNames["/map"]} icon={<MapOutlined />} />
+              <ListItemLink id="mapLink" to="/map" primary={routeNames["/map"]} icon={<MapOutlined />} />
               {pathname === "/map" ? <Divider /> : null}
-              {pathname === "/map" ? mapSubmenu : null}
+              {pathname === "/map" ? mapSubMenu : null}
               <Divider />
-              <ListItemLink to="/plan" primary={routeNames["/plan"]} icon={<DirectionsOutlined />} />
+              <ListItemLink id="planLink" to="/plan" primary={routeNames["/plan"]} icon={<DirectionsOutlined />} />
               {pathname === "/plan" ? <Divider /> : null}
               {pathname === "/plan" ? planSubMenu : null}
               <Divider />
             </List>
-            {routes.map((route, index) => (<Route key={index} path={route.path} exact={route.exact} component={route.sidebar} />))}
           </div>
         </Drawer>
 
         <Grid container className={classes.body}>
-          {routes.map((route, index) => (<Route key={index} path={route.path} exact={route.exact} component={route.component} />))}
+          <Switch>
+            {routes.map((route, index) => (<Route key={index} path={route.path} exact={route.exact} component={route.component} />))}
+          </Switch>
         </Grid>
       </div>
       <Snackbar
@@ -208,13 +214,13 @@ function App(props) {
         autoHideDuration={0}
         onClose={fetchData}
       >
-        <SnackbarContentWrapper
-          onClose={() => setBusstops([{id: 1, name: "Test"}])}
+        <SnackbarContent
+          onClose={() => setBusstops([{ id: 1, name: "Test" }])}
           variant="refresh"
           message={<div>Daten konnte nicht geladen werden!<br /> Bitte versuchen Sie es erneut. </div>}
         />
       </Snackbar>
-    </Router>
+    </Fragment>
   );
 }
 

@@ -11,7 +11,7 @@ let plugin = {
      * The name of the plugin.
      * @type {string}
      */
-    name: 'Main',
+    name: 'Bus',
 
     /**
      * The version of the plugin.
@@ -29,13 +29,13 @@ let plugin = {
         server.route([
             {
                 method: 'GET',
-                path: '/',
-                options: require('./handlers/root')
+                path: '/stops',
+                options: require('./handlers/stops')
             },
             {
                 method: 'GET',
-                path: '/demo',
-                options: require('./handlers/demo')
+                path: '/lines',
+                options: require('./handlers/lines')
             },
             {
                 method: 'GET',
@@ -53,6 +53,6 @@ let plugin = {
 module.exports = {
     plugin,
     routes: {
-        prefix: '/api'
+        prefix: '/api/bus'
     }
 };

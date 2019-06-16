@@ -38,6 +38,14 @@ npm install react-leaflet
 ~~~~
 npm install d3-tube-map
 ~~~~
+### Enzyme
+~~~~
+npm i --save-dev enzyme
+~~~~
+### Enzyme Adapter
+~~~~
+npm i --save-dev enzyme enzyme-adapter-react-16
+~~~~
 <hr><br>
 
 
