@@ -1,5 +1,7 @@
+import { DEMO } from "./urls";
+
 export async function calculateRoute() {
-    const answer = await fetch('/demo', {
+    const answer = await fetch(DEMO, {
         method: 'GET',
         headers: {
             'Accept': 'application/json',

@@ -1,11 +1,13 @@
 version: '3'
 services:
-  frontend:
+  vk-frontend:
     build:
       context: ./frontend
     ports:
       - 80:80
-  backend:
+    depends_on:
+      - vk-backend
+  vk-backend:
     build:
       context: ./backend/trafficnode-server
     ports:

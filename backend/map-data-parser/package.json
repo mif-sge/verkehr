@@ -1,0 +1,27 @@
+{
+  "name": "@smart-city/map-data-parser",
+  "version": "0.0.1",
+  "description": "A Service to parse map data for smart city applications.",
+  "main": "map-data-parser.js",
+  "scripts": {
+    "start": "node map-data-parser.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mif-sge/verkehr.git"
+  },
+  "author": "mif-sge#trafficnode",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mif-sge/verkehr/issues"
+  },
+  "homepage": "https://github.com/mif-sge/verkehr#readme",
+  "publishConfig": {
+    "access": "config"
+  },
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+  }
+}
