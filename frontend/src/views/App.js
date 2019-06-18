@@ -78,8 +78,7 @@ function App(props) {
 
   //onclick
   function calculateRouteClicked() {
-    const route = fetchRoute(busstopFrom, busstopTo);
-    console.log(route);
+    fetchRoute(busstopFrom, busstopTo);
   }
 
   function checkIfRouteCalculationButtonShouldBeDisabled() {

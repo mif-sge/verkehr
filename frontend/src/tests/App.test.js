@@ -149,6 +149,9 @@ describe("The App component,", () => {
       expect(pageHeader.text()).toEqual("Plan");
     });
 
+    // see issue #52 for further details, why this test is currently not in use
+    // link: https://github.com/mif-sge/verkehr/issues/52
+
     /*describe('should always be able to fetch the busstops from the server.', () => {
       it('Therefore the fetch request should not fail.', async () => {
         const response = await fetchBusstops();

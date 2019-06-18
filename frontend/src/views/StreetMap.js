@@ -49,13 +49,13 @@ function StreetMap(props) {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
             />
-            {busstops.length > 0 && showBusstops === true ? busstops.map(busstop => (<Marker icon={busstopIcon("lightblue")} position={[busstop.lat, busstop.lon]}>
+            {busstops.length > 0 && showBusstops === true ? busstops.map(busstop => (<Marker icon={busstopIcon()} position={[busstop.lat, busstop.lon]}>
                 <Popup>{busstop.name}</Popup>
             </Marker>)) : null}
-            {malls.length > 0 && showMalls === true ? malls.map(mall => (<Marker icon={mallIcon("yellow")} position={[mall.lat, mall.lon]}>
+            {malls.length > 0 && showMalls === true ? malls.map(mall => (<Marker icon={mallIcon()} position={[mall.lat, mall.lon]}>
                 <Popup>{mall.name}</Popup>
             </Marker>)) : null}
-            {hospitals.length > 0 && showHospitals === true ? hospitals.map(hospital => (<Marker icon={hospitalIcon("red")} position={[hospital.lat, hospital.lon]}>
+            {hospitals.length > 0 && showHospitals === true ? hospitals.map(hospital => (<Marker icon={hospitalIcon()} position={[hospital.lat, hospital.lon]}>
                 <Popup>{hospital.name}</Popup>
             </Marker>)) : null}
             {buslines.length > 0 ? buslines.filter(function (busline) {

@@ -4,7 +4,7 @@ import ReactDOMServer from 'react-dom/server';
 
 class HospitalIcon extends Component {
     render() {
-        const color = this.props.color || "black";
+        const color = this.props.color || "red";
         return (
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
                 <path fill="none" d="M0 0h24v24H0V0z" />
@@ -24,7 +24,7 @@ export function hospitalIcon(color) {
 
 class BusstopIcon extends Component {
     render() {
-        const color = this.props.color || "black";
+        const color = this.props.color || "lightblue";
         return (
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
                 <path fill="none" d="M0 0h24v24H0V0z" />
@@ -48,7 +48,7 @@ export function busstopIcon(color) {
 
 class MallIcon extends Component {
     render() {
-        const color = this.props.color || "black";
+        const color = this.props.color || "yellow";
         return (
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
                 <path fill="none" d="M0 0h24v24H0V0z" />
