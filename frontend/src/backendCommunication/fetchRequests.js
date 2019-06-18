@@ -1,26 +1,15 @@
-import { DEMO, SHORTBUSSTOPS } from "./urls";
+import { SHORTBUSSTOPS, BUSSTOPS, HOSPITALS, MALLS, SHORTBUSLINES, BUSLINES, ROUTE } from "./urls";
 
-export async function calculateRoute() {
-    const answer = await fetch(DEMO, {
+export async function fetchBusstops(requestMode) {
+    /*const URL = requestMode === "short" ? SHORTBUSSTOPS : BUSSTOPS;
+    const answer = await fetch(URL, {
         method: 'GET',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         }
     });
-    console.log(await answer);
-}
-
-export async function fetchBusstops() {
-    const answer = await fetch(SHORTBUSSTOPS, {
-        method: 'GET',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        }
-    });
-    //console.log(await answer);
-    //return await answer.json();
+    //return await answer.json();*/
     return [
         {
             "id": 1,
@@ -600,7 +589,66 @@ export async function fetchBusstops() {
     ]
 }
 
+export async function fetchHospitals() {
+    /*const answer = await fetch(HOSPITALS, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    });
+    //return await answer.json();*/
+    return [
+        {
+            "id": 1,
+            "name": "Johannes Wesling Klinikum",
+            "lat": 52.2606695,
+            "lon": 8.8866916,
+        }
+    ];
+}
+
+export async function fetchMalls() {
+    /*const answer = await fetch(MALLS, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    });
+    //return await answer.json();*/
+    return [
+        {
+            "id": 1,
+            "name": "Obermarktpassage",
+            "lat": 52.2857872,
+            "lon": 8.9152269
+        },
+        {
+            "id": 2,
+            "name": "E-Center",
+            "lat": 52.2623475,
+            "lon": 8.9010628
+        },
+        {
+            "id": 3,
+            "name": "Porta Markt",
+            "lat": 52.2600871,
+            "lon": 8.8997814
+        }
+    ];
+}
+
 export async function fetchBuslines(requestMode) {
+    /*const URL = requestMode === "short" ? SHORTBUSLINES : BUSLINES;
+    const answer = await fetch(URL, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    });
+    //return await answer.json();*/
     if (requestMode === "short") {
         return [
             {
@@ -1633,4 +1681,18 @@ export async function fetchBuslines(requestMode) {
             ]
         }
     ]
+}
+
+export async function fetchRoute(busstopFrom, busstopTo) {
+    /*
+    const URL = ROUTE(busstopFrom, busstopTo);
+    const answer = await fetch(URL, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    });
+    //return await answer.json();*/
+    return [];
 }

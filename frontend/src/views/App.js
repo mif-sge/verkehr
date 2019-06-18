@@ -13,7 +13,7 @@ import { Route, Switch } from "react-router-dom";
 
 import { HomeOutlined, MapOutlined, ChevronLeft, DirectionsOutlined, Menu } from '@material-ui/icons';
 
-import { calculateRoute, fetchBusstops, fetchBuslines } from '../backendCommunication/fetchRequests';
+import { fetchRoute, fetchBusstops, fetchBuslines } from '../backendCommunication/fetchRequests';
 
 import StreetMap from './StreetMap';
 import Home from './Home';
@@ -78,7 +78,8 @@ function App(props) {
 
   //onclick
   function calculateRouteClicked() {
-    calculateRoute();
+    const route = fetchRoute(busstopFrom, busstopTo);
+    console.log(route);
   }
 
   function checkIfRouteCalculationButtonShouldBeDisabled() {
@@ -228,7 +229,7 @@ function App(props) {
         onClose={fetchData}
       >
         <SnackbarContent
-          onClose={() => setBusstops([{ id: 1, name: "Test" }])}
+          onClose={fetchData}
           variant="refresh"
           message={<div>Daten konnte nicht geladen werden!<br /> Bitte versuchen Sie es erneut. </div>}
         />
