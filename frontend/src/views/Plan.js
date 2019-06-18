@@ -1,20 +1,32 @@
-import React, { useEffect, useState, createRef } from 'react';
+import React, { useEffect, useState, createRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 
 import * as d3 from 'd3';
 import * as tubeMap from "d3-tube-map";
-import tubeData from '../tubedata/tubedata';
 import style from '../assest/styles/PlanStyle';
 import { Grid } from '@material-ui/core';
+
+import { fetchBuslines } from '../backendCommunication/fetchRequests';
+import { generateTubemap } from '../tubedata/TubeDataGenerator';
 
 function Plan(props) {
 
     const { classes } = props;
-    const [tubemapIsSet, setTubemapIsSet] = useState(false);
     const tubeMapRef = createRef();
 
-    function setTubemap() {
+    const [tubemapIsSet, setTubemapIsSet] = useState(false);
+    const [buslines, setBuslines] = useState([]);
+    const [isSubscribed, setIsSubscribed] = useState(true);
+
+    const fetchData = useCallback(async () => {
+        const tempBuslines = await fetchBuslines();
+        if (isSubscribed) {
+            setBuslines(tempBuslines);
+        }
+    }, [isSubscribed]);
+
+    const setTubemap = useCallback(() => {
         if (!tubemapIsSet) {
             setTubemapIsSet(true);
             var container = d3.select('#tubeMap');
@@ -27,20 +39,20 @@ function Plan(props) {
                 .height(height)
                 .margin({
                     top: height / 50,
-                    right: width / 7,
+                    right: width / 5,
                     bottom: height / 10,
-                    left: width / 7,
+                    left: width / 5,
                 });
 
-            container.datum(tubeData).call(map);
+            container.datum(generateTubemap(buslines)).call(map);
         }
+    }, [tubeMapRef, tubemapIsSet, buslines]);
 
-    }
-
-    //gets called at page load once
     useEffect(() => {
+        fetchData();
         setTubemap();
-    });
+        return () => (setIsSubscribed(false));
+    }, [fetchData, setTubemap]);
 
     return (
         <Grid container className={classes.root}>
