@@ -1,4 +1,4 @@
-import { SHORTBUSSTOPS, BUSSTOPS, HOSPITALS, MALLS, SHORTBUSLINES, BUSLINES, ROUTE } from "./urls";
+//import { SHORTBUSSTOPS, BUSSTOPS, HOSPITALS, MALLS, SHORTBUSLINES, BUSLINES, ROUTE } from "./urls";
 
 export async function fetchBusstops(requestMode) {
     /*const URL = requestMode === "short" ? SHORTBUSSTOPS : BUSSTOPS;
