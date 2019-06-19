@@ -31,7 +31,7 @@ export async function fetchBusstops(requestMode) {
         },
         {
             "id": 4,
-            "name": "Gertrudstraße",
+            "name": "Gertrudstraße 2",
             "lat": 52.2860843,
             "lon": 8.8974831
         },
@@ -43,7 +43,7 @@ export async function fetchBusstops(requestMode) {
         },
         {
             "id": 6,
-            "name": "Ringstraße/Königstraße",
+            "name": "Ringstraße/Königstraße 2",
             "lat": 52.2881181,
             "lon": 8.9021904
         },
@@ -79,7 +79,7 @@ export async function fetchBusstops(requestMode) {
         },
         {
             "id": 12,
-            "name": "Königswall / Aula",
+            "name": "Königswall / Aula 2",
             "lat": 52.2880387,
             "lon": 8.9106601
         },
@@ -121,7 +121,7 @@ export async function fetchBusstops(requestMode) {
         },
         {
             "id": 19,
-            "name": "Grimpenwall",
+            "name": "Grimpenwall 2",
             "lat": 52.2918234,
             "lon": 8.9210917
         },
@@ -175,49 +175,49 @@ export async function fetchBusstops(requestMode) {
         },
         {
             "id": 28,
-            "name": "Minden ZOB",
+            "name": "Minden ZOB 2",
             "lat": 52.2865595,
             "lon": 8.9174432
         },
         {
             "id": 29,
-            "name": "Minden ZOB",
+            "name": "Minden ZOB 3",
             "lat": 52.2865981,
             "lon": 8.9171944
         },
         {
             "id": 30,
-            "name": "Minden ZOB",
+            "name": "Minden ZOB 4",
             "lat": 52.2870979,
             "lon": 8.917544
         },
         {
             "id": 31,
-            "name": "Minden ZOB",
+            "name": "Minden ZOB 5",
             "lat": 52.2864378,
             "lon": 8.9168083
         },
         {
             "id": 32,
-            "name": "Minden ZOB",
+            "name": "Minden ZOB 6",
             "lat": 52.2868258,
             "lon": 8.9174721
         },
         {
             "id": 33,
-            "name": "Minden ZOB",
+            "name": "Minden ZOB 7",
             "lat": 52.2869711,
             "lon": 8.9179278
         },
         {
             "id": 34,
-            "name": "Minden ZOB",
+            "name": "Minden ZOB 8",
             "lat": 52.2869575,
             "lon": 8.9180499
         },
         {
             "id": 35,
-            "name": "Minden ZOB",
+            "name": "Minden ZOB 9",
             "lat": 52.2871281,
             "lon": 8.9177682
         },
@@ -259,7 +259,7 @@ export async function fetchBusstops(requestMode) {
         },
         {
             "id": 42,
-            "name": "Simeonsplatz",
+            "name": "Simeonsplatz 2",
             "lat": 52.2846327,
             "lon": 8.9130071
         },
@@ -271,13 +271,13 @@ export async function fetchBusstops(requestMode) {
         },
         {
             "id": 44,
-            "name": "Minden, Bahnhof",
+            "name": "Minden, Bahnhof 2",
             "lat": 52.2900991,
             "lon": 8.9355701
         },
         {
             "id": 45,
-            "name": "Minden, Bahnhof",
+            "name": "Minden, Bahnhof 3",
             "lat": 52.2899632,
             "lon": 8.9354813
         },
@@ -295,7 +295,7 @@ export async function fetchBusstops(requestMode) {
         },
         {
             "id": 48,
-            "name": "Minden ZOB",
+            "name": "Minden ZOB 10",
             "lat": 52.2863146,
             "lon": 8.9171109
         },
@@ -331,7 +331,7 @@ export async function fetchBusstops(requestMode) {
         },
         {
             "id": 54,
-            "name": "Nettelbeckstraße",
+            "name": "Nettelbeckstraße 2",
             "lat": 52.2948766,
             "lon": 8.901353
         },
@@ -409,7 +409,7 @@ export async function fetchBusstops(requestMode) {
         },
         {
             "id": 67,
-            "name": "Hermann-Schoppe-Straße",
+            "name": "Hermann-Schoppe-Straße 2",
             "lat": 52.3009304,
             "lon": 8.9095332
         },
@@ -499,13 +499,13 @@ export async function fetchBusstops(requestMode) {
         },
         {
             "id": 82,
-            "name": "Minden ZOB",
+            "name": "Minden ZOB 11",
             "lat": 52.2863865,
             "lon": 8.9162957
         },
         {
             "id": 83,
-            "name": "Minden ZOB",
+            "name": "Minden ZOB 12",
             "lat": 52.2865637,
             "lon": 8.9165613
         },
@@ -517,12 +517,13 @@ export async function fetchBusstops(requestMode) {
         },
         {
             "id": 85,
-            "name": "Martin-Luther-Straße",
+            "name": "Martin-Luther-Straße 2",
             "lat": 52.303689,
             "lon": 8.8978019
         },
         {
             "id": 86,
+            "name": "Pausenhaltestelle",
             "lat": 52.2845997,
             "lon": 8.9153744
         },
@@ -540,13 +541,13 @@ export async function fetchBusstops(requestMode) {
         },
         {
             "id": 89,
-            "name": "Fachhochschule",
+            "name": "Fachhochschule hin",
             "lat": 52.2979367,
             "lon": 8.904148
         },
         {
             "id": 90,
-            "name": "Fachhochschule",
+            "name": "Fachhochschule zurück",
             "lat": 52.2973757,
             "lon": 8.9038758
         },
@@ -558,7 +559,7 @@ export async function fetchBusstops(requestMode) {
         },
         {
             "id": 92,
-            "name": "Steinstraße",
+            "name": "Steinstraße 2",
             "lat": 52.2934748,
             "lon": 8.9065741
         },
@@ -570,7 +571,7 @@ export async function fetchBusstops(requestMode) {
         },
         {
             "id": 94,
-            "name": "Bismarckstraße",
+            "name": "Bismarckstraße 2",
             "lat": 52.2915431,
             "lon": 8.8983491
         },
@@ -582,7 +583,7 @@ export async function fetchBusstops(requestMode) {
         },
         {
             "id": 96,
-            "name": "Hardenbergstraße",
+            "name": "Hardenbergstraße 2",
             "lat": 52.2878993,
             "lon": 8.9049688
         }
@@ -655,15 +656,15 @@ export async function fetchBuslines(requestMode) {
                 "id": 1,
                 "name": "Vom Campus zum Bahnhof",
                 "busstops": [
-                    1,
-                    2
+                    90,
+                    45
                 ]
             }, {
                 "id": 2,
                 "name": "Vom Bahnhof zum Campus",
                 "busstops": [
-                    2,
-                    3
+                    45,
+                    89
                 ]
             }
         ]
@@ -673,8 +674,8 @@ export async function fetchBuslines(requestMode) {
             "id": 1,
             "name": "Vom Campus zum Bahnhof",
             "busstops": [
-                1,
-                2
+                90,
+                45
             ],
             "coordinates": [
                 {
@@ -1194,8 +1195,8 @@ export async function fetchBuslines(requestMode) {
             "id": 2,
             "name": "Vom Bahnhof zum Campus",
             "busstops": [
-                2,
-                3
+                45,
+                89
             ],
             "coordinates": [
                 {

@@ -7,7 +7,7 @@ import * as tubeMap from "d3-tube-map";
 import style from '../assest/styles/PlanStyle';
 import { Grid } from '@material-ui/core';
 
-import { fetchBuslines } from '../backendCommunication/fetchRequests';
+import { fetchBuslines, fetchBusstops } from '../backendCommunication/fetchRequests';
 import { generateTubemap } from '../tubedata/TubeDataGenerator';
 
 function Plan(props) {
@@ -16,18 +16,22 @@ function Plan(props) {
     const tubeMapRef = createRef();
 
     const [tubemapIsSet, setTubemapIsSet] = useState(false);
-    const [buslines, setBuslines] = useState([]);
     const [isSubscribed, setIsSubscribed] = useState(true);
 
+    const [busstops, setBusstops] = useState([]);
+    const [buslines, setBuslines] = useState([]);
+
     const fetchData = useCallback(async () => {
+        const tempBusstops = await fetchBusstops();
         const tempBuslines = await fetchBuslines();
         if (isSubscribed) {
+            setBusstops(tempBusstops);
             setBuslines(tempBuslines);
         }
     }, [isSubscribed]);
 
     const setTubemap = useCallback(() => {
-        if (!tubemapIsSet) {
+        if (!tubemapIsSet && buslines.length > 0 && busstops.length > 0) {
             setTubemapIsSet(true);
             var container = d3.select('#tubeMap');
 
@@ -44,9 +48,9 @@ function Plan(props) {
                     left: width / 5,
                 });
 
-            container.datum(generateTubemap(buslines)).call(map);
+            container.datum(generateTubemap(buslines, busstops)).call(map);
         }
-    }, [tubeMapRef, tubemapIsSet, buslines]);
+    }, [tubeMapRef, tubemapIsSet, buslines, busstops]);
 
     useEffect(() => {
         fetchData();
