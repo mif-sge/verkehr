@@ -1,0 +1,10 @@
+numpy
+geopy
+ortools
+scikit-learn
+joblib
+grpcio
+grpcio-tools
+neo4j
+neomodel
+python-dotenv
