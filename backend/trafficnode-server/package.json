@@ -30,7 +30,9 @@
     "mqtt": "2.18.8",
     "neode": "0.2.15",
     "winston": "3.2.1",
-    "moment": "2.24.0"
+    "moment": "2.24.0",
+    "@grpc/proto-loader": "0.5.1",
+    "grpc": "1.21.1"
   },
   "devDependencies": {
     "@hapi/code": "5.3.1",

@@ -1,0 +1,90 @@
+syntax = "proto3";
+
+package computing;
+
+/*
+ * RoutePlanning is a service for routes optimization.
+ */
+service RoutePlanning {
+  rpc optimizeRoutes(RoutesOptimizationRequest) returns (RoutesOptimizationResponse) {}
+}
+
+/*
+ * RoutePlanning is a service for navigation purposes.
+ */
+service Navigation {
+  rpc shortestPath(NavigationRequest) returns (NavigationResponse) {}
+}
+
+/*
+ * RoutePlanning is a service for predicting occupancies.
+ */
+service OccupancyPrediction {
+    rpc predict(OccupancyPredictionRequest) returns (OccupancyPredictionResponse) {}
+}
+
+/*
+ * OccupancyPredictionRequest represents a request to the AI predicting occupancies of stops.
+ */
+message OccupancyPredictionRequest {
+    int32 routeId = 1;
+    int32 stopId = 2;
+    int64 timestamp = 3;
+}
+
+/*
+ * OccupancyPredictionResponse represents a response from the AI predicting occupancies of stops.
+ */
+message OccupancyPredictionResponse {
+    int32 boardings = 1;
+}
+
+/*
+ * Route represents a route consisting of steps between nodes.
+ */
+message Route {
+    int32 distance = 1;
+    repeated int32 steps = 2;
+}
+
+/*
+ * RoutesOptimizationResponse represents a response from the routes optimization engine.
+ */
+message RoutesOptimizationResponse {
+    repeated Route routes = 1;
+}
+
+/*
+ * Node represents a location consisting of name, latitude and longitude.
+ */
+message Node {
+    string name = 1;
+    float lat = 2;
+    float lon = 3;
+}
+
+/*
+ * RoutesOptimizationRequest represents a request to the routes optimization engine.
+ */
+message RoutesOptimizationRequest {
+    int32 depot = 1;
+    int32 vehicles = 2;
+    int32 maxDistance = 3;
+    repeated Node nodes = 4;
+}
+
+/*
+ * NavigationRequest represents a request to the navigation engine.
+ */
+message NavigationRequest {
+    int32 startNode = 1;
+    int32 endNode = 2;
+}
+
+/*
+ * NavigationResponse represents a response from the navigation engine.
+ */
+message NavigationResponse {
+    int32 distance = 1;
+    repeated Node nodes = 2;
+}
