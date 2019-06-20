@@ -6,7 +6,7 @@ require.extensions['.cypher'] = function (module, filename) {
     module.exports = fs.readFileSync(filename, 'utf8');
 };
 const dataJSON = require("../../data/openstreetmap-data-osm.json");
-const neo4jUrl = "http://neo4j:test@localhost:7474" + "/db/data/transaction/commit";
+const neo4jUrl = "http://neo4j:test@neo4j:7474" + "/db/data/transaction/commit";
 let cypherScriptsDir = "./cypher-scripts/";
 let cypherQueries = fs.readdirSync('./cypher-scripts/');
 let initCypherScriptName= "import-init.cypher";
