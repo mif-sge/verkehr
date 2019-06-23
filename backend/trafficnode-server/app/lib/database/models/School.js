@@ -1,7 +1,7 @@
 /**
- * The schema of a street.
+ * The schema of a Schools
  */
-let Street = {
+let School = {
 
     /**
      * The unique identification number.
@@ -11,18 +11,14 @@ let Street = {
         type: 'uuid',
         primary: true
     },
-
     /**
      * The name.
      * @type {string}
      */
     name: {
-        type: 'integer'
-    },
-    maxspeed: {
-        type: 'integer'
+        type: 'string'
     }
-    
+
 };
 
-module.exports = Street;
+module.exports = School;
