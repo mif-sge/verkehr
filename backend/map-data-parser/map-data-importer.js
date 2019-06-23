@@ -1,7 +1,7 @@
 var request=require("request");
 
 var fs = require('fs');
-
+const cron = require("node-cron");
 require.extensions['.cypher'] = function (module, filename) {
     module.exports = fs.readFileSync(filename, 'utf8');
 };
@@ -58,17 +58,26 @@ let cypher = function(queryFileName,params) {
  * @param  {[type]} json            data to import into neo4j
  * @return {[type]}                 errors
  */
-cypher(initCypherScriptName,{json:dataJSON})
-.then(json => {
-  let res = new Array(cypherQueries.length);
-  for(let file of cypherQueries) {
-    res.push(cypher(file,{json:dataJSON}));
-  }
-  return Promise.all(res);
-}).then(json => {
-  console.log("start latest cypher script")
-  cypher(buslinesCypherScriptName,{json:dataJSON});
-})
-.catch(err => {
-  console.log(err);
-})
+function seedDatabase(){
+  cypher(initCypherScriptName,{json:dataJSON})
+  .then(json => {
+    cronjob.destroy();
+    let res = new Array(cypherQueries.length);
+    for(let file of cypherQueries) {
+      res.push(cypher(file,{json:dataJSON}));
+    }
+    return Promise.all(res);
+  }).then(json => {
+    console.log("start latest cypher script")
+    return cypher(buslinesCypherScriptName,{json:dataJSON});
+  })
+  .catch(err => {
+    console.log(err);
+  })
+}
+
+let cronjob = cron.schedule("0 */1 * * * *",  () => {
+  seedDatabase();
+}, {
+  scheduled: true
+});

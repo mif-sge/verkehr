@@ -20,8 +20,8 @@
     "access": "config"
   },
   "dependencies": {
-    
+    "node-cron": "^2.0.3",
+    "request": "^2.88.0"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
