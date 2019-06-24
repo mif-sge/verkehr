@@ -4,5 +4,6 @@ WITH e,
   CASE WHEN e.type='node' AND EXISTS(e.tags.shop)  THEN [e] ELSE [] END AS shops
   UNWIND shops as shp
 	  MATCH (p:Position) WHERE p.id=shp.id
-	  MERGE (shop:Shop {name: coalesce(shp.tags.name, "Unknown")})
+	  MERGE (shop:Shop {name: coalesce(shp.tags.name, "Unknown")})  ON CREATE
+    SET shop.id = randomUUID()
 	  MERGE (shop)-[r:LOCATES_ON]->(p)
