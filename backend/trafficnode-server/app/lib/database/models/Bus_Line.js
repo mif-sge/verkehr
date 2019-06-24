@@ -32,7 +32,35 @@ let Bus_Line = {
     },
     via: {
         type: 'string'
-    }
+    },
+    /**
+     * Determines the bus stops of this bus line
+     * @type {relationships}
+     */
+    stopsOn: {
+        type: 'relationships',
+        relationship: 'STOPS_ON',
+        target: 'Bus_Stop'
+    },
+    /**
+     * Determines the positions on the route of this bus line
+     * @type {relationships}
+     */
+    viaPosition: {
+        type: 'relationships',
+        relationship: 'VIA',
+        target: 'Position'
+    },
+    /**
+     * Determines the streets on the route of this bus line
+     * @type {relationships}
+     */
+    viaStreet: {
+        type: 'relationships',
+        relationship: 'VIA',
+        target: 'Street'
+    },
+
 };
 
 module.exports = Bus_Line;

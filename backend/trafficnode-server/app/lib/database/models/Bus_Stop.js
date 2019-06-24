@@ -17,6 +17,16 @@ let Bus_Stop = {
      */
     name: {
         type: 'string'
+    },
+    /**
+     * Determines the position
+     * @type {relationship}
+     */
+    locatesOn: {
+        type: 'relationship',
+        relationship: 'LOCATES_ON',
+        target: 'Position',
+        eager: true
     }
 
 };
