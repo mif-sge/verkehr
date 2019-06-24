@@ -34,12 +34,12 @@ let Bus_Line = {
         type: 'string'
     },
     /**
-     * Determines the bus stops of this bus line
+     * Determines the bus stops this bus line serves
      * @type {relationships}
      */
-    stopsOn: {
+    serves: {
         type: 'relationships',
-        relationship: 'STOPS_ON',
+        relationship: 'SERVES',
         target: 'Bus_Stop'
     },
     /**

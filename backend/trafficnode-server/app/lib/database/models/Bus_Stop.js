@@ -27,7 +27,16 @@ let Bus_Stop = {
         relationship: 'LOCATES_ON',
         target: 'Position',
         eager: true
-    }
+    },
+    /**
+    * Determines the bus lines this bus stop serves
+    * @type {relationships}
+    */
+   serves: {
+       type: 'relationships',
+       relationship: 'SERVES',
+       target: 'Bus_Line'
+   }
 
 };
 
