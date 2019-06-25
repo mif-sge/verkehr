@@ -1,5 +1,5 @@
 'use strict';
-
+const DataService = require('./../../../lib/dataService');
 /**
  * Returns all lines.
  * @param {Request} request The request object.
@@ -7,8 +7,15 @@
  * @returns {Response} The response object.
  */
 let handler = (request, h) => {
-
+    let data = new DataService();
     if(request.query.requestMode === 'short') {
+      return data.getAllWithRelations('Bus_Line').then(result => {
+          return h.response(result).code(200);
+      }).catch(err => {
+          console.log(err);
+          return h.response(err).code(500);
+      });
+      /*
         return h.response([
             {
                 id: 1,
@@ -17,10 +24,15 @@ let handler = (request, h) => {
                     1, 2, 3
                 ]
             }
-        ]).code(200);
+        ]).code(200);*/
     }
-
-    return h.response([
+    return data.getAllWithRelations('Bus_Line').then(result => {
+        return h.response(result).code(200);
+    }).catch(err => {
+        console.log(err);
+        return h.response(err).code(500);
+    });
+    /*return h.response([
         {
             id: 1,
             name: 'Buslinie 1',
@@ -42,7 +54,7 @@ let handler = (request, h) => {
                 }
             ]
         }
-    ]).code(200);
+    ]).code(200);*/
 };
 
 module.exports = {

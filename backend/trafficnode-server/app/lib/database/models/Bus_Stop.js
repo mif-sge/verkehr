@@ -35,7 +35,8 @@ let Bus_Stop = {
    serves: {
        type: 'relationships',
        relationship: 'SERVES',
-       target: 'Bus_Line'
+       target: 'Bus_Line',
+       eager: true
    }
 
 };

@@ -40,7 +40,8 @@ let Bus_Line = {
     serves: {
         type: 'relationships',
         relationship: 'SERVES',
-        target: 'Bus_Stop'
+        target: 'Bus_Stop',
+        eager: true
     },
     /**
      * Determines the positions on the route of this bus line
@@ -49,7 +50,8 @@ let Bus_Line = {
     viaPosition: {
         type: 'relationships',
         relationship: 'VIA',
-        target: 'Position'
+        target: 'Position',
+        eager: true
     },
     /**
      * Determines the streets on the route of this bus line
@@ -58,7 +60,8 @@ let Bus_Line = {
     viaStreet: {
         type: 'relationships',
         relationship: 'VIA',
-        target: 'Street'
+        target: 'Street',
+        eager: true
     },
 
 };
