@@ -5,14 +5,14 @@ WITH e,
   CASE WHEN e.type='way' THEN [e] ELSE [] END AS ways
 
   FOREACH (n IN nodes |
-  	MERGE (node:Nodes {id:n.id}) ON CREATE
-  	SET node.latitude = n.lat, node.longitude = n.lon, node.type= n.type
+  	MERGE (p:Position {id:n.id}) ON CREATE
+  	SET p.latitude = n.lat, p.longitude = n.lon
   )
   FOREACH (w IN ways |
-  	MERGE (way:Ways {id:w.id}) ON CREATE
-  	SET way.type= w.type
+  	MERGE (s:Street {id:w.id}) ON CREATE
+  	SET s.name= coalesce(w.tags.name, "Unknown"), s.maxspeed=coalesce(w.tags.maxspeed, "")
   )
   WITH e, ways
   UNWIND ways as w
-  MATCH (way:Ways), (node:Nodes) WHERE way.id=w.id AND node.id IN w.nodes
-  MERGE (way)-[r:CONNECTS]->(node)
+  MATCH (s:Street), (p:Position) WHERE s.id=w.id AND p.id IN w.nodes
+  MERGE (s)-[r:CONNECTS]->(p)
