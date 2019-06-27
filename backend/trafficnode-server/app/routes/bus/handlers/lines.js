@@ -15,16 +15,6 @@ let handler = (request, h) => {
           console.log(err);
           return h.response(err).code(500);
       });
-      /*
-        return h.response([
-            {
-                id: 1,
-                name: 'Buslinie 1',
-                stops: [
-                    1, 2, 3
-                ]
-            }
-        ]).code(200);*/
     }
     return data.getAllWithRelations('Bus_Line').then(result => {
         return h.response(result).code(200);
@@ -32,29 +22,6 @@ let handler = (request, h) => {
         console.log(err);
         return h.response(err).code(500);
     });
-    /*return h.response([
-        {
-            id: 1,
-            name: 'Buslinie 1',
-            stops: [
-                1, 2, 3
-            ],
-            coordinates: [
-                {
-                    lat: 1,
-                    lon: 1,
-                },
-                {
-                    lat: 3,
-                    lon: 3
-                },
-                {
-                    lat: 1,
-                    lon: 3
-                }
-            ]
-        }
-    ]).code(200);*/
 };
 
 module.exports = {
