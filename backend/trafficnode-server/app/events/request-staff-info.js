@@ -1,3 +1,5 @@
+const logger = require('./../../logger');
+
 module.exports = {
 
     /**
@@ -11,7 +13,7 @@ module.exports = {
      * @type {function}
      */
     onError: (err, eventSystem) => {
-        console.log(err.message);
+        logger.error(err.message);
     },
 
     /**
@@ -19,14 +21,20 @@ module.exports = {
      * @type {function}
      */
     onMessage: (payload, eventSystem) => {
-        let json = JSON.parse(payload.toString());
-
         eventSystem.client.publish('STAFF_INFO_REQUESTED', JSON.stringify({
             id: 'traffic',
             staff: [
                 {
                     employee_type: "construction_worker",
                     count: 42
+                },
+                {
+                    employee_type: "developer",
+                    count: 4
+                },
+                {
+                    employee_type: "controller",
+                    count: 11
                 }
             ]
         }));

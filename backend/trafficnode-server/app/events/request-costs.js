@@ -1,3 +1,5 @@
+const logger = require('./../../logger');
+
 const moment = require('moment');
 
 const dateFormat = "DD.MM.YYYY";
@@ -15,7 +17,7 @@ module.exports = {
      * @type {function}
      */
     onError: (err, eventSystem) => {
-        console.log(err.message);
+        logger.error(err.message);
     },
 
     /**
@@ -40,7 +42,7 @@ module.exports = {
         let costs = {};
 
         months.forEach(value => {
-            costs[value] = 42;
+            costs[value] = Math.floor(Math.random() * 10000 + 5000);
         });
 
         eventSystem.client.publish('COSTS_REQUESTED', JSON.stringify({

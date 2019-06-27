@@ -1,3 +1,5 @@
+const logger = require('./../../logger');
+
 module.exports = {
 
     /**
@@ -11,7 +13,7 @@ module.exports = {
      * @type {function}
      */
     onError: (err, eventSystem) => {
-        console.log(err.message);
+        logger.error(err.message);
     },
 
     /**
@@ -19,18 +21,13 @@ module.exports = {
      * @type {function}
      */
     onMessage: (payload, eventSystem) => {
-        let json = JSON.parse(payload.toString());
-
-        eventSystem.client.publish('INFO_REQUESTED', JSON.stringify({
-            id: 'traffic',
-            name: 'Verkehrsverwaltung',
-            description: 'Verwaltung des Verkehrsnetzes.',
+        eventSystem.client.publish('INFO_REQUESTED', JSON.stringify(Object.assign(require('./../../config/molecule'), {
             state: [
                 {
                     name: "Anzahl der Bushaltestellen",
                     value: 42
                 }
             ]
-        }));
+        })));
     }
 };

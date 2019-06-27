@@ -10,6 +10,7 @@ const Server = require('./server');
 const Prompt = require('./prompt');
 
 const logger = require('./logger');
+const scheduler = require('./scheduler');
 
 // Configures and starts the server.
 Setup.main(async () => {
@@ -38,6 +39,9 @@ Setup.main(async () => {
 
         logger.info(`EventSystem connected to: ${eventSystem.brokerHost}.`);
 
+        // Publishes MOLECULE_STARTED event.
+        eventSystem.client.publish('MOLECULE_STARTED', JSON.stringify(Object.assign(require('./config/molecule'), { timestamp: Date.now() })))
+
         // Dynamically loads events from a directory.
         await eventSystem.withDirectory(path.join(__dirname, 'app', 'events'));
     });
@@ -49,6 +53,9 @@ Setup.main(async () => {
 
     // Makes the event system available.
     server.app.eventSystem = eventSystem;
+
+    // Schedules tasks.
+    scheduler.start();
 
     // Starts command prompt.
     Prompt.create(server);

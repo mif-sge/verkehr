@@ -1,3 +1,8 @@
+const logger = require('./../../logger');
+
+const con = require('./../lib/database/connection');
+const locationtypeToLabelConverter = require('./../util/locationtype-to-label-converter');
+
 module.exports = {
 
     /**
@@ -11,14 +16,40 @@ module.exports = {
      * @type {function}
      */
     onError: (err, eventSystem) => {
-        console.log(err.message);
+        logger.error(err.message);
     },
 
     /**
      * The callback for handling messages.
      * @type {function}
      */
-    onMessage: (payload, eventSystem) => {
-        console.log(payload.toString());
+    onMessage: async (payload, eventSystem) => {
+        
+        let json = null;
+
+        try {
+            json = JSON.parse(payload.toString());
+        } catch {
+            logger.warn("Wrong format.");
+            return;
+        }
+
+        let label = locationtypeToLabelConverter(json.type);
+
+        if(!label) {
+            return;
+        }
+
+        let position = await con.create('Position', {
+            latitude: json.position.lat,
+            longitude: json.position.lon,
+        });
+
+        let node = await con.create(label, {
+            // smartcityid: json.id,
+            name: json.name
+        });
+
+        await node.relateTo(position, 'locatesOn', {});
     }
 };

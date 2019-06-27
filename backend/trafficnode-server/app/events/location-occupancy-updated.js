@@ -1,3 +1,8 @@
+const logger = require('./../../logger');
+
+const con = require('./../lib/database/connection');
+const occupancyValidator = require('./../util/occupancy-validator');
+
 module.exports = {
 
     /**
@@ -11,14 +16,28 @@ module.exports = {
      * @type {function}
      */
     onError: (err, eventSystem) => {
-        console.log(err.message);
+        logger.error(err.message);
     },
 
     /**
      * The callback for handling messages.
      * @type {function}
      */
-    onMessage: (payload, eventSystem) => {
-        console.log(payload.toString());
+    onMessage: async (payload, eventSystem) => {
+
+        let json = null;
+
+        try {
+            json = JSON.parse(payload.toString());
+        } catch {
+            logger.warn("Wrong format.");
+            return;
+        }
+
+        if(!occupancyValidator(json.occupancy)) {
+            return;
+        }
+
+        await con.cypher('MATCH (h { id: {id} }) SET h.occupancy = {occupancy}', { id: json.id, occupancy: json.occupancy });
     }
 };
