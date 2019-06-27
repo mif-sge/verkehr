@@ -5,5 +5,5 @@ WITH e,
   UNWIND shops as shp
 	  MATCH (p:Position) WHERE p.id=shp.id
 	  MERGE (shop:Shop {name: coalesce(shp.tags.name, "Unknown")})  ON CREATE
-    SET shop.id = randomUUID()
+    SET shop.id = randomUUID(), shop.SmartCityId="", shop.occupancy="NONE"
 	  MERGE (shop)-[r:LOCATES_ON]->(p)

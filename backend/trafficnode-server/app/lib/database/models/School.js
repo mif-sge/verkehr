@@ -19,6 +19,20 @@ let School = {
         type: 'string'
     },
     /**
+     * The id of SmartCity Node.
+     * @type {string}
+     */
+    SmartCityId: {
+        type: 'string'
+    },
+    /**
+     * The occupancy of this Location
+     * @type {string}
+     */
+    occupancy: {
+        type: 'string'
+    },
+    /**
      * Determines the position
      * @type {relationship}
      */

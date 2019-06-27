@@ -4,6 +4,5 @@ WITH e,
   CASE WHEN e.type='node' AND (EXISTS(e.tags.highway) AND e.tags.highway='bus_stop') OR EXISTS(e.tags.bus) AND e.tags.bus='yes'  THEN [e] ELSE [] END AS busstops
   UNWIND busstops as bs
 	MATCH (p:Position) WHERE bs.id=p.id
-	MERGE (bus:Bus_Stop {name: coalesce(bs.tags.name, "Unknown")}) ON CREATE
-  SET bus.id = randomUUID()
+	CREATE (bus:Bus_Stop {name: coalesce(bs.tags.name, "Unknown"), id: randomUUID()})
 	MERGE (bus)-[r:LOCATES_ON]->(p)
