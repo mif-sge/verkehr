@@ -38,6 +38,6 @@ module.exports = {
             return;
         }
 
-        await con.cypher('MATCH (h { id: {id} }) SET h.occupancy = {occupancy}', { id: json.id, occupancy: json.occupancy });
+        await con.cypher('MATCH (h { SmartCityId: {id} }) SET h.occupancy = {occupancy}', { id: json.id, occupancy: json.occupancy });
     }
 };

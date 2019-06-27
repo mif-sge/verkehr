@@ -34,7 +34,7 @@ module.exports = {
             return;
         }
 
-        let node = await con.cypher('MATCH (h {id: {id} }) RETURN h', { id: json.id }).then(res => {
+        let node = await con.cypher('MATCH (h { SmartCityId: {id} }) RETURN h', { id: json.id }).then(res => {
             if(res.records.length === 0) {
                 return false;
             }
@@ -48,13 +48,13 @@ module.exports = {
         }
 
         if(json.name) {
-            await con.cypher('MATCH (h {id: {id} }) SET h.name = {name}', { id: json.id, name: json.name });
+            await con.cypher('MATCH (h { SmartCityId: {id} }) SET h.name = {name}', { id: json.id, name: json.name });
         }
 
         if(json.type) {
             let label = locationtypeToLabelConverter(json.type);
 
-            await con.cypher("MATCH (h {id: {id} }) REMOVE h:Hospital:Shop SET h:" + label, {
+            await con.cypher("MATCH (h { SmartCityId: {id} }) REMOVE h:Hospital:Shop SET h:" + label, {
                 id: json.id
             });
         }
