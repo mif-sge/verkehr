@@ -1,5 +1,6 @@
 'use strict';
-
+const DataService = require('./../../../lib/dataService');
+/*
 const pois = {
     hospitals: [
         {
@@ -30,7 +31,7 @@ const pois = {
         }
     ]
 };
-
+*/
 /**
  * Returns POIs.
  * @param {Request} request The request object.
@@ -38,20 +39,40 @@ const pois = {
  * @returns {Response} The response object.
  */
 let handler = (request, h) => {
-
+    let data = new DataService();
     if(!request.query.types) {
-        return h.response(pois).code(200);
-    }
+      let allPois=[];
+      return data.getAllWithRelations('Hospital').then(result => {
+        allPois.push(result);
+        console.log("--Hospital");
+        return data.getAllWithRelations('Shop');
+      }).then(result => {
+        allPois.push(result);
+          console.log("--Shop");
+        return data.getAllWithRelations('School');
+      }).then(result => {
+        allPois.push(result);
+        console.log("--School");
+        return  allPois;
+      }).then(result => {
+        console.log("--return");
+        return h.response(result).code(200);
+      })
+      .catch(err => {
+          console.log(err);
+          return h.response(err).code(500);
+      });
+    } /*else {
+      let result = {};
 
-    let result = {};
+      for(var type of request.query.types.split(',')) {
+          if(pois[type]) {
+              result[type] = pois[type];
+          }
+      }
 
-    for(var type of request.query.types.split(',')) {
-        if(pois[type]) {
-            result[type] = pois[type];
-        }
-    }
-
-    return h.response(result).code(200);
+      return h.response(result).code(200);
+    }*/
 };
 
 module.exports = {

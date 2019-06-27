@@ -17,9 +17,22 @@ let Street = {
      * @type {string}
      */
     name: {
-        type: 'string',
-        index: true
+        type: 'integer'
+    },
+    maxspeed: {
+        type: 'integer'
+    },
+    /**
+     * Determines the positions connected woth this street
+     * @type {relationships}
+     */
+    connects: {
+        type: 'relationships',
+        relationship: 'CONNECTS',
+        target: 'Position',
+        eager: true
     }
+
 };
 
 module.exports = Street;
