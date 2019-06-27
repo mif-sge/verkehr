@@ -26,37 +26,39 @@ class DataService {
      * @returns {Promise<StatementResult>} A promise to all records.
      */
     async getAllWithRelations(modelName) {
-
         try{
           let res = await con.model(modelName).all();
           let objWithRel = this.pickObjectsWithRelations(res);
           return objWithRel;
         }catch(err){
+          console.log(err);
           return err;
         }
     }
 
     async pickObjectsWithRelations(objCollection){
       let objects =  [];
-          objCollection.forEach(async (e) => {
-            let ename = e.model().name();
-            let json = {
+      objCollection.forEach(async (e) => {
+        let ename = e.model().name();
+        let json = {
+        }
+        json[ename] = e.properties();
+        let relationships = e.model().eager();
+        for(const relation of relationships) {
+          let relationModel = e.get(relation.name());
+          if(relation.type() == "relationships" ) {
+            json[relation.name()] = await this.pickRelationships(relationModel);
+          } else {
+            if(relation.direction() == 'DIRECTION_IN'){
+              json[relation.name()] = await this.pickRelationship(relationModel, "start");
+            } else{
+              json[relation.name()] = await this.pickRelationship(relationModel, "end");
             }
-            json[ename] = e.properties();
+          }
+        }
 
-            let relationships = e.model().eager();
-            for(const relation of relationships) {
-              let relationModel = e.get(relation.name());
-              if(relation.type() == "relationships" ) {
-                json[relation.name()] = await this.pickRelationships(relationModel);
-              } else {
-                json[relation.name() + " start"] = relationModel.startNode().properties();
-                json[relation.name() + " end"] = relationModel.endNode().properties();
-              }
-            }
-
-            objects.push(json);
-          });
+        objects.push(json);
+      });
         return objects;
     }
     async pickObjects(objCollection){
@@ -77,13 +79,17 @@ class DataService {
       return list;
     }
 
-    async pickRelationship(relModel, direction) {
+    async pickRelationship(relationModel, direction) {
+      if(relationModel==null || relationModel==undefined ){
+        return null;
+      }
       if(direction == "start"){
         return relationModel.startNode().properties();
       } else {
         return relationModel.endNode().properties();
       }
     }
+
 
 
 };
