@@ -5,5 +5,5 @@ WITH e,
   UNWIND hospitals as h
 	MATCH (p:Position) WHERE p.id IN h.nodes
   MERGE (hospital:Hospital  {name: coalesce(h.tags.name, "Unknown")}) ON CREATE
-  SET hospital.id = randomUUID()
+  SET hospital.id = randomUUID(), hospital.SmartCityId= "", hospital.occupancy="NONE"
   MERGE (hospital)-[r:LOCATES_ON]->(p)

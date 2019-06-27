@@ -1694,5 +1694,16 @@ export async function fetchRoute(busstopFrom, busstopTo) {
         }
     });
     //return await answer.json();*/
-    return [];
+    return [
+        {
+            "id": 1, //Buslinie
+            "from": 90,
+            "to": 45,
+        },
+        {
+            "id": 2, //Buslinie
+            "from": 45,
+            "to": 89,
+        },
+    ];
 }
