@@ -1,6 +1,6 @@
 'use strict';
 
-const Data = require('./../../../lib/data');
+const DataService = require('./../../../lib/dataService');
 
 /**
  * Returns demo data from a database (if reachable).
@@ -10,9 +10,9 @@ const Data = require('./../../../lib/data');
  */
 let handler = (request, h) => {
 
-    let data = new Data();
+    let data = new DataService();
 
-    return data.demo().then(result => {
+    return data.getAll('Bus_Stop').then(result => {
         return h.response(result).code(200);
     }).catch(err => {
         return h.response(err).code(500);

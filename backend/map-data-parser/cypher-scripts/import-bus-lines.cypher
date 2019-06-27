@@ -17,4 +17,4 @@ WITH e,
     MERGE (busline)-[rn:VIA]->(s)
     WITH busline
     MATCH(busline)-[v:VIA]-(p:Position)-[l:LOCATES_ON]-(bs:Bus_Stop)
-    MERGE (busline)-[so:STOPS_ON]->(bs)
+    MERGE (busline)-[h:SERVES]-(bs)
