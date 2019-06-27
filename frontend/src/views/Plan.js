@@ -41,8 +41,6 @@ function Plan(props) {
 
     }
 
-    console.log(calculatedRoute);
-
     //gets called at page load once
     useEffect(() => {
         setTubemap();
@@ -53,7 +51,7 @@ function Plan(props) {
             <Grid item xs className={classes.container}>
                 <div className={classes.map} id="tubeMap" ref={tubeMapRef} />
             </Grid>
-            {calculatedRoute.length > 0 ? <Grid item xs={3} className={classes.container}>
+            {calculatedRoute && calculatedRoute.length > 0 ? <Grid item xs={3} className={classes.container}>
                 <Paper className={classes.route}>
                     <Grid container spacing={1}>
                         <Grid item xs={12}>
