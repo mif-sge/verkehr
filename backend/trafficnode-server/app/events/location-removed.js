@@ -33,7 +33,7 @@ module.exports = {
             return;
         }
 
-        await con.cypher('MATCH (h { id: {id} }) DETACH DELETE h', {
+        await con.cypher('MATCH (h { SmartCityId: {id} }) DETACH DELETE h', {
             id: json.id
         });
     }

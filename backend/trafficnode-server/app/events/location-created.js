@@ -46,7 +46,7 @@ module.exports = {
         });
 
         let node = await con.create(label, {
-            // smartcityid: json.id,
+            SmartCityId: json.id,
             name: json.name
         });
 
