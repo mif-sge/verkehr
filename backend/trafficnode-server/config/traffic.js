@@ -1,7 +1,7 @@
 module.exports = {
     vehiclePool: {
-        maxDistance: 10000,
-        vehicles: 10,
+        maxDistance: 2000,
+        vehicles: 5,
         depot: 0
     }
 };

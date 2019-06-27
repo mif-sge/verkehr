@@ -12,7 +12,7 @@ from lib.occupancy import occupancy_predicter
 def calculate_routes(data, stops):
     
     def distance_callback(fi, ti):
-        return data['distances'][manager.IndexToNode(fi)][manager.IndexToNode(ti)] + occupancy_predicter.predict(100, ti, int(time.time()))
+        return data['distances'][manager.IndexToNode(fi)][manager.IndexToNode(ti)]
 
     manager = pywrapcp.RoutingIndexManager(
             len(data['distances']), 
