@@ -1,0 +1,1810 @@
+[
+    {
+        "id": "node/21105246",
+        "name": "Wedigenstein"
+    },
+    {
+        "id": "node/35685101",
+        "name": "Erbeweg"
+    },
+    {
+        "id": "node/35685106",
+        "name": "Kapellenweg"
+    },
+    {
+        "id": "node/98917603",
+        "name": "Potts Park"
+    },
+    {
+        "id": "node/171217485",
+        "name": "Unterm Willem"
+    },
+    {
+        "id": "node/301896102",
+        "name": "Zollern"
+    },
+    {
+        "id": "node/301896227",
+        "name": "Edelweißstraße"
+    },
+    {
+        "id": "node/301896555",
+        "name": "Barkhausen Kreuzung"
+    },
+    {
+        "id": "node/301896686",
+        "name": "Kaiserstraße"
+    },
+    {
+        "id": "node/309081858",
+        "name": "Grille/Haus 33"
+    },
+    {
+        "id": "node/378261189",
+        "name": "Porta, Bahnhof"
+    },
+    {
+        "id": "node/378262057",
+        "name": "Porta"
+    },
+    {
+        "id": "node/378262193",
+        "name": "Porta 2"
+    },
+    {
+        "id": "node/416031397",
+        "name": "Steinbruch"
+    },
+    {
+        "id": "node/416031398",
+        "name": "Steinbruch 2"
+    },
+    {
+        "id": "node/416031404",
+        "name": "Auf den Bohlen"
+    },
+    {
+        "id": "node/416031405",
+        "name": "Auf den Bohlen 2"
+    },
+    {
+        "id": "node/447220547",
+        "name": "Hummelbeck"
+    },
+    {
+        "id": "node/447220553",
+        "name": "Hummelbeck 2"
+    },
+    {
+        "id": "node/447220557",
+        "name": "Doldenweg"
+    },
+    {
+        "id": "node/447220563",
+        "name": "Doldenweg 2"
+    },
+    {
+        "id": "node/447220567",
+        "name": "Dützer Dorfstraße"
+    },
+    {
+        "id": "node/447220570",
+        "name": "Dützer Dorfstraße 2"
+    },
+    {
+        "id": "node/447220578",
+        "name": "Kaufmannsbrede"
+    },
+    {
+        "id": "node/447220580",
+        "name": "Kaufmannsbrede 2"
+    },
+    {
+        "id": "node/447220582",
+        "name": "Romeoweg"
+    },
+    {
+        "id": "node/447220587",
+        "name": "Romeoweg 2"
+    },
+    {
+        "id": "node/447220593",
+        "name": "Bölhorst"
+    },
+    {
+        "id": "node/448238543",
+        "name": "Klinkerstraße"
+    },
+    {
+        "id": "node/448238548",
+        "name": "Klinkerstraße 2"
+    },
+    {
+        "id": "node/461042747",
+        "name": "Johannes-Wesling-Klinikum"
+    },
+    {
+        "id": "node/494840117",
+        "name": "Plattenberger Weg"
+    },
+    {
+        "id": "node/494844818",
+        "name": "Plattenberger Weg 2"
+    },
+    {
+        "id": "node/497788075",
+        "name": "Parkhotel"
+    },
+    {
+        "id": "node/731809811",
+        "name": "Ziegeleiweg"
+    },
+    {
+        "id": "node/731809853",
+        "name": "Ziegeleiweg 2"
+    },
+    {
+        "id": "node/736055538",
+        "name": "Hohenstaufenring"
+    },
+    {
+        "id": "node/736055658",
+        "name": "Hohenstaufenring 2"
+    },
+    {
+        "id": "node/744520688",
+        "name": "Bölhorst, Mindener Straße"
+    },
+    {
+        "id": "node/744545349",
+        "name": "Meyerweg"
+    },
+    {
+        "id": "node/748300346",
+        "name": "Schmaler Weg"
+    },
+    {
+        "id": "node/750309122",
+        "name": "Meyerweg 2"
+    },
+    {
+        "id": "node/764888386",
+        "name": "Südfriedhof"
+    },
+    {
+        "id": "node/764888499",
+        "name": "Südfriedhof 2"
+    },
+    {
+        "id": "node/764888579",
+        "name": "Dohlenweg"
+    },
+    {
+        "id": "node/764888600",
+        "name": "Dohlenweg 2"
+    },
+    {
+        "id": "node/766894148",
+        "name": "Pauluskirche"
+    },
+    {
+        "id": "node/766894197",
+        "name": "Piwittskamp"
+    },
+    {
+        "id": "node/766894208",
+        "name": "Vogelsang"
+    },
+    {
+        "id": "node/822591051",
+        "name": "Schule"
+    },
+    {
+        "id": "node/822591056",
+        "name": "Brink"
+    },
+    {
+        "id": "node/822812864",
+        "name": "Holzkamp"
+    },
+    {
+        "id": "node/996261075",
+        "name": "Schillerstraße"
+    },
+    {
+        "id": "node/998050751",
+        "name": "Schillerstraße 2"
+    },
+    {
+        "id": "node/998111914",
+        "name": "Lichtenbergstraße"
+    },
+    {
+        "id": "node/1005300356",
+        "name": "Preußenring"
+    },
+    {
+        "id": "node/1005310686",
+        "name": "Hohenzollernring / Königstraße"
+    },
+    {
+        "id": "node/1005318646",
+        "name": "Gertrudstraße"
+    },
+    {
+        "id": "node/1008200702",
+        "name": "Gertrudstraße 2"
+    },
+    {
+        "id": "node/1008216083",
+        "name": "Ringstraße/Königstraße"
+    },
+    {
+        "id": "node/1008216086",
+        "name": "Ringstraße/Königstraße 2"
+    },
+    {
+        "id": "node/1011145552",
+        "name": "Königswall"
+    },
+    {
+        "id": "node/1015045026",
+        "name": "Lehra"
+    },
+    {
+        "id": "node/1166342745",
+        "name": "Wilhelmstraße/Oberstadt"
+    },
+    {
+        "id": "node/1166342749",
+        "name": "Steinstraße"
+    },
+    {
+        "id": "node/1167191266",
+        "name": "Bildungszentrum"
+    },
+    {
+        "id": "node/1171123889",
+        "name": "Königswall / Aula"
+    },
+    {
+        "id": "node/1171123943",
+        "name": "Königswall / Aula 2"
+    },
+    {
+        "id": "node/1257853447",
+        "name": "Petzer Krug"
+    },
+    {
+        "id": "node/1257853458",
+        "name": "Petzer Krug 2"
+    },
+    {
+        "id": "node/1393811740",
+        "name": "Prange"
+    },
+    {
+        "id": "node/1623899638",
+        "name": "Kirchweg"
+    },
+    {
+        "id": "node/1636738140",
+        "name": "Kanzlers Weide"
+    },
+    {
+        "id": "node/1636738156",
+        "name": "Hafenstraße"
+    },
+    {
+        "id": "node/1636738164",
+        "name": "Kaiserstraße 2"
+    },
+    {
+        "id": "node/1636738170",
+        "name": "Friedrich-Wilhelm-Str./Bahnhof"
+    },
+    {
+        "id": "node/1636738182",
+        "name": "Kaiserstraße 3"
+    },
+    {
+        "id": "node/1636738183",
+        "name": "Grimpenwall"
+    },
+    {
+        "id": "node/1636738188",
+        "name": "Grimpenwall 2"
+    },
+    {
+        "id": "node/1636751813",
+        "name": "Hermannstraße"
+    },
+    {
+        "id": "node/1636751814",
+        "name": "Dorotheenstraße"
+    },
+    {
+        "id": "node/1636751815",
+        "name": "Marienstraße"
+    },
+    {
+        "id": "node/1636751816",
+        "name": "Werftstraße"
+    },
+    {
+        "id": "node/1636751818",
+        "name": "Agentur für Arbeit"
+    },
+    {
+        "id": "node/1636751823",
+        "name": "Omnibusbetriebshof"
+    },
+    {
+        "id": "node/1636758076",
+        "name": "Hausberge, Schalksburg"
+    },
+    {
+        "id": "node/1636758084",
+        "name": "Hausberge, Schalksburg 2"
+    },
+    {
+        "id": "node/1650766012",
+        "name": "Minden ZOB"
+    },
+    {
+        "id": "node/1650766013",
+        "name": "Minden ZOB 2"
+    },
+    {
+        "id": "node/1650766014",
+        "name": "Minden ZOB 3"
+    },
+    {
+        "id": "node/1650766015",
+        "name": "Minden ZOB 4"
+    },
+    {
+        "id": "node/1650766016",
+        "name": "Minden ZOB 5"
+    },
+    {
+        "id": "node/1650766017",
+        "name": "Minden ZOB 6"
+    },
+    {
+        "id": "node/1650766018",
+        "name": "Minden ZOB 7"
+    },
+    {
+        "id": "node/1650778014",
+        "name": "Minden ZOB 8"
+    },
+    {
+        "id": "node/1672299960",
+        "name": "Leopoldshöhe"
+    },
+    {
+        "id": "node/1672351033",
+        "name": "Dützen, Mühle"
+    },
+    {
+        "id": "node/1672386306",
+        "name": "Schulzentrum Süd"
+    },
+    {
+        "id": "node/1734172607",
+        "name": "Lerbeck Kirche"
+    },
+    {
+        "id": "node/1734172609",
+        "name": "Pfahlweg"
+    },
+    {
+        "id": "node/1734172610",
+        "name": "Hausberger Straße 14"
+    },
+    {
+        "id": "node/1734172611",
+        "name": "Lindenstraße"
+    },
+    {
+        "id": "node/1734172612",
+        "name": "Georg-Rost-Straße"
+    },
+    {
+        "id": "node/1734183136",
+        "name": "Mittelfeldstraße"
+    },
+    {
+        "id": "node/1734183137",
+        "name": "Meißener Straße"
+    },
+    {
+        "id": "node/1734183139",
+        "name": "Hebünte"
+    },
+    {
+        "id": "node/1734183149",
+        "name": "Weidenstraße"
+    },
+    {
+        "id": "node/1734183150",
+        "name": "Forststraße"
+    },
+    {
+        "id": "node/1772874362",
+        "name": "Clus Märchenwald"
+    },
+    {
+        "id": "node/1772874368",
+        "name": "Clus Märchenwald 2"
+    },
+    {
+        "id": "node/1788602825",
+        "name": "Kreishaus"
+    },
+    {
+        "id": "node/1788602826",
+        "name": "Wittekindallee"
+    },
+    {
+        "id": "node/1788602828",
+        "name": "Wittekindallee 2"
+    },
+    {
+        "id": "node/1788613086",
+        "name": "Gesundheitszentrum"
+    },
+    {
+        "id": "node/1788613088",
+        "name": "Feldstraße"
+    },
+    {
+        "id": "node/1788613091",
+        "name": "Flurweg"
+    },
+    {
+        "id": "node/1788613094",
+        "name": "Füllenkamp"
+    },
+    {
+        "id": "node/1789848839",
+        "name": "Nordfriedhof"
+    },
+    {
+        "id": "node/1789848840",
+        "name": "Nordfriedhof 2"
+    },
+    {
+        "id": "node/1789853941",
+        "name": "Gewerbepark Minderheide"
+    },
+    {
+        "id": "node/1790724302",
+        "name": "Agentur für Arbeit 2"
+    },
+    {
+        "id": "node/1790735664",
+        "name": "Goebenstraße"
+    },
+    {
+        "id": "node/1790735665",
+        "name": "Brühlstraße"
+    },
+    {
+        "id": "node/1790735666",
+        "name": "Rosentalstraße"
+    },
+    {
+        "id": "node/1790745214",
+        "name": "Leteln Grundschule"
+    },
+    {
+        "id": "node/1911502866",
+        "name": "Brühlstraße 2"
+    },
+    {
+        "id": "node/2035260120",
+        "name": "Beermann"
+    },
+    {
+        "id": "node/2035260134",
+        "name": "Hahlen, Friedhof"
+    },
+    {
+        "id": "node/2035260142",
+        "name": "Beermann 2"
+    },
+    {
+        "id": "node/2035288554",
+        "name": "Osterhahlen"
+    },
+    {
+        "id": "node/2035288557",
+        "name": "Wittelsbacherallee"
+    },
+    {
+        "id": "node/2035288564",
+        "name": "Am Grundbach"
+    },
+    {
+        "id": "node/2035288567",
+        "name": "Hohenzollernring / Königstraße 2"
+    },
+    {
+        "id": "node/2035288570",
+        "name": "Preußenring 2"
+    },
+    {
+        "id": "node/2035288574",
+        "name": "Osterhahlen 2"
+    },
+    {
+        "id": "node/2035288577",
+        "name": "Wilhelm-Tell-Straße"
+    },
+    {
+        "id": "node/2035653947",
+        "name": "Simeonsplatz"
+    },
+    {
+        "id": "node/2035653959",
+        "name": "Simeonsplatz 2"
+    },
+    {
+        "id": "node/2035700702",
+        "name": "Minden, Bahnhof"
+    },
+    {
+        "id": "node/2035700712",
+        "name": "Minden, Bahnhof 2"
+    },
+    {
+        "id": "node/2035700716",
+        "name": "Minden, Bahnhof 3"
+    },
+    {
+        "id": "node/2093899511",
+        "name": "Hermann-Oberth-Weg"
+    },
+    {
+        "id": "node/2094149362",
+        "name": "Meisenweg"
+    },
+    {
+        "id": "node/2094149363",
+        "name": "Bleekstraße"
+    },
+    {
+        "id": "node/2094149364",
+        "name": "Kuhlenstraße"
+    },
+    {
+        "id": "node/2094169778",
+        "name": "Minden ZOB 9"
+    },
+    {
+        "id": "node/2094169786",
+        "name": "Parkstraße"
+    },
+    {
+        "id": "node/2125846722",
+        "name": "Schaumburger Weg"
+    },
+    {
+        "id": "node/2125846723",
+        "name": "(Steinkreuz-/)Meißener Straße"
+    },
+    {
+        "id": "node/2125846724",
+        "name": "Denkmal"
+    },
+    {
+        "id": "node/2125846725",
+        "name": "Alsenweg"
+    },
+    {
+        "id": "node/2125846726",
+        "name": "Bahnhof"
+    },
+    {
+        "id": "node/2125846728",
+        "name": "Siedlung"
+    },
+    {
+        "id": "node/2125846729",
+        "name": "Petzer Krug/Kirche"
+    },
+    {
+        "id": "node/2125860643",
+        "name": "Freundschaftsheim"
+    },
+    {
+        "id": "node/2125860646",
+        "name": "Schmiedeweg"
+    },
+    {
+        "id": "node/2125860677",
+        "name": "Abzw. Petzen"
+    },
+    {
+        "id": "node/2125860679",
+        "name": "Schule 2"
+    },
+    {
+        "id": "node/2125860706",
+        "name": "Abzw. Petzen 2"
+    },
+    {
+        "id": "node/2135504398",
+        "name": "Holzweg"
+    },
+    {
+        "id": "node/2135504401",
+        "name": "Holzweg 2"
+    },
+    {
+        "id": "node/2135504403",
+        "name": "Südbruch"
+    },
+    {
+        "id": "node/2225690981",
+        "name": "Imhoffstraße"
+    },
+    {
+        "id": "node/2225690985",
+        "name": "Kutenhauser Straße"
+    },
+    {
+        "id": "node/2225690989",
+        "name": "Graf-Wilhelm-Straße / Bahnübergang"
+    },
+    {
+        "id": "node/2225690993",
+        "name": "Brauereistraße"
+    },
+    {
+        "id": "node/2225690996",
+        "name": "Dessauer Straße"
+    },
+    {
+        "id": "node/2225691000",
+        "name": "Gabelsberger Straße"
+    },
+    {
+        "id": "node/2225708244",
+        "name": "Herzog-Ferdinand-Straße"
+    },
+    {
+        "id": "node/2225708254",
+        "name": "Bierpohlschule"
+    },
+    {
+        "id": "node/2225708269",
+        "name": "Ziethenstraße"
+    },
+    {
+        "id": "node/2226721679",
+        "name": "Stiftstraße"
+    },
+    {
+        "id": "node/2229268801",
+        "name": "Nettelbeckstraße"
+    },
+    {
+        "id": "node/2229268805",
+        "name": "Habsburgerring / KBS"
+    },
+    {
+        "id": "node/2229268809",
+        "name": "Nettelbeckstraße 2"
+    },
+    {
+        "id": "node/2229268810",
+        "name": "Hahler Straße"
+    },
+    {
+        "id": "node/2229268826",
+        "name": "Drabertstraße"
+    },
+    {
+        "id": "node/2229279889",
+        "name": "Roßbachstraße"
+    },
+    {
+        "id": "node/2229279890",
+        "name": "Roßbachstraße 2"
+    },
+    {
+        "id": "node/2229279893",
+        "name": "Fahlstätte"
+    },
+    {
+        "id": "node/2229285288",
+        "name": "Lange Wand"
+    },
+    {
+        "id": "node/2229285289",
+        "name": "Grundschule"
+    },
+    {
+        "id": "node/2229285290",
+        "name": "Am Schäferfeld"
+    },
+    {
+        "id": "node/2229285291",
+        "name": "Leuthenstraße"
+    },
+    {
+        "id": "node/2229285292",
+        "name": "Wintgensstraße"
+    },
+    {
+        "id": "node/2229285293",
+        "name": "Liegnitzstraße"
+    },
+    {
+        "id": "node/2229285294",
+        "name": "Stiftsallee"
+    },
+    {
+        "id": "node/2229298869",
+        "name": "Trafo"
+    },
+    {
+        "id": "node/2229298876",
+        "name": "Kingsley Allee"
+    },
+    {
+        "id": "node/2229298877",
+        "name": "Grenzweg"
+    },
+    {
+        "id": "node/2229298879",
+        "name": "Hämelstraße"
+    },
+    {
+        "id": "node/2229298880",
+        "name": "Molkereiweg"
+    },
+    {
+        "id": "node/2229298881",
+        "name": "Kingsley Allee 2"
+    },
+    {
+        "id": "node/2229298884",
+        "name": "An der Heide"
+    },
+    {
+        "id": "node/2229298885",
+        "name": "Käferweg"
+    },
+    {
+        "id": "node/2235188550",
+        "name": "Gerichtszentrum"
+    },
+    {
+        "id": "node/2235188556",
+        "name": "Greisenbruchstraße"
+    },
+    {
+        "id": "node/2235318502",
+        "name": "Goethestraße"
+    },
+    {
+        "id": "node/2235344715",
+        "name": "Wittelsbacher Allee 105"
+    },
+    {
+        "id": "node/2235344733",
+        "name": "Freiherr-von-Vincke-Schule"
+    },
+    {
+        "id": "node/2235344753",
+        "name": "Besselgymnasium"
+    },
+    {
+        "id": "node/2235344758",
+        "name": "Sieben Bauern"
+    },
+    {
+        "id": "node/2235344770",
+        "name": "Zähringerallee"
+    },
+    {
+        "id": "node/2235365191",
+        "name": "Tillystraße"
+    },
+    {
+        "id": "node/2235365195",
+        "name": "Melanchthonstraße"
+    },
+    {
+        "id": "node/2235365205",
+        "name": "Diemelstraße"
+    },
+    {
+        "id": "node/2235365218",
+        "name": "Liebigstraße"
+    },
+    {
+        "id": "node/2235365223",
+        "name": "In den Bärenkämpen"
+    },
+    {
+        "id": "node/2235365226",
+        "name": "Bunsenstraße"
+    },
+    {
+        "id": "node/2235365230",
+        "name": "Sandtrift"
+    },
+    {
+        "id": "node/2235379969",
+        "name": "Hahler Feld"
+    },
+    {
+        "id": "node/2235379976",
+        "name": "Melittabad"
+    },
+    {
+        "id": "node/2273738777",
+        "name": "Wettinerallee"
+    },
+    {
+        "id": "node/2273738779",
+        "name": "Wilhelm-Busch-Straße"
+    },
+    {
+        "id": "node/2273738782",
+        "name": "Hohenzollernring / Rodenbecker Straße"
+    },
+    {
+        "id": "node/2273738783",
+        "name": "Ernst-Moritz-Arndt-Straße"
+    },
+    {
+        "id": "node/2273738784",
+        "name": "Mitteldamm"
+    },
+    {
+        "id": "node/2273753241",
+        "name": "Falkenstraße"
+    },
+    {
+        "id": "node/2273753314",
+        "name": "Schwabenring"
+    },
+    {
+        "id": "node/2274341443",
+        "name": "Bad Minden"
+    },
+    {
+        "id": "node/2274341448",
+        "name": "Bad Minden 2"
+    },
+    {
+        "id": "node/2274341462",
+        "name": "Erzweg"
+    },
+    {
+        "id": "node/2274361249",
+        "name": "Pastorenweg"
+    },
+    {
+        "id": "node/2274361257",
+        "name": "Kreuzriehe"
+    },
+    {
+        "id": "node/2274361268",
+        "name": "Dorenbusch"
+    },
+    {
+        "id": "node/2274361291",
+        "name": "Menzelstraße"
+    },
+    {
+        "id": "node/2277351653",
+        "name": "Bachstraße"
+    },
+    {
+        "id": "node/2277383702",
+        "name": "Josefa-Metz-Straße"
+    },
+    {
+        "id": "node/2277383723",
+        "name": "Dombrede"
+    },
+    {
+        "id": "node/2277383725",
+        "name": "Hansemannweg"
+    },
+    {
+        "id": "node/2277383730",
+        "name": "Kleine Dombrede"
+    },
+    {
+        "id": "node/2277401582",
+        "name": "Helgastraße"
+    },
+    {
+        "id": "node/2277401589",
+        "name": "Ulrikenstraße"
+    },
+    {
+        "id": "node/2277401610",
+        "name": "Edithstraße"
+    },
+    {
+        "id": "node/2277401616",
+        "name": "Emmeliusstraße"
+    },
+    {
+        "id": "node/2277437048",
+        "name": "Olafstraße"
+    },
+    {
+        "id": "node/2277437058",
+        "name": "Reinholdstraße"
+    },
+    {
+        "id": "node/2277437071",
+        "name": "Waterloostraße / Dankerser Straße"
+    },
+    {
+        "id": "node/2277437079",
+        "name": "Sedanstraße"
+    },
+    {
+        "id": "node/2277437090",
+        "name": "Burkhardstraße"
+    },
+    {
+        "id": "node/2277437097",
+        "name": "Waterloostraße"
+    },
+    {
+        "id": "node/2277551834",
+        "name": "Sollort"
+    },
+    {
+        "id": "node/2277551842",
+        "name": "Christian-Kipp-Platz"
+    },
+    {
+        "id": "node/2277551857",
+        "name": "Auf dem Piwitt"
+    },
+    {
+        "id": "node/2277551892",
+        "name": "Hünenbrink"
+    },
+    {
+        "id": "node/2277568074",
+        "name": "Zum Industriehafen"
+    },
+    {
+        "id": "node/2277568078",
+        "name": "Hasenkamp"
+    },
+    {
+        "id": "node/2277593026",
+        "name": "BASF"
+    },
+    {
+        "id": "node/2277593027",
+        "name": "Karlstraße"
+    },
+    {
+        "id": "node/2277593028",
+        "name": "Aminghauser Straße"
+    },
+    {
+        "id": "node/2277593029",
+        "name": "Goldinsel"
+    },
+    {
+        "id": "node/2277593030",
+        "name": "Nordbrücke"
+    },
+    {
+        "id": "node/2277593031",
+        "name": "Karlstraße 2"
+    },
+    {
+        "id": "node/2277593032",
+        "name": "Hans-Böckler-Straße"
+    },
+    {
+        "id": "node/2277593033",
+        "name": "Effem"
+    },
+    {
+        "id": "node/2277593034",
+        "name": "Teichstraße"
+    },
+    {
+        "id": "node/2277706412",
+        "name": "Follmann"
+    },
+    {
+        "id": "node/2277706418",
+        "name": "Zewa"
+    },
+    {
+        "id": "node/2277706434",
+        "name": "MKB"
+    },
+    {
+        "id": "node/2277712159",
+        "name": "Cammer Straße / Drabert"
+    },
+    {
+        "id": "node/2277722823",
+        "name": "Potsdamer Straße"
+    },
+    {
+        "id": "node/2277722844",
+        "name": "Dresdener Straße"
+    },
+    {
+        "id": "node/2278422802",
+        "name": "Volksbank"
+    },
+    {
+        "id": "node/2278422809",
+        "name": "Huntestraße"
+    },
+    {
+        "id": "node/2278422842",
+        "name": "Mainstraße"
+    },
+    {
+        "id": "node/2278422856",
+        "name": "Bad"
+    },
+    {
+        "id": "node/2278422860",
+        "name": "Christian-Kipp-Platz 2"
+    },
+    {
+        "id": "node/2278431381",
+        "name": "Christinenweg"
+    },
+    {
+        "id": "node/2278431403",
+        "name": "Schranke"
+    },
+    {
+        "id": "node/2278459240",
+        "name": "Dankersen Schulzentrum"
+    },
+    {
+        "id": "node/2278459242",
+        "name": "Hannastraße"
+    },
+    {
+        "id": "node/2278459244",
+        "name": "Wilmastraße"
+    },
+    {
+        "id": "node/2278463917",
+        "name": "Waterloostraße / Bachstraße"
+    },
+    {
+        "id": "node/2278529933",
+        "name": "Kornhaus"
+    },
+    {
+        "id": "node/2278529934",
+        "name": "Turnerweg"
+    },
+    {
+        "id": "node/2278529936",
+        "name": "An der Stadtmühle"
+    },
+    {
+        "id": "node/2278529937",
+        "name": "Dreh"
+    },
+    {
+        "id": "node/2278529938",
+        "name": "Windmühlenstraße"
+    },
+    {
+        "id": "node/2278529939",
+        "name": "Turnerweg 2"
+    },
+    {
+        "id": "node/2278529940",
+        "name": "Dreh 2"
+    },
+    {
+        "id": "node/2278529941",
+        "name": "Muttkuhle Süd"
+    },
+    {
+        "id": "node/2278529942",
+        "name": "Schmiedeweg 2"
+    },
+    {
+        "id": "node/2387413550",
+        "name": "Brink 2"
+    },
+    {
+        "id": "node/2406963973",
+        "name": "Notthorn"
+    },
+    {
+        "id": "node/2406963987",
+        "name": "Grille"
+    },
+    {
+        "id": "node/2406964029",
+        "name": "Burgweg"
+    },
+    {
+        "id": "node/2406964036",
+        "name": "Südbruch 2"
+    },
+    {
+        "id": "node/2406964091",
+        "name": "Kronenweg"
+    },
+    {
+        "id": "node/2406981140",
+        "name": "Clus / Wendeplatz"
+    },
+    {
+        "id": "node/2406981172",
+        "name": "Clus"
+    },
+    {
+        "id": "node/2406981185",
+        "name": "Kreuzung"
+    },
+    {
+        "id": "node/2406994564",
+        "name": "Freistraße"
+    },
+    {
+        "id": "node/2406994597",
+        "name": "Stollenweg"
+    },
+    {
+        "id": "node/2406994602",
+        "name": "Stollenweg 2"
+    },
+    {
+        "id": "node/2406994612",
+        "name": "Osterfeldweg"
+    },
+    {
+        "id": "node/2406994613",
+        "name": "Osterfeldweg 2"
+    },
+    {
+        "id": "node/2406994624",
+        "name": "Meißen, Dorf"
+    },
+    {
+        "id": "node/2721593412",
+        "name": "Hessenring"
+    },
+    {
+        "id": "node/2721593414",
+        "name": "Hessenring 2"
+    },
+    {
+        "id": "node/2721593415",
+        "name": "Karolingerring"
+    },
+    {
+        "id": "node/2721593425",
+        "name": "Hermann-Schoppe-Straße"
+    },
+    {
+        "id": "node/2721593427",
+        "name": "Seydlitzstraße"
+    },
+    {
+        "id": "node/2721593428",
+        "name": "Kuhlenkampschule"
+    },
+    {
+        "id": "node/2721593429",
+        "name": "Hermann-Schoppe-Straße 2"
+    },
+    {
+        "id": "node/2721645670",
+        "name": "Maulbeerkamp"
+    },
+    {
+        "id": "node/2721645685",
+        "name": "Weingarten"
+    },
+    {
+        "id": "node/2721645696",
+        "name": "Holzhauser Straße"
+    },
+    {
+        "id": "node/2733958775",
+        "name": "Gagnyweg"
+    },
+    {
+        "id": "node/2733958784",
+        "name": "Merkurweg"
+    },
+    {
+        "id": "node/2733958791",
+        "name": "Osterhahlen 3"
+    },
+    {
+        "id": "node/2733958799",
+        "name": "Rütliweg"
+    },
+    {
+        "id": "node/2733958806",
+        "name": "Schenkendorfstraße"
+    },
+    {
+        "id": "node/2733958811",
+        "name": "Unterdamm"
+    },
+    {
+        "id": "node/2734220555",
+        "name": "Barkhausen Kreuzung 2"
+    },
+    {
+        "id": "node/2734220560",
+        "name": "Kreishaus 2"
+    },
+    {
+        "id": "node/2739933931",
+        "name": "Uphauser Weg"
+    },
+    {
+        "id": "node/2739933937",
+        "name": "Zechenstraße"
+    },
+    {
+        "id": "node/2892044144",
+        "name": "Gesamtschule"
+    },
+    {
+        "id": "node/2892044145",
+        "name": "Gewerbegebiet"
+    },
+    {
+        "id": "node/2892044149",
+        "name": "Porta Möbel"
+    },
+    {
+        "id": "node/2972812738",
+        "name": "Königswall 2"
+    },
+    {
+        "id": "node/3386168160",
+        "name": "Freimark"
+    },
+    {
+        "id": "node/3386168163",
+        "name": "Heuweg"
+    },
+    {
+        "id": "node/3386168164",
+        "name": "Immanuelstraße"
+    },
+    {
+        "id": "node/3386168167",
+        "name": "Kaserne"
+    },
+    {
+        "id": "node/3386168171",
+        "name": "Lagerstraße"
+    },
+    {
+        "id": "node/3386168173",
+        "name": "Lüchten"
+    },
+    {
+        "id": "node/3799704520",
+        "name": "Nammen, Bad"
+    },
+    {
+        "id": "node/3799704522",
+        "name": "Barbarastraße"
+    },
+    {
+        "id": "node/3799704524",
+        "name": "Dorfmitte"
+    },
+    {
+        "id": "node/3799704525",
+        "name": "Kohlmeier"
+    },
+    {
+        "id": "node/3799704526",
+        "name": "Lehra 2"
+    },
+    {
+        "id": "node/3799705231",
+        "name": "Zur Porta"
+    },
+    {
+        "id": "node/3799705232",
+        "name": "Zur Porta 2"
+    },
+    {
+        "id": "node/3890367775",
+        "name": "Lilienstraße"
+    },
+    {
+        "id": "node/3890374320",
+        "name": "Dorfgemeinschaftshaus"
+    },
+    {
+        "id": "node/3890377691",
+        "name": "Grube"
+    },
+    {
+        "id": "node/3890378613",
+        "name": "Im Langenfeld"
+    },
+    {
+        "id": "node/3890380986",
+        "name": "Im Langenfeld 2"
+    },
+    {
+        "id": "node/3890388575",
+        "name": "Nammen, Schule"
+    },
+    {
+        "id": "node/3890395845",
+        "name": "Nammen, Schule 2"
+    },
+    {
+        "id": "node/3890396039",
+        "name": "Nammen, Schule 3"
+    },
+    {
+        "id": "node/3890397934",
+        "name": "Im Diekhoff"
+    },
+    {
+        "id": "node/3890398178",
+        "name": "Dorfmitte 2"
+    },
+    {
+        "id": "node/3890407024",
+        "name": "Jemke"
+    },
+    {
+        "id": "node/3890409027",
+        "name": "Nammen, Bad 2"
+    },
+    {
+        "id": "node/3890412768",
+        "name": "Wülpke Bahnhof"
+    },
+    {
+        "id": "node/3890413070",
+        "name": "Wülpke Bahnhof 2"
+    },
+    {
+        "id": "node/3890446602",
+        "name": "Grille / Haus 33"
+    },
+    {
+        "id": "node/3890540046",
+        "name": "Denkmalstraße"
+    },
+    {
+        "id": "node/3890540047",
+        "name": "Denkmalstraße 2"
+    },
+    {
+        "id": "node/3890544626",
+        "name": "Feldweg"
+    },
+    {
+        "id": "node/3890547471",
+        "name": "Exner"
+    },
+    {
+        "id": "node/3890552646",
+        "name": "Wallfahrtsteich"
+    },
+    {
+        "id": "node/3890770912",
+        "name": "Paulinenstraße"
+    },
+    {
+        "id": "node/3890771065",
+        "name": "Wilhelmstraße"
+    },
+    {
+        "id": "node/3890774991",
+        "name": "Graf-Wilhelm-Straße"
+    },
+    {
+        "id": "node/3890783032",
+        "name": "Kerkweg"
+    },
+    {
+        "id": "node/3892274255",
+        "name": "Grube 2"
+    },
+    {
+        "id": "node/3892308353",
+        "name": "Notthorn 2"
+    },
+    {
+        "id": "node/3892308354",
+        "name": "Grille 2"
+    },
+    {
+        "id": "node/3892405730",
+        "name": "Untkenstraße"
+    },
+    {
+        "id": "node/3900055857",
+        "name": "Bachstraße 2"
+    },
+    {
+        "id": "node/3900055866",
+        "name": "Kirchweg 2"
+    },
+    {
+        "id": "node/3900055868",
+        "name": "Lerbeck Kirche 2"
+    },
+    {
+        "id": "node/3900274834",
+        "name": "Abzw. Leteln"
+    },
+    {
+        "id": "node/3900274835",
+        "name": "Abzw. Leteln 2"
+    },
+    {
+        "id": "node/3900274837",
+        "name": "Aminghauser Straße 2"
+    },
+    {
+        "id": "node/3900274839",
+        "name": "Busch"
+    },
+    {
+        "id": "node/3900274840",
+        "name": "Busch 2"
+    },
+    {
+        "id": "node/3900274841",
+        "name": "Dorotheenstraße 2"
+    },
+    {
+        "id": "node/3900274845",
+        "name": "Goldinsel 2"
+    },
+    {
+        "id": "node/3900274846",
+        "name": "Hermannstraße 2"
+    },
+    {
+        "id": "node/3900274847",
+        "name": "Holzkamp 2"
+    },
+    {
+        "id": "node/3900274848",
+        "name": "Kriegerdenkmal"
+    },
+    {
+        "id": "node/3900274849",
+        "name": "Kriegerdenkmal 2"
+    },
+    {
+        "id": "node/3900274851",
+        "name": "Prange 2"
+    },
+    {
+        "id": "node/3900274852",
+        "name": "Prangenort"
+    },
+    {
+        "id": "node/3900274853",
+        "name": "Prangenort 2"
+    },
+    {
+        "id": "node/3900278109",
+        "name": "Rodenberg"
+    },
+    {
+        "id": "node/3900278110",
+        "name": "Rodenberg 2"
+    },
+    {
+        "id": "node/3900278112",
+        "name": "Schule 3"
+    },
+    {
+        "id": "node/3900278113",
+        "name": "Teichstraße 2"
+    },
+    {
+        "id": "node/3900278114",
+        "name": "Werftstraße 2"
+    },
+    {
+        "id": "node/3900278115",
+        "name": "Wietersheimer Heide"
+    },
+    {
+        "id": "node/3900278116",
+        "name": "Wietersheimer Heide 2"
+    },
+    {
+        "id": "node/3913239181",
+        "name": "Rosentalstraße 2"
+    },
+    {
+        "id": "node/4028670536",
+        "name": "Paulinenstraße 2"
+    },
+    {
+        "id": "node/4028675184",
+        "name": "Wilhelmstraße 2"
+    },
+    {
+        "id": "node/4548320344",
+        "name": "Wittelsbacherallee 2"
+    },
+    {
+        "id": "node/4548320345",
+        "name": "Wilhelm-Tell-Straße 2"
+    },
+    {
+        "id": "node/4548320346",
+        "name": "Am Grundbach 2"
+    },
+    {
+        "id": "node/4548320349",
+        "name": "Merkurweg 2"
+    },
+    {
+        "id": "node/4578055903",
+        "name": "Unterdamm 2"
+    },
+    {
+        "id": "node/4578055904",
+        "name": "Gagnyweg 2"
+    },
+    {
+        "id": "node/4578055907",
+        "name": "Mitteldamm 2"
+    },
+    {
+        "id": "node/4578055909",
+        "name": "Kuhlenstraße 2"
+    },
+    {
+        "id": "node/4578055911",
+        "name": "Nordbrücke 2"
+    },
+    {
+        "id": "node/4578055912",
+        "name": "BASF 2"
+    },
+    {
+        "id": "node/4578055913",
+        "name": "MKB 2"
+    },
+    {
+        "id": "node/4578055914",
+        "name": "Zewa 2"
+    },
+    {
+        "id": "node/4578055915",
+        "name": "Follmann 2"
+    },
+    {
+        "id": "node/4578055918",
+        "name": "Hans-Böckler-Straße 2"
+    },
+    {
+        "id": "node/4578055919",
+        "name": "Effem 2"
+    },
+    {
+        "id": "node/4578055920",
+        "name": "Zum Industriehafen 2"
+    },
+    {
+        "id": "node/4578055921",
+        "name": "Auf dem Piwitt 2"
+    },
+    {
+        "id": "node/4578055925",
+        "name": "Hünenbrink 2"
+    },
+    {
+        "id": "node/4578055926",
+        "name": "Sollort 2"
+    },
+    {
+        "id": "node/4578055927",
+        "name": "Olafstraße 2"
+    },
+    {
+        "id": "node/4578055928",
+        "name": "(Steinkreuz-/)Meißener Straße 2"
+    },
+    {
+        "id": "node/4578055929",
+        "name": "Reinholdstraße 2"
+    },
+    {
+        "id": "node/4578055931",
+        "name": "Burkhardstraße 2"
+    },
+    {
+        "id": "node/4578055932",
+        "name": "Waterloostraße 2"
+    },
+    {
+        "id": "node/4578055933",
+        "name": "Sedanstraße 2"
+    },
+    {
+        "id": "node/4578055934",
+        "name": "Alsenweg 2"
+    },
+    {
+        "id": "node/4584263595",
+        "name": "Grundschule 2"
+    },
+    {
+        "id": "node/5700316211",
+        "name": "Drabertstraße 2"
+    },
+    {
+        "id": "node/5700316213",
+        "name": "Habsburgerring / KBS 2"
+    },
+    {
+        "id": "node/5700316214",
+        "name": "Martin-Luther-Straße"
+    },
+    {
+        "id": "node/5700316215",
+        "name": "Martin-Luther-Straße 2"
+    },
+    {
+        "id": "node/5700316216",
+        "name": "Wagnerstraße"
+    },
+    {
+        "id": "node/5709430245",
+        "name": "Füllenkamp 2"
+    },
+    {
+        "id": "node/5709430246",
+        "name": "Erikaweg"
+    },
+    {
+        "id": "node/5847422297",
+        "name": "Kaiser-Wilhelm-Denkmal"
+    },
+    {
+        "id": "node/5847422302",
+        "name": "Zur Wittekindsburg"
+    },
+    {
+        "id": "node/5847422303",
+        "name": "Zur Wittekindsburg 2"
+    },
+    {
+        "id": "node/6111154362",
+        "name": "Fachhochschule"
+    },
+    {
+        "id": "node/6111154365",
+        "name": "Fachhochschule 2"
+    },
+    {
+        "id": "node/6343583265",
+        "name": "Erikaweg 2"
+    },
+    {
+        "id": "node/6343583266",
+        "name": "Erbeweg 2"
+    },
+    {
+        "id": "node/6343583267",
+        "name": "Zollern 2"
+    },
+    {
+        "id": "node/6343583268",
+        "name": "Edelweißstraße 2"
+    },
+    {
+        "id": "node/6343583269",
+        "name": "Flurweg 2"
+    },
+    {
+        "id": "node/6343583270",
+        "name": "Kreisstraße"
+    },
+    {
+        "id": "node/6343583271",
+        "name": "Kaiserstraße 4"
+    },
+    {
+        "id": "node/6343583272",
+        "name": "Wedigenstein 2"
+    },
+    {
+        "id": "node/6343583274",
+        "name": "Leopoldshöhe 2"
+    },
+    {
+        "id": "node/6538406668",
+        "name": "Steinstraße 2"
+    },
+    {
+        "id": "node/6538406669",
+        "name": "Steinstraße 3"
+    },
+    {
+        "id": "node/6538406677",
+        "name": "Kampa-Halle"
+    },
+    {
+        "id": "node/6538406678",
+        "name": "Kampa-Halle 2"
+    },
+    {
+        "id": "node/6538477214",
+        "name": "Kirche"
+    },
+    {
+        "id": "node/6538477215",
+        "name": "Kirche 2"
+    },
+    {
+        "id": "node/6538477267",
+        "name": "Kleine Dombrede 2"
+    },
+    {
+        "id": "node/6538490990",
+        "name": "Mittelweg"
+    },
+    {
+        "id": "node/6538490991",
+        "name": "Mittelweg 2"
+    },
+    {
+        "id": "node/6538490997",
+        "name": "Karlsbader Weg"
+    },
+    {
+        "id": "node/6538490998",
+        "name": "Karlsbader Weg 2"
+    },
+    {
+        "id": "node/6538490999",
+        "name": "Bismarckstraße"
+    },
+    {
+        "id": "node/6538491000",
+        "name": "Bismarckstraße 2"
+    },
+    {
+        "id": "node/6538491004",
+        "name": "Hardenbergstraße"
+    },
+    {
+        "id": "node/6538491005",
+        "name": "Hardenbergstraße 2"
+    }
+]

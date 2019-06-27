@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 import * as d3 from 'd3';
 import * as tubeMap from "d3-tube-map";
-import tubeData from '../tubedata/tubedata';
+import tubeData from '../localData/tubedata';
 import style from '../assest/styles/PlanStyle';
 import { Grid, Paper, Typography, Divider } from '@material-ui/core';
 

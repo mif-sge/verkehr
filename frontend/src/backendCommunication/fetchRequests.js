@@ -1,4 +1,5 @@
 import busstops from '../localData/busstops.json';
+import shortBusstops from '../localData/shortBusstops.json';
 import hospitals from '../localData/hospitals.json';
 import malls from '../localData/malls.json';
 import shortBuslines from '../localData/shortBuslines.json';
@@ -17,7 +18,8 @@ export async function fetchBusstops(requestMode) {
         }
     });
     //return await answer.json();*/
-    return busstops
+    if (requestMode === "short") return shortBusstops;
+    else return busstops;
 }
 
 export async function fetchHospitals() {

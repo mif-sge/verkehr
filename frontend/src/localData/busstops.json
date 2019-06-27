@@ -1,576 +1,2713 @@
 [
     {
-        "id": 1,
+        "id": "node/21105246",
+        "name": "Wedigenstein",
+        "lat": 52.24153,
+        "lon": 8.8859413
+    },
+    {
+        "id": "node/35685101",
+        "name": "Erbeweg",
+        "lat": 52.2712559,
+        "lon": 8.9030676
+    },
+    {
+        "id": "node/35685106",
+        "name": "Kapellenweg",
+        "lat": 52.2570291,
+        "lon": 8.9084401
+    },
+    {
+        "id": "node/98917603",
+        "name": "Potts Park",
+        "lat": 52.2640928,
+        "lon": 8.8449325
+    },
+    {
+        "id": "node/171217485",
+        "name": "Unterm Willem",
+        "lat": 52.2451976,
+        "lon": 8.9139827
+    },
+    {
+        "id": "node/301896102",
+        "name": "Zollern",
+        "lat": 52.2678436,
+        "lon": 8.9043862
+    },
+    {
+        "id": "node/301896227",
+        "name": "Edelweißstraße",
+        "lat": 52.2629736,
+        "lon": 8.9060374
+    },
+    {
+        "id": "node/301896555",
+        "name": "Barkhausen Kreuzung",
+        "lat": 52.2544869,
+        "lon": 8.9092676
+    },
+    {
+        "id": "node/301896686",
+        "name": "Kaiserstraße",
+        "lat": 52.2501788,
+        "lon": 8.911193
+    },
+    {
+        "id": "node/309081858",
+        "name": "Grille/Haus 33",
+        "lat": 52.2827887,
+        "lon": 8.9534562
+    },
+    {
+        "id": "node/378261189",
+        "name": "Porta, Bahnhof",
+        "lat": 52.2441831,
+        "lon": 8.9213999
+    },
+    {
+        "id": "node/378262057",
+        "name": "Porta",
+        "lat": 52.2462272,
+        "lon": 8.912508
+    },
+    {
+        "id": "node/378262193",
+        "name": "Porta 2",
+        "lat": 52.2464086,
+        "lon": 8.9129902
+    },
+    {
+        "id": "node/416031397",
+        "name": "Steinbruch",
+        "lat": 52.2454004,
+        "lon": 8.8700929
+    },
+    {
+        "id": "node/416031398",
+        "name": "Steinbruch 2",
+        "lat": 52.2452789,
+        "lon": 8.8696058
+    },
+    {
+        "id": "node/416031404",
+        "name": "Auf den Bohlen",
+        "lat": 52.2444629,
+        "lon": 8.8590513
+    },
+    {
+        "id": "node/416031405",
+        "name": "Auf den Bohlen 2",
+        "lat": 52.2444785,
+        "lon": 8.8598281
+    },
+    {
+        "id": "node/447220547",
+        "name": "Hummelbeck",
+        "lat": 52.2729727,
+        "lon": 8.8524794
+    },
+    {
+        "id": "node/447220553",
+        "name": "Hummelbeck 2",
+        "lat": 52.2728676,
+        "lon": 8.8524451
+    },
+    {
+        "id": "node/447220557",
+        "name": "Doldenweg",
+        "lat": 52.2729044,
+        "lon": 8.8588652
+    },
+    {
+        "id": "node/447220563",
+        "name": "Doldenweg 2",
+        "lat": 52.2727731,
+        "lon": 8.858891
+    },
+    {
+        "id": "node/447220567",
+        "name": "Dützer Dorfstraße",
+        "lat": 52.2728624,
+        "lon": 8.8639378
+    },
+    {
+        "id": "node/447220570",
+        "name": "Dützer Dorfstraße 2",
+        "lat": 52.2727573,
+        "lon": 8.8639207
+    },
+    {
+        "id": "node/447220578",
+        "name": "Kaufmannsbrede",
+        "lat": 52.272828,
+        "lon": 8.8745485
+    },
+    {
+        "id": "node/447220580",
+        "name": "Kaufmannsbrede 2",
+        "lat": 52.2726819,
+        "lon": 8.8734117
+    },
+    {
+        "id": "node/447220582",
+        "name": "Romeoweg",
+        "lat": 52.2727878,
+        "lon": 8.8801694
+    },
+    {
+        "id": "node/447220587",
+        "name": "Romeoweg 2",
+        "lat": 52.2726749,
+        "lon": 8.8804553
+    },
+    {
+        "id": "node/447220593",
+        "name": "Bölhorst",
+        "lat": 52.2734838,
+        "lon": 8.8879412
+    },
+    {
+        "id": "node/448238543",
+        "name": "Klinkerstraße",
+        "lat": 52.2685345,
+        "lon": 8.8830534
+    },
+    {
+        "id": "node/448238548",
+        "name": "Klinkerstraße 2",
+        "lat": 52.2685293,
+        "lon": 8.8831306
+    },
+    {
+        "id": "node/461042747",
+        "name": "Johannes-Wesling-Klinikum",
+        "lat": 52.2605215,
+        "lon": 8.8914389
+    },
+    {
+        "id": "node/494840117",
+        "name": "Plattenberger Weg",
+        "lat": 52.242768,
+        "lon": 8.8455527
+    },
+    {
+        "id": "node/494844818",
+        "name": "Plattenberger Weg 2",
+        "lat": 52.2426702,
+        "lon": 8.8457098
+    },
+    {
+        "id": "node/497788075",
         "name": "Parkhotel",
         "lat": 52.3040848,
         "lon": 8.9159483
     },
     {
-        "id": 2,
+        "id": "node/731809811",
+        "name": "Ziegeleiweg",
+        "lat": 52.2690597,
+        "lon": 8.8713984
+    },
+    {
+        "id": "node/731809853",
+        "name": "Ziegeleiweg 2",
+        "lat": 52.2689531,
+        "lon": 8.8719325
+    },
+    {
+        "id": "node/736055538",
+        "name": "Hohenstaufenring",
+        "lat": 52.2840181,
+        "lon": 8.8929654
+    },
+    {
+        "id": "node/736055658",
+        "name": "Hohenstaufenring 2",
+        "lat": 52.2836427,
+        "lon": 8.8924787
+    },
+    {
+        "id": "node/744520688",
+        "name": "Bölhorst, Mindener Straße",
+        "lat": 52.2724918,
+        "lon": 8.8881046
+    },
+    {
+        "id": "node/744545349",
+        "name": "Meyerweg",
+        "lat": 52.2688512,
+        "lon": 8.8976112
+    },
+    {
+        "id": "node/748300346",
+        "name": "Schmaler Weg",
+        "lat": 52.2703836,
+        "lon": 8.8641319
+    },
+    {
+        "id": "node/750309122",
+        "name": "Meyerweg 2",
+        "lat": 52.2689391,
+        "lon": 8.897687
+    },
+    {
+        "id": "node/764888386",
+        "name": "Südfriedhof",
+        "lat": 52.2792915,
+        "lon": 8.895056
+    },
+    {
+        "id": "node/764888499",
+        "name": "Südfriedhof 2",
+        "lat": 52.279393,
+        "lon": 8.8951238
+    },
+    {
+        "id": "node/764888579",
+        "name": "Dohlenweg",
+        "lat": 52.2775029,
+        "lon": 8.8965082
+    },
+    {
+        "id": "node/764888600",
+        "name": "Dohlenweg 2",
+        "lat": 52.2774707,
+        "lon": 8.8966745
+    },
+    {
+        "id": "node/766894148",
+        "name": "Pauluskirche",
+        "lat": 52.2820947,
+        "lon": 8.8779171
+    },
+    {
+        "id": "node/766894197",
+        "name": "Piwittskamp",
+        "lat": 52.2805869,
+        "lon": 8.887034
+    },
+    {
+        "id": "node/766894208",
+        "name": "Vogelsang",
+        "lat": 52.2794868,
+        "lon": 8.8816536
+    },
+    {
+        "id": "node/822591051",
+        "name": "Schule",
+        "lat": 52.3152664,
+        "lon": 8.9969908
+    },
+    {
+        "id": "node/822591056",
+        "name": "Brink",
+        "lat": 52.310172,
+        "lon": 8.997695
+    },
+    {
+        "id": "node/822812864",
+        "name": "Holzkamp",
+        "lat": 52.3193139,
+        "lon": 8.9951046
+    },
+    {
+        "id": "node/996261075",
+        "name": "Schillerstraße",
+        "lat": 52.2891076,
+        "lon": 8.8954969
+    },
+    {
+        "id": "node/998050751",
+        "name": "Schillerstraße 2",
+        "lat": 52.2889858,
+        "lon": 8.8968948
+    },
+    {
+        "id": "node/998111914",
         "name": "Lichtenbergstraße",
         "lat": 52.28867,
         "lon": 8.897962
     },
     {
-        "id": 3,
+        "id": "node/1005300356",
+        "name": "Preußenring",
+        "lat": 52.2910342,
+        "lon": 8.8863464
+    },
+    {
+        "id": "node/1005310686",
+        "name": "Hohenzollernring / Königstraße",
+        "lat": 52.2897612,
+        "lon": 8.8920891
+    },
+    {
+        "id": "node/1005318646",
         "name": "Gertrudstraße",
         "lat": 52.285966,
         "lon": 8.8976136
     },
     {
-        "id": 4,
-        "name": "Gertrudstraße",
+        "id": "node/1008200702",
+        "name": "Gertrudstraße 2",
         "lat": 52.2860843,
         "lon": 8.8974831
     },
     {
-        "id": 5,
+        "id": "node/1008216083",
         "name": "Ringstraße/Königstraße",
         "lat": 52.2879623,
         "lon": 8.9025578
     },
     {
-        "id": 6,
-        "name": "Ringstraße/Königstraße",
+        "id": "node/1008216086",
+        "name": "Ringstraße/Königstraße 2",
         "lat": 52.2881181,
         "lon": 8.9021904
     },
     {
-        "id": 7,
+        "id": "node/1011145552",
         "name": "Königswall",
         "lat": 52.2873156,
         "lon": 8.9079099
     },
     {
-        "id": 8,
+        "id": "node/1015045026",
+        "name": "Lehra",
+        "lat": 52.2512561,
+        "lon": 8.9984525
+    },
+    {
+        "id": "node/1166342745",
         "name": "Wilhelmstraße/Oberstadt",
         "lat": 52.2980487,
         "lon": 8.9115853
     },
     {
-        "id": 9,
+        "id": "node/1166342749",
         "name": "Steinstraße",
         "lat": 52.2962903,
         "lon": 8.9123538
     },
     {
-        "id": 10,
+        "id": "node/1167191266",
         "name": "Bildungszentrum",
         "lat": 52.286341,
         "lon": 8.9086159
     },
     {
-        "id": 11,
+        "id": "node/1171123889",
         "name": "Königswall / Aula",
         "lat": 52.2880588,
         "lon": 8.9106874
     },
     {
-        "id": 12,
-        "name": "Königswall / Aula",
+        "id": "node/1171123943",
+        "name": "Königswall / Aula 2",
         "lat": 52.2880387,
         "lon": 8.9106601
     },
     {
-        "id": 13,
+        "id": "node/1257853447",
+        "name": "Petzer Krug",
+        "lat": 52.2716152,
+        "lon": 9.0044323
+    },
+    {
+        "id": "node/1257853458",
+        "name": "Petzer Krug 2",
+        "lat": 52.2714155,
+        "lon": 9.0059339
+    },
+    {
+        "id": "node/1393811740",
+        "name": "Prange",
+        "lat": 52.310758,
+        "lon": 8.9920466
+    },
+    {
+        "id": "node/1623899638",
+        "name": "Kirchweg",
+        "lat": 52.2515776,
+        "lon": 8.9423837
+    },
+    {
+        "id": "node/1636738140",
         "name": "Kanzlers Weide",
         "lat": 52.2877592,
         "lon": 8.9264768
     },
     {
-        "id": 14,
+        "id": "node/1636738156",
         "name": "Hafenstraße",
         "lat": 52.2900617,
         "lon": 8.9301318
     },
     {
-        "id": 15,
-        "name": "Kaiserstraße",
+        "id": "node/1636738164",
+        "name": "Kaiserstraße 2",
         "lat": 52.2893201,
         "lon": 8.9273886
     },
     {
-        "id": 16,
+        "id": "node/1636738170",
         "name": "Friedrich-Wilhelm-Str./Bahnhof",
         "lat": 52.2892983,
         "lon": 8.9320435
     },
     {
-        "id": 17,
-        "name": "Kaiserstraße",
+        "id": "node/1636738182",
+        "name": "Kaiserstraße 3",
         "lat": 52.289475,
         "lon": 8.9274205
     },
     {
-        "id": 18,
+        "id": "node/1636738183",
         "name": "Grimpenwall",
         "lat": 52.2922169,
         "lon": 8.9187173
     },
     {
-        "id": 19,
-        "name": "Grimpenwall",
+        "id": "node/1636738188",
+        "name": "Grimpenwall 2",
         "lat": 52.2918234,
         "lon": 8.9210917
     },
     {
-        "id": 20,
-        "name": "Domschule",
-        "lat": 52.2933709,
-        "lon": 8.9147603
-    },
-    {
-        "id": 21,
+        "id": "node/1636751813",
         "name": "Hermannstraße",
         "lat": 52.2939446,
         "lon": 8.9235053
     },
     {
-        "id": 22,
+        "id": "node/1636751814",
         "name": "Dorotheenstraße",
         "lat": 52.2956905,
         "lon": 8.9235865
     },
     {
-        "id": 23,
+        "id": "node/1636751815",
         "name": "Marienstraße",
         "lat": 52.2930297,
         "lon": 8.915825
     },
     {
-        "id": 24,
+        "id": "node/1636751816",
         "name": "Werftstraße",
         "lat": 52.297764,
         "lon": 8.9248527
     },
     {
-        "id": 25,
+        "id": "node/1636751818",
         "name": "Agentur für Arbeit",
         "lat": 52.2918075,
         "lon": 8.9223509
     },
     {
-        "id": 26,
+        "id": "node/1636751823",
         "name": "Omnibusbetriebshof",
         "lat": 52.3004392,
         "lon": 8.9259639
     },
     {
-        "id": 27,
+        "id": "node/1636758076",
+        "name": "Hausberge, Schalksburg",
+        "lat": 52.239419,
+        "lon": 8.9204539
+    },
+    {
+        "id": "node/1636758084",
+        "name": "Hausberge, Schalksburg 2",
+        "lat": 52.2387362,
+        "lon": 8.9196494
+    },
+    {
+        "id": "node/1650766012",
         "name": "Minden ZOB",
         "lat": 52.2868361,
         "lon": 8.9172131
     },
     {
-        "id": 28,
-        "name": "Minden ZOB",
+        "id": "node/1650766013",
+        "name": "Minden ZOB 2",
         "lat": 52.2865595,
         "lon": 8.9174432
     },
     {
-        "id": 29,
-        "name": "Minden ZOB",
+        "id": "node/1650766014",
+        "name": "Minden ZOB 3",
         "lat": 52.2865981,
         "lon": 8.9171944
     },
     {
-        "id": 30,
-        "name": "Minden ZOB",
+        "id": "node/1650766015",
+        "name": "Minden ZOB 4",
         "lat": 52.2870979,
         "lon": 8.917544
     },
     {
-        "id": 31,
-        "name": "Minden ZOB",
+        "id": "node/1650766016",
+        "name": "Minden ZOB 5",
         "lat": 52.2864378,
         "lon": 8.9168083
     },
     {
-        "id": 32,
-        "name": "Minden ZOB",
+        "id": "node/1650766017",
+        "name": "Minden ZOB 6",
         "lat": 52.2868258,
         "lon": 8.9174721
     },
     {
-        "id": 33,
-        "name": "Minden ZOB",
+        "id": "node/1650766018",
+        "name": "Minden ZOB 7",
         "lat": 52.2869711,
         "lon": 8.9179278
     },
     {
-        "id": 34,
-        "name": "Minden ZOB",
+        "id": "node/1650778014",
+        "name": "Minden ZOB 8",
         "lat": 52.2869575,
         "lon": 8.9180499
     },
     {
-        "id": 35,
-        "name": "Minden ZOB",
-        "lat": 52.2871281,
-        "lon": 8.9177682
+        "id": "node/1672299960",
+        "name": "Leopoldshöhe",
+        "lat": 52.2438816,
+        "lon": 8.877656
     },
     {
-        "id": 36,
-        "name": "Agentur für Arbeit",
+        "id": "node/1672351033",
+        "name": "Dützen, Mühle",
+        "lat": 52.2721133,
+        "lon": 8.8531728
+    },
+    {
+        "id": "node/1672386306",
+        "name": "Schulzentrum Süd",
+        "lat": 52.2637715,
+        "lon": 8.8782676
+    },
+    {
+        "id": "node/1734172607",
+        "name": "Lerbeck Kirche",
+        "lat": 52.2504631,
+        "lon": 8.9425964
+    },
+    {
+        "id": "node/1734172609",
+        "name": "Pfahlweg",
+        "lat": 52.2510205,
+        "lon": 8.9329942
+    },
+    {
+        "id": "node/1734172610",
+        "name": "Hausberger Straße 14",
+        "lat": 52.2511618,
+        "lon": 8.9270866
+    },
+    {
+        "id": "node/1734172611",
+        "name": "Lindenstraße",
+        "lat": 52.2585456,
+        "lon": 8.9441562
+    },
+    {
+        "id": "node/1734172612",
+        "name": "Georg-Rost-Straße",
+        "lat": 52.2559039,
+        "lon": 8.9429476
+    },
+    {
+        "id": "node/1734183136",
+        "name": "Mittelfeldstraße",
+        "lat": 52.2631139,
+        "lon": 8.9291672
+    },
+    {
+        "id": "node/1734183137",
+        "name": "Meißener Straße",
+        "lat": 52.2589789,
+        "lon": 8.9334901
+    },
+    {
+        "id": "node/1734183139",
+        "name": "Hebünte",
+        "lat": 52.2672796,
+        "lon": 8.9289058
+    },
+    {
+        "id": "node/1734183149",
+        "name": "Weidenstraße",
+        "lat": 52.2595637,
+        "lon": 8.936789
+    },
+    {
+        "id": "node/1734183150",
+        "name": "Forststraße",
+        "lat": 52.2616458,
+        "lon": 8.945675
+    },
+    {
+        "id": "node/1772874362",
+        "name": "Clus Märchenwald",
+        "lat": 52.2673523,
+        "lon": 8.9801712
+    },
+    {
+        "id": "node/1772874368",
+        "name": "Clus Märchenwald 2",
+        "lat": 52.2675809,
+        "lon": 8.980079
+    },
+    {
+        "id": "node/1788602825",
+        "name": "Kreishaus",
+        "lat": 52.2820402,
+        "lon": 8.910818
+    },
+    {
+        "id": "node/1788602826",
+        "name": "Wittekindallee",
+        "lat": 52.2808628,
+        "lon": 8.9082699
+    },
+    {
+        "id": "node/1788602828",
+        "name": "Wittekindallee 2",
+        "lat": 52.2802089,
+        "lon": 8.9076798
+    },
+    {
+        "id": "node/1788613086",
+        "name": "Gesundheitszentrum",
+        "lat": 52.260371,
+        "lon": 8.895004
+    },
+    {
+        "id": "node/1788613088",
+        "name": "Feldstraße",
+        "lat": 52.2604619,
+        "lon": 8.9017937
+    },
+    {
+        "id": "node/1788613091",
+        "name": "Flurweg",
+        "lat": 52.2611244,
+        "lon": 8.9057218
+    },
+    {
+        "id": "node/1788613094",
+        "name": "Füllenkamp",
+        "lat": 52.2552721,
+        "lon": 8.9029753
+    },
+    {
+        "id": "node/1789848839",
+        "name": "Nordfriedhof",
+        "lat": 52.3086434,
+        "lon": 8.9153401
+    },
+    {
+        "id": "node/1789848840",
+        "name": "Nordfriedhof 2",
+        "lat": 52.3078058,
+        "lon": 8.9151245
+    },
+    {
+        "id": "node/1789853941",
+        "name": "Gewerbepark Minderheide",
+        "lat": 52.312804,
+        "lon": 8.8817134
+    },
+    {
+        "id": "node/1790724302",
+        "name": "Agentur für Arbeit 2",
         "lat": 52.2919307,
         "lon": 8.9225075
     },
     {
-        "id": 37,
+        "id": "node/1790735664",
         "name": "Goebenstraße",
         "lat": 52.2923474,
         "lon": 8.919667
     },
     {
-        "id": 38,
+        "id": "node/1790735665",
         "name": "Brühlstraße",
         "lat": 52.2965962,
         "lon": 8.9196563
     },
     {
-        "id": 39,
+        "id": "node/1790735666",
         "name": "Rosentalstraße",
         "lat": 52.2948223,
         "lon": 8.9195514
     },
     {
-        "id": 40,
-        "name": "Brühlstraße",
+        "id": "node/1790745214",
+        "name": "Leteln Grundschule",
+        "lat": 52.3171128,
+        "lon": 8.9308226
+    },
+    {
+        "id": "node/1911502866",
+        "name": "Brühlstraße 2",
         "lat": 52.2967888,
         "lon": 8.9198799
     },
     {
-        "id": 41,
+        "id": "node/2035260120",
+        "name": "Beermann",
+        "lat": 52.3038801,
+        "lon": 8.8568122
+    },
+    {
+        "id": "node/2035260134",
+        "name": "Hahlen, Friedhof",
+        "lat": 52.3074731,
+        "lon": 8.8463949
+    },
+    {
+        "id": "node/2035260142",
+        "name": "Beermann 2",
+        "lat": 52.3038161,
+        "lon": 8.8571903
+    },
+    {
+        "id": "node/2035288554",
+        "name": "Osterhahlen",
+        "lat": 52.2978712,
+        "lon": 8.8647408
+    },
+    {
+        "id": "node/2035288557",
+        "name": "Wittelsbacherallee",
+        "lat": 52.2920104,
+        "lon": 8.881387
+    },
+    {
+        "id": "node/2035288564",
+        "name": "Am Grundbach",
+        "lat": 52.2951323,
+        "lon": 8.8711195
+    },
+    {
+        "id": "node/2035288567",
+        "name": "Hohenzollernring / Königstraße 2",
+        "lat": 52.2896106,
+        "lon": 8.8922093
+    },
+    {
+        "id": "node/2035288570",
+        "name": "Preußenring 2",
+        "lat": 52.2901549,
+        "lon": 8.8892431
+    },
+    {
+        "id": "node/2035288574",
+        "name": "Osterhahlen 2",
+        "lat": 52.2985429,
+        "lon": 8.8637779
+    },
+    {
+        "id": "node/2035288577",
+        "name": "Wilhelm-Tell-Straße",
+        "lat": 52.2943082,
+        "lon": 8.8744552
+    },
+    {
+        "id": "node/2035653947",
         "name": "Simeonsplatz",
         "lat": 52.2844915,
         "lon": 8.9122078
     },
     {
-        "id": 42,
-        "name": "Simeonsplatz",
+        "id": "node/2035653959",
+        "name": "Simeonsplatz 2",
         "lat": 52.2846327,
         "lon": 8.9130071
     },
     {
-        "id": 43,
+        "id": "node/2035700702",
         "name": "Minden, Bahnhof",
         "lat": 52.2899065,
         "lon": 8.9355967
     },
     {
-        "id": 44,
-        "name": "Minden, Bahnhof",
+        "id": "node/2035700712",
+        "name": "Minden, Bahnhof 2",
         "lat": 52.2900991,
         "lon": 8.9355701
     },
     {
-        "id": 45,
-        "name": "Minden, Bahnhof",
+        "id": "node/2035700716",
+        "name": "Minden, Bahnhof 3",
         "lat": 52.2899632,
         "lon": 8.9354813
     },
     {
-        "id": 46,
+        "id": "node/2093899511",
+        "name": "Hermann-Oberth-Weg",
+        "lat": 52.2705144,
+        "lon": 8.872972
+    },
+    {
+        "id": "node/2094149362",
+        "name": "Meisenweg",
+        "lat": 52.275474,
+        "lon": 8.8956049
+    },
+    {
+        "id": "node/2094149363",
         "name": "Bleekstraße",
         "lat": 52.2858981,
         "lon": 8.9025054
     },
     {
-        "id": 47,
+        "id": "node/2094149364",
         "name": "Kuhlenstraße",
         "lat": 52.2849867,
         "lon": 8.8989973
     },
     {
-        "id": 48,
-        "name": "Minden ZOB",
+        "id": "node/2094169778",
+        "name": "Minden ZOB 9",
         "lat": 52.2863146,
         "lon": 8.9171109
     },
     {
-        "id": 49,
+        "id": "node/2094169786",
         "name": "Parkstraße",
         "lat": 52.2855659,
         "lon": 8.9064685
     },
     {
-        "id": 50,
+        "id": "node/2125846722",
+        "name": "Schaumburger Weg",
+        "lat": 52.2879059,
+        "lon": 8.965507
+    },
+    {
+        "id": "node/2125846723",
+        "name": "(Steinkreuz-/)Meißener Straße",
+        "lat": 52.2878149,
+        "lon": 8.9558448
+    },
+    {
+        "id": "node/2125846724",
+        "name": "Denkmal",
+        "lat": 52.2881211,
+        "lon": 8.9941011
+    },
+    {
+        "id": "node/2125846725",
         "name": "Alsenweg",
         "lat": 52.2890831,
         "lon": 8.9423487
     },
     {
-        "id": 51,
+        "id": "node/2125846726",
+        "name": "Bahnhof",
+        "lat": 52.2787684,
+        "lon": 9.0009193
+    },
+    {
+        "id": "node/2125846728",
+        "name": "Siedlung",
+        "lat": 52.2910625,
+        "lon": 8.9889296
+    },
+    {
+        "id": "node/2125846729",
+        "name": "Petzer Krug/Kirche",
+        "lat": 52.2704343,
+        "lon": 9.0026359
+    },
+    {
+        "id": "node/2125860643",
+        "name": "Freundschaftsheim",
+        "lat": 52.2605372,
+        "lon": 9.0237344
+    },
+    {
+        "id": "node/2125860646",
+        "name": "Schmiedeweg",
+        "lat": 52.2621071,
+        "lon": 9.0113333
+    },
+    {
+        "id": "node/2125860677",
+        "name": "Abzw. Petzen",
+        "lat": 52.2647633,
+        "lon": 8.9974401
+    },
+    {
+        "id": "node/2125860679",
+        "name": "Schule 2",
+        "lat": 52.2632462,
+        "lon": 9.0029672
+    },
+    {
+        "id": "node/2125860706",
+        "name": "Abzw. Petzen 2",
+        "lat": 52.2644679,
+        "lon": 8.9974454
+    },
+    {
+        "id": "node/2135504398",
+        "name": "Holzweg",
+        "lat": 52.2709019,
+        "lon": 8.9737431
+    },
+    {
+        "id": "node/2135504401",
+        "name": "Holzweg 2",
+        "lat": 52.2709872,
+        "lon": 8.9738719
+    },
+    {
+        "id": "node/2135504403",
+        "name": "Südbruch",
+        "lat": 52.2847382,
+        "lon": 8.9490448
+    },
+    {
+        "id": "node/2225690981",
+        "name": "Imhoffstraße",
+        "lat": 52.3119685,
+        "lon": 8.9103223
+    },
+    {
+        "id": "node/2225690985",
+        "name": "Kutenhauser Straße",
+        "lat": 52.3052549,
+        "lon": 8.9113622
+    },
+    {
+        "id": "node/2225690989",
+        "name": "Graf-Wilhelm-Straße / Bahnübergang",
+        "lat": 52.3118924,
+        "lon": 8.9074783
+    },
+    {
+        "id": "node/2225690993",
+        "name": "Brauereistraße",
+        "lat": 52.307199,
+        "lon": 8.9113613
+    },
+    {
+        "id": "node/2225690996",
+        "name": "Dessauer Straße",
+        "lat": 52.31034,
+        "lon": 8.9113631
+    },
+    {
+        "id": "node/2225691000",
         "name": "Gabelsberger Straße",
         "lat": 52.3030007,
         "lon": 8.9117097
     },
     {
-        "id": 52,
+        "id": "node/2225708244",
+        "name": "Herzog-Ferdinand-Straße",
+        "lat": 52.3080671,
+        "lon": 8.9093917
+    },
+    {
+        "id": "node/2225708254",
+        "name": "Bierpohlschule",
+        "lat": 52.3083247,
+        "lon": 8.9040888
+    },
+    {
+        "id": "node/2225708269",
+        "name": "Ziethenstraße",
+        "lat": 52.3102937,
+        "lon": 8.9038138
+    },
+    {
+        "id": "node/2226721679",
         "name": "Stiftstraße",
         "lat": 52.2941367,
         "lon": 8.9131374
     },
     {
-        "id": 53,
+        "id": "node/2229268801",
         "name": "Nettelbeckstraße",
         "lat": 52.2949344,
         "lon": 8.9006016
     },
     {
-        "id": 54,
-        "name": "Nettelbeckstraße",
+        "id": "node/2229268805",
+        "name": "Habsburgerring / KBS",
+        "lat": 52.2977476,
+        "lon": 8.8968742
+    },
+    {
+        "id": "node/2229268809",
+        "name": "Nettelbeckstraße 2",
         "lat": 52.2948766,
         "lon": 8.901353
     },
     {
-        "id": 55,
+        "id": "node/2229268810",
         "name": "Hahler Straße",
         "lat": 52.2959283,
         "lon": 8.8983747
     },
     {
-        "id": 56,
+        "id": "node/2229268826",
+        "name": "Drabertstraße",
+        "lat": 52.3004697,
+        "lon": 8.895401
+    },
+    {
+        "id": "node/2229279889",
+        "name": "Roßbachstraße",
+        "lat": 52.3085129,
+        "lon": 8.8962385
+    },
+    {
+        "id": "node/2229279890",
+        "name": "Roßbachstraße 2",
+        "lat": 52.3088344,
+        "lon": 8.8960239
+    },
+    {
+        "id": "node/2229279893",
+        "name": "Fahlstätte",
+        "lat": 52.3063122,
+        "lon": 8.8999531
+    },
+    {
+        "id": "node/2229285288",
+        "name": "Lange Wand",
+        "lat": 52.3161893,
+        "lon": 8.8945719
+    },
+    {
+        "id": "node/2229285289",
+        "name": "Grundschule",
+        "lat": 52.3160224,
+        "lon": 8.8854062
+    },
+    {
+        "id": "node/2229285290",
+        "name": "Am Schäferfeld",
+        "lat": 52.3167906,
+        "lon": 8.8874846
+    },
+    {
+        "id": "node/2229285291",
+        "name": "Leuthenstraße",
+        "lat": 52.3163227,
+        "lon": 8.8904079
+    },
+    {
+        "id": "node/2229285292",
+        "name": "Wintgensstraße",
+        "lat": 52.3139638,
+        "lon": 8.8943333
+    },
+    {
+        "id": "node/2229285293",
+        "name": "Liegnitzstraße",
+        "lat": 52.3116537,
+        "lon": 8.8934416
+    },
+    {
+        "id": "node/2229285294",
+        "name": "Stiftsallee",
+        "lat": 52.314139,
+        "lon": 8.8825057
+    },
+    {
+        "id": "node/2229298869",
+        "name": "Trafo",
+        "lat": 52.3089914,
+        "lon": 8.8730242
+    },
+    {
+        "id": "node/2229298876",
+        "name": "Kingsley Allee",
+        "lat": 52.3129799,
+        "lon": 8.8829186
+    },
+    {
+        "id": "node/2229298877",
+        "name": "Grenzweg",
+        "lat": 52.311476,
+        "lon": 8.8779245
+    },
+    {
+        "id": "node/2229298879",
+        "name": "Hämelstraße",
+        "lat": 52.3150702,
+        "lon": 8.877072
+    },
+    {
+        "id": "node/2229298880",
+        "name": "Molkereiweg",
+        "lat": 52.3147071,
+        "lon": 8.8682488
+    },
+    {
+        "id": "node/2229298881",
+        "name": "Kingsley Allee 2",
+        "lat": 52.3129636,
+        "lon": 8.8824546
+    },
+    {
+        "id": "node/2229298884",
+        "name": "An der Heide",
+        "lat": 52.3163876,
+        "lon": 8.8725755
+    },
+    {
+        "id": "node/2229298885",
+        "name": "Käferweg",
+        "lat": 52.3109678,
+        "lon": 8.8702265
+    },
+    {
+        "id": "node/2235188550",
         "name": "Gerichtszentrum",
         "lat": 52.2913595,
         "lon": 8.9121043
     },
     {
-        "id": 57,
+        "id": "node/2235188556",
         "name": "Greisenbruchstraße",
         "lat": 52.2897503,
         "lon": 8.9120926
     },
     {
-        "id": 58,
-        "name": "Steinstraße",
-        "lat": 52.2934336,
-        "lon": 8.9065121
+        "id": "node/2235318502",
+        "name": "Goethestraße",
+        "lat": 52.2924517,
+        "lon": 8.8915351
     },
     {
-        "id": 59,
+        "id": "node/2235344715",
+        "name": "Wittelsbacher Allee 105",
+        "lat": 52.2983436,
+        "lon": 8.8812057
+    },
+    {
+        "id": "node/2235344733",
+        "name": "Freiherr-von-Vincke-Schule",
+        "lat": 52.3007936,
+        "lon": 8.8814647
+    },
+    {
+        "id": "node/2235344753",
+        "name": "Besselgymnasium",
+        "lat": 52.2972552,
+        "lon": 8.8851471
+    },
+    {
+        "id": "node/2235344758",
+        "name": "Sieben Bauern",
+        "lat": 52.3032141,
+        "lon": 8.8821812
+    },
+    {
+        "id": "node/2235344770",
+        "name": "Zähringerallee",
+        "lat": 52.3059431,
+        "lon": 8.8833587
+    },
+    {
+        "id": "node/2235365191",
+        "name": "Tillystraße",
+        "lat": 52.306567,
+        "lon": 8.8930545
+    },
+    {
+        "id": "node/2235365195",
+        "name": "Melanchthonstraße",
+        "lat": 52.3069227,
+        "lon": 8.895828
+    },
+    {
+        "id": "node/2235365205",
+        "name": "Diemelstraße",
+        "lat": 52.3043118,
+        "lon": 8.8971906
+    },
+    {
+        "id": "node/2235365218",
+        "name": "Liebigstraße",
+        "lat": 52.3038165,
+        "lon": 8.8889991
+    },
+    {
+        "id": "node/2235365223",
+        "name": "In den Bärenkämpen",
+        "lat": 52.3027096,
+        "lon": 8.8928128
+    },
+    {
+        "id": "node/2235365226",
+        "name": "Bunsenstraße",
+        "lat": 52.3047842,
+        "lon": 8.8858232
+    },
+    {
+        "id": "node/2235365230",
+        "name": "Sandtrift",
+        "lat": 52.3036903,
+        "lon": 8.8936902
+    },
+    {
+        "id": "node/2235379969",
+        "name": "Hahler Feld",
+        "lat": 52.3028893,
+        "lon": 8.8830567
+    },
+    {
+        "id": "node/2235379976",
+        "name": "Melittabad",
+        "lat": 52.3025079,
+        "lon": 8.8882236
+    },
+    {
+        "id": "node/2273738777",
+        "name": "Wettinerallee",
+        "lat": 52.2868524,
+        "lon": 8.8787397
+    },
+    {
+        "id": "node/2273738779",
+        "name": "Wilhelm-Busch-Straße",
+        "lat": 52.2871296,
+        "lon": 8.884925
+    },
+    {
+        "id": "node/2273738782",
+        "name": "Hohenzollernring / Rodenbecker Straße",
+        "lat": 52.286637,
+        "lon": 8.8924591
+    },
+    {
+        "id": "node/2273738783",
+        "name": "Ernst-Moritz-Arndt-Straße",
+        "lat": 52.2889277,
+        "lon": 8.8811967
+    },
+    {
+        "id": "node/2273738784",
+        "name": "Mitteldamm",
+        "lat": 52.2873923,
+        "lon": 8.887242
+    },
+    {
+        "id": "node/2273753241",
+        "name": "Falkenstraße",
+        "lat": 52.2801774,
+        "lon": 8.8782142
+    },
+    {
+        "id": "node/2273753314",
+        "name": "Schwabenring",
+        "lat": 52.2844536,
+        "lon": 8.8870627
+    },
+    {
+        "id": "node/2274341443",
+        "name": "Bad Minden",
+        "lat": 52.2765411,
+        "lon": 8.8999314
+    },
+    {
+        "id": "node/2274341448",
+        "name": "Bad Minden 2",
+        "lat": 52.2765722,
+        "lon": 8.8996283
+    },
+    {
+        "id": "node/2274341462",
+        "name": "Erzweg",
+        "lat": 52.2656059,
+        "lon": 8.8808003
+    },
+    {
+        "id": "node/2274361249",
+        "name": "Pastorenweg",
+        "lat": 52.2607354,
+        "lon": 8.8723233
+    },
+    {
+        "id": "node/2274361257",
+        "name": "Kreuzriehe",
+        "lat": 52.2599572,
+        "lon": 8.8742865
+    },
+    {
+        "id": "node/2274361268",
+        "name": "Dorenbusch",
+        "lat": 52.262325,
+        "lon": 8.8759123
+    },
+    {
+        "id": "node/2274361291",
+        "name": "Menzelstraße",
+        "lat": 52.2636296,
+        "lon": 8.8785272
+    },
+    {
+        "id": "node/2277351653",
         "name": "Bachstraße",
         "lat": 52.2890782,
         "lon": 8.9376879
     },
     {
-        "id": 60,
+        "id": "node/2277383702",
+        "name": "Josefa-Metz-Straße",
+        "lat": 52.2938483,
+        "lon": 8.9477688
+    },
+    {
+        "id": "node/2277383723",
+        "name": "Dombrede",
+        "lat": 52.2929691,
+        "lon": 8.9441827
+    },
+    {
+        "id": "node/2277383725",
+        "name": "Hansemannweg",
+        "lat": 52.2954544,
+        "lon": 8.9514738
+    },
+    {
+        "id": "node/2277383730",
+        "name": "Kleine Dombrede",
+        "lat": 52.2918157,
+        "lon": 8.9429034
+    },
+    {
+        "id": "node/2277401582",
+        "name": "Helgastraße",
+        "lat": 52.2928155,
+        "lon": 8.9517046
+    },
+    {
+        "id": "node/2277401589",
+        "name": "Ulrikenstraße",
+        "lat": 52.2942522,
+        "lon": 8.953053
+    },
+    {
+        "id": "node/2277401610",
+        "name": "Edithstraße",
+        "lat": 52.2924325,
+        "lon": 8.9536023
+    },
+    {
+        "id": "node/2277401616",
+        "name": "Emmeliusstraße",
+        "lat": 52.2955911,
+        "lon": 8.9536394
+    },
+    {
+        "id": "node/2277437048",
+        "name": "Olafstraße",
+        "lat": 52.2879275,
+        "lon": 8.9627302
+    },
+    {
+        "id": "node/2277437058",
+        "name": "Reinholdstraße",
+        "lat": 52.2881736,
+        "lon": 8.9521329
+    },
+    {
+        "id": "node/2277437071",
+        "name": "Waterloostraße / Dankerser Straße",
+        "lat": 52.2901898,
+        "lon": 8.9491257
+    },
+    {
+        "id": "node/2277437079",
+        "name": "Sedanstraße",
+        "lat": 52.2896091,
+        "lon": 8.9455077
+    },
+    {
+        "id": "node/2277437090",
+        "name": "Burkhardstraße",
+        "lat": 52.2883631,
+        "lon": 8.9503318
+    },
+    {
+        "id": "node/2277437097",
+        "name": "Waterloostraße",
+        "lat": 52.2897501,
+        "lon": 8.9489409
+    },
+    {
+        "id": "node/2277551834",
+        "name": "Sollort",
+        "lat": 52.2884103,
+        "lon": 8.9650804
+    },
+    {
+        "id": "node/2277551842",
+        "name": "Christian-Kipp-Platz",
+        "lat": 52.29581,
+        "lon": 8.9656573
+    },
+    {
+        "id": "node/2277551857",
+        "name": "Auf dem Piwitt",
+        "lat": 52.2993951,
+        "lon": 8.9630526
+    },
+    {
+        "id": "node/2277551892",
+        "name": "Hünenbrink",
+        "lat": 52.2901231,
+        "lon": 8.9663993
+    },
+    {
+        "id": "node/2277568074",
+        "name": "Zum Industriehafen",
+        "lat": 52.3013426,
+        "lon": 8.9610348
+    },
+    {
+        "id": "node/2277568078",
+        "name": "Hasenkamp",
+        "lat": 52.3053544,
+        "lon": 8.9643417
+    },
+    {
+        "id": "node/2277593026",
+        "name": "BASF",
+        "lat": 52.2983295,
+        "lon": 8.9427584
+    },
+    {
+        "id": "node/2277593027",
         "name": "Karlstraße",
         "lat": 52.2981655,
         "lon": 8.9361604
     },
     {
-        "id": 61,
+        "id": "node/2277593028",
+        "name": "Aminghauser Straße",
+        "lat": 52.3048435,
+        "lon": 8.9350468
+    },
+    {
+        "id": "node/2277593029",
+        "name": "Goldinsel",
+        "lat": 52.3058329,
+        "lon": 8.9450672
+    },
+    {
+        "id": "node/2277593030",
         "name": "Nordbrücke",
         "lat": 52.297987,
         "lon": 8.9385298
     },
     {
-        "id": 62,
-        "name": "Karlstraße",
+        "id": "node/2277593031",
+        "name": "Karlstraße 2",
         "lat": 52.297155,
         "lon": 8.9362731
     },
     {
-        "id": 63,
+        "id": "node/2277593032",
+        "name": "Hans-Böckler-Straße",
+        "lat": 52.3064205,
+        "lon": 8.9569445
+    },
+    {
+        "id": "node/2277593033",
+        "name": "Effem",
+        "lat": 52.3048197,
+        "lon": 8.9626527
+    },
+    {
+        "id": "node/2277593034",
+        "name": "Teichstraße",
+        "lat": 52.3047121,
+        "lon": 8.9389716
+    },
+    {
+        "id": "node/2277706412",
+        "name": "Follmann",
+        "lat": 52.2988235,
+        "lon": 8.956191
+    },
+    {
+        "id": "node/2277706418",
+        "name": "Zewa",
+        "lat": 52.298981,
+        "lon": 8.9531332
+    },
+    {
+        "id": "node/2277706434",
+        "name": "MKB",
+        "lat": 52.2986481,
+        "lon": 8.9458539
+    },
+    {
+        "id": "node/2277712159",
+        "name": "Cammer Straße / Drabert",
+        "lat": 52.3084425,
+        "lon": 8.9792495
+    },
+    {
+        "id": "node/2277722823",
+        "name": "Potsdamer Straße",
+        "lat": 52.3092938,
+        "lon": 8.9746285
+    },
+    {
+        "id": "node/2277722844",
+        "name": "Dresdener Straße",
+        "lat": 52.3090578,
+        "lon": 8.9684513
+    },
+    {
+        "id": "node/2278422802",
+        "name": "Volksbank",
+        "lat": 52.2936,
+        "lon": 8.9653941
+    },
+    {
+        "id": "node/2278422809",
+        "name": "Huntestraße",
+        "lat": 52.2976489,
+        "lon": 8.9669309
+    },
+    {
+        "id": "node/2278422842",
+        "name": "Mainstraße",
+        "lat": 52.2994335,
+        "lon": 8.9716194
+    },
+    {
+        "id": "node/2278422856",
+        "name": "Bad",
+        "lat": 52.2978622,
+        "lon": 8.9691813
+    },
+    {
+        "id": "node/2278422860",
+        "name": "Christian-Kipp-Platz 2",
+        "lat": 52.2958376,
+        "lon": 8.9660819
+    },
+    {
+        "id": "node/2278431381",
+        "name": "Christinenweg",
+        "lat": 52.2952474,
+        "lon": 8.9580729
+    },
+    {
+        "id": "node/2278431403",
+        "name": "Schranke",
+        "lat": 52.2949959,
+        "lon": 8.9643568
+    },
+    {
+        "id": "node/2278459240",
+        "name": "Dankersen Schulzentrum",
+        "lat": 52.2905173,
+        "lon": 8.9621946
+    },
+    {
+        "id": "node/2278459242",
+        "name": "Hannastraße",
+        "lat": 52.2906347,
+        "lon": 8.9558849
+    },
+    {
+        "id": "node/2278459244",
+        "name": "Wilmastraße",
+        "lat": 52.2907299,
+        "lon": 8.95828
+    },
+    {
+        "id": "node/2278463917",
+        "name": "Waterloostraße / Bachstraße",
+        "lat": 52.2927103,
+        "lon": 8.9475496
+    },
+    {
+        "id": "node/2278529933",
         "name": "Kornhaus",
         "lat": 52.2939171,
         "lon": 8.9339297
     },
     {
-        "id": 64,
+        "id": "node/2278529934",
+        "name": "Turnerweg",
+        "lat": 52.3088492,
+        "lon": 8.9345966
+    },
+    {
+        "id": "node/2278529936",
+        "name": "An der Stadtmühle",
+        "lat": 52.3055526,
+        "lon": 8.9342132
+    },
+    {
+        "id": "node/2278529937",
+        "name": "Dreh",
+        "lat": 52.3123746,
+        "lon": 8.9361492
+    },
+    {
+        "id": "node/2278529938",
         "name": "Windmühlenstraße",
         "lat": 52.3012297,
         "lon": 8.9343823
     },
     {
-        "id": 65,
+        "id": "node/2278529939",
+        "name": "Turnerweg 2",
+        "lat": 52.3090427,
+        "lon": 8.9348112
+    },
+    {
+        "id": "node/2278529940",
+        "name": "Dreh 2",
+        "lat": 52.3121765,
+        "lon": 8.9355969
+    },
+    {
+        "id": "node/2278529941",
+        "name": "Muttkuhle Süd",
+        "lat": 52.3166564,
+        "lon": 8.9383011
+    },
+    {
+        "id": "node/2278529942",
+        "name": "Schmiedeweg 2",
+        "lat": 52.3143279,
+        "lon": 8.9330327
+    },
+    {
+        "id": "node/2387413550",
+        "name": "Brink 2",
+        "lat": 52.3102219,
+        "lon": 8.9972877
+    },
+    {
+        "id": "node/2406963973",
+        "name": "Notthorn",
+        "lat": 52.2811652,
+        "lon": 8.9564722
+    },
+    {
+        "id": "node/2406963987",
+        "name": "Grille",
+        "lat": 52.2873163,
+        "lon": 8.9435516
+    },
+    {
+        "id": "node/2406964029",
+        "name": "Burgweg",
+        "lat": 52.278372,
+        "lon": 8.9497083
+    },
+    {
+        "id": "node/2406964036",
+        "name": "Südbruch 2",
+        "lat": 52.2843357,
+        "lon": 8.950218
+    },
+    {
+        "id": "node/2406964091",
+        "name": "Kronenweg",
+        "lat": 52.2837396,
+        "lon": 8.9494079
+    },
+    {
+        "id": "node/2406981140",
+        "name": "Clus / Wendeplatz",
+        "lat": 52.2699676,
+        "lon": 8.9747761
+    },
+    {
+        "id": "node/2406981172",
+        "name": "Clus",
+        "lat": 52.2731351,
+        "lon": 8.9695571
+    },
+    {
+        "id": "node/2406981185",
+        "name": "Kreuzung",
+        "lat": 52.2786585,
+        "lon": 8.9607609
+    },
+    {
+        "id": "node/2406994564",
+        "name": "Freistraße",
+        "lat": 52.2676992,
+        "lon": 8.9542813
+    },
+    {
+        "id": "node/2406994597",
+        "name": "Stollenweg",
+        "lat": 52.2706865,
+        "lon": 8.9565264
+    },
+    {
+        "id": "node/2406994602",
+        "name": "Stollenweg 2",
+        "lat": 52.2711103,
+        "lon": 8.957112
+    },
+    {
+        "id": "node/2406994612",
+        "name": "Osterfeldweg",
+        "lat": 52.2740099,
+        "lon": 8.9593267
+    },
+    {
+        "id": "node/2406994613",
+        "name": "Osterfeldweg 2",
+        "lat": 52.2739628,
+        "lon": 8.9594523
+    },
+    {
+        "id": "node/2406994624",
+        "name": "Meißen, Dorf",
+        "lat": 52.2691264,
+        "lon": 8.9506354
+    },
+    {
+        "id": "node/2721593412",
+        "name": "Hessenring",
+        "lat": 52.3050231,
+        "lon": 8.9023646
+    },
+    {
+        "id": "node/2721593414",
+        "name": "Hessenring 2",
+        "lat": 52.3047065,
+        "lon": 8.9026436
+    },
+    {
+        "id": "node/2721593415",
         "name": "Karolingerring",
         "lat": 52.3030728,
         "lon": 8.9056246
     },
     {
-        "id": 66,
+        "id": "node/2721593425",
         "name": "Hermann-Schoppe-Straße",
         "lat": 52.3007725,
         "lon": 8.9094882
     },
     {
-        "id": 67,
-        "name": "Hermann-Schoppe-Straße",
+        "id": "node/2721593427",
+        "name": "Seydlitzstraße",
+        "lat": 52.3103815,
+        "lon": 8.8912921
+    },
+    {
+        "id": "node/2721593428",
+        "name": "Kuhlenkampschule",
+        "lat": 52.3132503,
+        "lon": 8.8901502
+    },
+    {
+        "id": "node/2721593429",
+        "name": "Hermann-Schoppe-Straße 2",
         "lat": 52.3009304,
         "lon": 8.9095332
     },
     {
-        "id": 68,
-        "name": "Königswall",
+        "id": "node/2721645670",
+        "name": "Maulbeerkamp",
+        "lat": 52.3277592,
+        "lon": 8.8830458
+    },
+    {
+        "id": "node/2721645685",
+        "name": "Weingarten",
+        "lat": 52.3223807,
+        "lon": 8.8811334
+    },
+    {
+        "id": "node/2721645696",
+        "name": "Holzhauser Straße",
+        "lat": 52.3179317,
+        "lon": 8.8800417
+    },
+    {
+        "id": "node/2733958775",
+        "name": "Gagnyweg",
+        "lat": 52.2896868,
+        "lon": 8.8735134
+    },
+    {
+        "id": "node/2733958784",
+        "name": "Merkurweg",
+        "lat": 52.2946094,
+        "lon": 8.8628333
+    },
+    {
+        "id": "node/2733958791",
+        "name": "Osterhahlen 3",
+        "lat": 52.2979969,
+        "lon": 8.8638893
+    },
+    {
+        "id": "node/2733958799",
+        "name": "Rütliweg",
+        "lat": 52.2892695,
+        "lon": 8.8774022
+    },
+    {
+        "id": "node/2733958806",
+        "name": "Schenkendorfstraße",
+        "lat": 52.2904734,
+        "lon": 8.8792343
+    },
+    {
+        "id": "node/2733958811",
+        "name": "Unterdamm",
+        "lat": 52.2897052,
+        "lon": 8.869101
+    },
+    {
+        "id": "node/2734220555",
+        "name": "Barkhausen Kreuzung 2",
+        "lat": 52.2530016,
+        "lon": 8.9100842
+    },
+    {
+        "id": "node/2734220560",
+        "name": "Kreishaus 2",
+        "lat": 52.2822672,
+        "lon": 8.9107427
+    },
+    {
+        "id": "node/2739933931",
+        "name": "Uphauser Weg",
+        "lat": 52.2664425,
+        "lon": 8.8506197
+    },
+    {
+        "id": "node/2739933937",
+        "name": "Zechenstraße",
+        "lat": 52.2633337,
+        "lon": 8.8491085
+    },
+    {
+        "id": "node/2892044144",
+        "name": "Gesamtschule",
+        "lat": 52.2526299,
+        "lon": 8.9473102
+    },
+    {
+        "id": "node/2892044145",
+        "name": "Gewerbegebiet",
+        "lat": 52.2607832,
+        "lon": 8.8983953
+    },
+    {
+        "id": "node/2892044149",
+        "name": "Porta Möbel",
+        "lat": 52.25983,
+        "lon": 8.9033135
+    },
+    {
+        "id": "node/2972812738",
+        "name": "Königswall 2",
         "lat": 52.2874269,
         "lon": 8.9069865
     },
     {
-        "id": 69,
+        "id": "node/3386168160",
+        "name": "Freimark",
+        "lat": 52.3291316,
+        "lon": 8.8608726
+    },
+    {
+        "id": "node/3386168163",
+        "name": "Heuweg",
+        "lat": 52.3233915,
+        "lon": 8.8693225
+    },
+    {
+        "id": "node/3386168164",
         "name": "Immanuelstraße",
         "lat": 52.2925284,
         "lon": 8.9139828
     },
     {
-        "id": 70,
+        "id": "node/3386168167",
+        "name": "Kaserne",
+        "lat": 52.3210689,
+        "lon": 8.8731437
+    },
+    {
+        "id": "node/3386168171",
+        "name": "Lagerstraße",
+        "lat": 52.3187294,
+        "lon": 8.8733239
+    },
+    {
+        "id": "node/3386168173",
+        "name": "Lüchten",
+        "lat": 52.3262616,
+        "lon": 8.8648823
+    },
+    {
+        "id": "node/3799704520",
+        "name": "Nammen, Bad",
+        "lat": 52.2591998,
+        "lon": 8.9786989
+    },
+    {
+        "id": "node/3799704522",
+        "name": "Barbarastraße",
+        "lat": 52.250206,
+        "lon": 8.999144
+    },
+    {
+        "id": "node/3799704524",
+        "name": "Dorfmitte",
+        "lat": 52.2471492,
+        "lon": 8.9850148
+    },
+    {
+        "id": "node/3799704525",
+        "name": "Kohlmeier",
+        "lat": 52.2495912,
+        "lon": 8.9705286
+    },
+    {
+        "id": "node/3799704526",
+        "name": "Lehra 2",
+        "lat": 52.2509668,
+        "lon": 8.9993886
+    },
+    {
+        "id": "node/3799705231",
+        "name": "Zur Porta",
+        "lat": 52.2483621,
+        "lon": 8.97903
+    },
+    {
+        "id": "node/3799705232",
+        "name": "Zur Porta 2",
+        "lat": 52.2485578,
+        "lon": 8.9782201
+    },
+    {
+        "id": "node/3890367775",
+        "name": "Lilienstraße",
+        "lat": 52.238039,
+        "lon": 9.0255921
+    },
+    {
+        "id": "node/3890374320",
+        "name": "Dorfgemeinschaftshaus",
+        "lat": 52.239129,
+        "lon": 9.0216098
+    },
+    {
+        "id": "node/3890377691",
+        "name": "Grube",
+        "lat": 52.2472805,
+        "lon": 9.0078708
+    },
+    {
+        "id": "node/3890378613",
+        "name": "Im Langenfeld",
+        "lat": 52.2539343,
+        "lon": 8.9907344
+    },
+    {
+        "id": "node/3890380986",
+        "name": "Im Langenfeld 2",
+        "lat": 52.2540624,
+        "lon": 8.9908631
+    },
+    {
+        "id": "node/3890388575",
+        "name": "Nammen, Schule",
+        "lat": 52.2497154,
+        "lon": 8.9883744
+    },
+    {
+        "id": "node/3890395845",
+        "name": "Nammen, Schule 2",
+        "lat": 52.2492053,
+        "lon": 8.9873856
+    },
+    {
+        "id": "node/3890396039",
+        "name": "Nammen, Schule 3",
+        "lat": 52.2489647,
+        "lon": 8.9882587
+    },
+    {
+        "id": "node/3890397934",
+        "name": "Im Diekhoff",
+        "lat": 52.2478973,
+        "lon": 8.9846619
+    },
+    {
+        "id": "node/3890398178",
+        "name": "Dorfmitte 2",
+        "lat": 52.247279,
+        "lon": 8.9842408
+    },
+    {
+        "id": "node/3890407024",
+        "name": "Jemke",
+        "lat": 52.2508605,
+        "lon": 8.9586471
+    },
+    {
+        "id": "node/3890409027",
+        "name": "Nammen, Bad 2",
+        "lat": 52.2594354,
+        "lon": 8.9784613
+    },
+    {
+        "id": "node/3890412768",
+        "name": "Wülpke Bahnhof",
+        "lat": 52.2413069,
+        "lon": 9.0220982
+    },
+    {
+        "id": "node/3890413070",
+        "name": "Wülpke Bahnhof 2",
+        "lat": 52.2418653,
+        "lon": 9.0208429
+    },
+    {
+        "id": "node/3890446602",
+        "name": "Grille / Haus 33",
+        "lat": 52.2826071,
+        "lon": 8.953583
+    },
+    {
+        "id": "node/3890540046",
+        "name": "Denkmalstraße",
+        "lat": 52.3191704,
+        "lon": 8.9177474
+    },
+    {
+        "id": "node/3890540047",
+        "name": "Denkmalstraße 2",
+        "lat": 52.3193523,
+        "lon": 8.9162963
+    },
+    {
+        "id": "node/3890544626",
+        "name": "Feldweg",
+        "lat": 52.3274888,
+        "lon": 8.9074603
+    },
+    {
+        "id": "node/3890547471",
+        "name": "Exner",
+        "lat": 52.3208111,
+        "lon": 8.9103743
+    },
+    {
+        "id": "node/3890552646",
+        "name": "Wallfahrtsteich",
+        "lat": 52.3160369,
+        "lon": 8.9168656
+    },
+    {
+        "id": "node/3890770912",
         "name": "Paulinenstraße",
         "lat": 52.2946617,
         "lon": 8.9154127
     },
     {
-        "id": 71,
+        "id": "node/3890771065",
         "name": "Wilhelmstraße",
         "lat": 52.2981458,
         "lon": 8.9158145
     },
     {
-        "id": 72,
-        "name": "Bachstraße",
+        "id": "node/3890774991",
+        "name": "Graf-Wilhelm-Straße",
+        "lat": 52.3128212,
+        "lon": 8.9151644
+    },
+    {
+        "id": "node/3890783032",
+        "name": "Kerkweg",
+        "lat": 52.3232418,
+        "lon": 8.9093079
+    },
+    {
+        "id": "node/3892274255",
+        "name": "Grube 2",
+        "lat": 52.2474076,
+        "lon": 9.0078012
+    },
+    {
+        "id": "node/3892308353",
+        "name": "Notthorn 2",
+        "lat": 52.281575,
+        "lon": 8.9560051
+    },
+    {
+        "id": "node/3892308354",
+        "name": "Grille 2",
+        "lat": 52.2875164,
+        "lon": 8.9434148
+    },
+    {
+        "id": "node/3892405730",
+        "name": "Untkenstraße",
+        "lat": 52.2472497,
+        "lon": 8.9905933
+    },
+    {
+        "id": "node/3900055857",
+        "name": "Bachstraße 2",
         "lat": 52.2889429,
         "lon": 8.937677
     },
     {
-        "id": 73,
-        "name": "Dorotheenstraße",
+        "id": "node/3900055866",
+        "name": "Kirchweg 2",
+        "lat": 52.2522409,
+        "lon": 8.9425475
+    },
+    {
+        "id": "node/3900055868",
+        "name": "Lerbeck Kirche 2",
+        "lat": 52.2506225,
+        "lon": 8.941298
+    },
+    {
+        "id": "node/3900274834",
+        "name": "Abzw. Leteln",
+        "lat": 52.3089409,
+        "lon": 8.9493011
+    },
+    {
+        "id": "node/3900274835",
+        "name": "Abzw. Leteln 2",
+        "lat": 52.3089726,
+        "lon": 8.9491839
+    },
+    {
+        "id": "node/3900274837",
+        "name": "Aminghauser Straße 2",
+        "lat": 52.304928,
+        "lon": 8.9350581
+    },
+    {
+        "id": "node/3900274839",
+        "name": "Busch",
+        "lat": 52.3152709,
+        "lon": 8.9690572
+    },
+    {
+        "id": "node/3900274840",
+        "name": "Busch 2",
+        "lat": 52.3153342,
+        "lon": 8.9689725
+    },
+    {
+        "id": "node/3900274841",
+        "name": "Dorotheenstraße 2",
         "lat": 52.2954586,
         "lon": 8.9234167
     },
     {
-        "id": 74,
-        "name": "Hermannstraße",
+        "id": "node/3900274845",
+        "name": "Goldinsel 2",
+        "lat": 52.3057389,
+        "lon": 8.9451519
+    },
+    {
+        "id": "node/3900274846",
+        "name": "Hermannstraße 2",
         "lat": 52.2940653,
         "lon": 8.9233448
     },
     {
-        "id": 75,
-        "name": "Werftstraße",
+        "id": "node/3900274847",
+        "name": "Holzkamp 2",
+        "lat": 52.3193116,
+        "lon": 8.9952436
+    },
+    {
+        "id": "node/3900274848",
+        "name": "Kriegerdenkmal",
+        "lat": 52.3200609,
+        "lon": 8.989041
+    },
+    {
+        "id": "node/3900274849",
+        "name": "Kriegerdenkmal 2",
+        "lat": 52.3201326,
+        "lon": 8.9890301
+    },
+    {
+        "id": "node/3900274851",
+        "name": "Prange 2",
+        "lat": 52.3105049,
+        "lon": 8.991418
+    },
+    {
+        "id": "node/3900274852",
+        "name": "Prangenort",
+        "lat": 52.3198749,
+        "lon": 8.9858203
+    },
+    {
+        "id": "node/3900274853",
+        "name": "Prangenort 2",
+        "lat": 52.3199188,
+        "lon": 8.9854439
+    },
+    {
+        "id": "node/3900278109",
+        "name": "Rodenberg",
+        "lat": 52.3124936,
+        "lon": 8.9527512
+    },
+    {
+        "id": "node/3900278110",
+        "name": "Rodenberg 2",
+        "lat": 52.3125685,
+        "lon": 8.9526356
+    },
+    {
+        "id": "node/3900278112",
+        "name": "Schule 3",
+        "lat": 52.3152314,
+        "lon": 8.9968628
+    },
+    {
+        "id": "node/3900278113",
+        "name": "Teichstraße 2",
+        "lat": 52.3047855,
+        "lon": 8.9389708
+    },
+    {
+        "id": "node/3900278114",
+        "name": "Werftstraße 2",
         "lat": 52.2978168,
         "lon": 8.9246892
     },
     {
-        "id": 76,
-        "name": "Rosentalstraße",
+        "id": "node/3900278115",
+        "name": "Wietersheimer Heide",
+        "lat": 52.3144647,
+        "lon": 8.9614077
+    },
+    {
+        "id": "node/3900278116",
+        "name": "Wietersheimer Heide 2",
+        "lat": 52.3145405,
+        "lon": 8.9614048
+    },
+    {
+        "id": "node/3913239181",
+        "name": "Rosentalstraße 2",
         "lat": 52.2948181,
         "lon": 8.9197228
     },
     {
-        "id": 77,
-        "name": "Paulinenstraße",
+        "id": "node/4028670536",
+        "name": "Paulinenstraße 2",
         "lat": 52.2952711,
         "lon": 8.9151209
     },
     {
-        "id": 78,
-        "name": "Wilhelmstraße",
+        "id": "node/4028675184",
+        "name": "Wilhelmstraße 2",
         "lat": 52.2970383,
         "lon": 8.9155248
     },
     {
-        "id": 79,
-        "name": "Kuhlenstraße",
+        "id": "node/4548320344",
+        "name": "Wittelsbacherallee 2",
+        "lat": 52.2930598,
+        "lon": 8.878997
+    },
+    {
+        "id": "node/4548320345",
+        "name": "Wilhelm-Tell-Straße 2",
+        "lat": 52.2943099,
+        "lon": 8.874912
+    },
+    {
+        "id": "node/4548320346",
+        "name": "Am Grundbach 2",
+        "lat": 52.2953884,
+        "lon": 8.8705024
+    },
+    {
+        "id": "node/4548320349",
+        "name": "Merkurweg 2",
+        "lat": 52.2949004,
+        "lon": 8.8626194
+    },
+    {
+        "id": "node/4578055903",
+        "name": "Unterdamm 2",
+        "lat": 52.2896163,
+        "lon": 8.8696937
+    },
+    {
+        "id": "node/4578055904",
+        "name": "Gagnyweg 2",
+        "lat": 52.2896261,
+        "lon": 8.8735051
+    },
+    {
+        "id": "node/4578055907",
+        "name": "Mitteldamm 2",
+        "lat": 52.2875334,
+        "lon": 8.887226
+    },
+    {
+        "id": "node/4578055909",
+        "name": "Kuhlenstraße 2",
         "lat": 52.2850542,
         "lon": 8.898958
     },
     {
-        "id": 80,
-        "name": "Nordbrücke",
+        "id": "node/4578055911",
+        "name": "Nordbrücke 2",
         "lat": 52.2977949,
         "lon": 8.9377776
     },
     {
-        "id": 81,
-        "name": "Alsenweg",
+        "id": "node/4578055912",
+        "name": "BASF 2",
+        "lat": 52.2982254,
+        "lon": 8.9427839
+    },
+    {
+        "id": "node/4578055913",
+        "name": "MKB 2",
+        "lat": 52.2985437,
+        "lon": 8.9458631
+    },
+    {
+        "id": "node/4578055914",
+        "name": "Zewa 2",
+        "lat": 52.2988881,
+        "lon": 8.953325
+    },
+    {
+        "id": "node/4578055915",
+        "name": "Follmann 2",
+        "lat": 52.2987364,
+        "lon": 8.9561829
+    },
+    {
+        "id": "node/4578055918",
+        "name": "Hans-Böckler-Straße 2",
+        "lat": 52.3065541,
+        "lon": 8.9564981
+    },
+    {
+        "id": "node/4578055919",
+        "name": "Effem 2",
+        "lat": 52.3047837,
+        "lon": 8.9628536
+    },
+    {
+        "id": "node/4578055920",
+        "name": "Zum Industriehafen 2",
+        "lat": 52.3013697,
+        "lon": 8.9608459
+    },
+    {
+        "id": "node/4578055921",
+        "name": "Auf dem Piwitt 2",
+        "lat": 52.2992761,
+        "lon": 8.9630145
+    },
+    {
+        "id": "node/4578055925",
+        "name": "Hünenbrink 2",
+        "lat": 52.2900903,
+        "lon": 8.966454
+    },
+    {
+        "id": "node/4578055926",
+        "name": "Sollort 2",
+        "lat": 52.2884621,
+        "lon": 8.9649645
+    },
+    {
+        "id": "node/4578055927",
+        "name": "Olafstraße 2",
+        "lat": 52.2879083,
+        "lon": 8.9611262
+    },
+    {
+        "id": "node/4578055928",
+        "name": "(Steinkreuz-/)Meißener Straße 2",
+        "lat": 52.2879255,
+        "lon": 8.9564056
+    },
+    {
+        "id": "node/4578055929",
+        "name": "Reinholdstraße 2",
+        "lat": 52.2882504,
+        "lon": 8.9521381
+    },
+    {
+        "id": "node/4578055931",
+        "name": "Burkhardstraße 2",
+        "lat": 52.2884981,
+        "lon": 8.9500004
+    },
+    {
+        "id": "node/4578055932",
+        "name": "Waterloostraße 2",
+        "lat": 52.2897549,
+        "lon": 8.9490831
+    },
+    {
+        "id": "node/4578055933",
+        "name": "Sedanstraße 2",
+        "lat": 52.2898025,
+        "lon": 8.9459368
+    },
+    {
+        "id": "node/4578055934",
+        "name": "Alsenweg 2",
         "lat": 52.2891774,
         "lon": 8.9419993
     },
     {
-        "id": 82,
-        "name": "Minden ZOB",
-        "lat": 52.2863865,
-        "lon": 8.9162957
+        "id": "node/4584263595",
+        "name": "Grundschule 2",
+        "lat": 52.3158987,
+        "lon": 8.8853994
     },
     {
-        "id": 83,
-        "name": "Minden ZOB",
-        "lat": 52.2865637,
-        "lon": 8.9165613
+        "id": "node/5700316211",
+        "name": "Drabertstraße 2",
+        "lat": 52.3004865,
+        "lon": 8.8955435
     },
     {
-        "id": 84,
+        "id": "node/5700316213",
+        "name": "Habsburgerring / KBS 2",
+        "lat": 52.297607,
+        "lon": 8.8971595
+    },
+    {
+        "id": "node/5700316214",
         "name": "Martin-Luther-Straße",
         "lat": 52.3038997,
         "lon": 8.8984349
     },
     {
-        "id": 85,
-        "name": "Martin-Luther-Straße",
+        "id": "node/5700316215",
+        "name": "Martin-Luther-Straße 2",
         "lat": 52.303689,
         "lon": 8.8978019
     },
     {
-        "id": 86,
-        "lat": 52.2845997,
-        "lon": 8.9153744
+        "id": "node/5700316216",
+        "name": "Wagnerstraße",
+        "lat": 52.2980179,
+        "lon": 8.8914102
     },
     {
-        "id": 87,
-        "name": "Marienglacis",
-        "lat": 52.2913676,
-        "lon": 8.9072674
+        "id": "node/5709430245",
+        "name": "Füllenkamp 2",
+        "lat": 52.2554477,
+        "lon": 8.902882
     },
     {
-        "id": 88,
-        "name": "Gesamtschule",
-        "lat": 52.28954,
-        "lon": 8.9114517
+        "id": "node/5709430246",
+        "name": "Erikaweg",
+        "lat": 52.2742517,
+        "lon": 8.901931
     },
     {
-        "id": 89,
+        "id": "node/5847422297",
+        "name": "Kaiser-Wilhelm-Denkmal",
+        "lat": 52.2466616,
+        "lon": 8.9011899
+    },
+    {
+        "id": "node/5847422302",
+        "name": "Zur Wittekindsburg",
+        "lat": 52.2483229,
+        "lon": 8.9001971
+    },
+    {
+        "id": "node/5847422303",
+        "name": "Zur Wittekindsburg 2",
+        "lat": 52.2482572,
+        "lon": 8.9001515
+    },
+    {
+        "id": "node/6111154362",
         "name": "Fachhochschule",
         "lat": 52.2979367,
         "lon": 8.904148
     },
     {
-        "id": 90,
-        "name": "Fachhochschule",
+        "id": "node/6111154365",
+        "name": "Fachhochschule 2",
         "lat": 52.2973757,
         "lon": 8.9038758
     },
     {
-        "id": 91,
-        "name": "Steinstraße",
+        "id": "node/6343583265",
+        "name": "Erikaweg 2",
+        "lat": 52.2751493,
+        "lon": 8.9016616
+    },
+    {
+        "id": "node/6343583266",
+        "name": "Erbeweg 2",
+        "lat": 52.2713941,
+        "lon": 8.9028069
+    },
+    {
+        "id": "node/6343583267",
+        "name": "Zollern 2",
+        "lat": 52.2681032,
+        "lon": 8.9040944
+    },
+    {
+        "id": "node/6343583268",
+        "name": "Edelweißstraße 2",
+        "lat": 52.2629718,
+        "lon": 8.9062522
+    },
+    {
+        "id": "node/6343583269",
+        "name": "Flurweg 2",
+        "lat": 52.2608492,
+        "lon": 8.904545
+    },
+    {
+        "id": "node/6343583270",
+        "name": "Kreisstraße",
+        "lat": 52.2540143,
+        "lon": 8.9088312
+    },
+    {
+        "id": "node/6343583271",
+        "name": "Kaiserstraße 4",
+        "lat": 52.251222,
+        "lon": 8.9105465
+    },
+    {
+        "id": "node/6343583272",
+        "name": "Wedigenstein 2",
+        "lat": 52.2416848,
+        "lon": 8.8860244
+    },
+    {
+        "id": "node/6343583274",
+        "name": "Leopoldshöhe 2",
+        "lat": 52.243962,
+        "lon": 8.8777538
+    },
+    {
+        "id": "node/6538406668",
+        "name": "Steinstraße 2",
         "lat": 52.293424,
         "lon": 8.906385
     },
     {
-        "id": 92,
-        "name": "Steinstraße",
+        "id": "node/6538406669",
+        "name": "Steinstraße 3",
         "lat": 52.2934748,
         "lon": 8.9065741
     },
     {
-        "id": 93,
+        "id": "node/6538406677",
+        "name": "Kampa-Halle",
+        "lat": 52.2969074,
+        "lon": 8.8897271
+    },
+    {
+        "id": "node/6538406678",
+        "name": "Kampa-Halle 2",
+        "lat": 52.2970452,
+        "lon": 8.8890056
+    },
+    {
+        "id": "node/6538477214",
+        "name": "Kirche",
+        "lat": 52.2932025,
+        "lon": 8.9656457
+    },
+    {
+        "id": "node/6538477215",
+        "name": "Kirche 2",
+        "lat": 52.2930893,
+        "lon": 8.9655384
+    },
+    {
+        "id": "node/6538477267",
+        "name": "Kleine Dombrede 2",
+        "lat": 52.2915833,
+        "lon": 8.9428751
+    },
+    {
+        "id": "node/6538490990",
+        "name": "Mittelweg",
+        "lat": 52.2928949,
+        "lon": 8.8898948
+    },
+    {
+        "id": "node/6538490991",
+        "name": "Mittelweg 2",
+        "lat": 52.2929507,
+        "lon": 8.8892229
+    },
+    {
+        "id": "node/6538490997",
+        "name": "Karlsbader Weg",
+        "lat": 52.2920295,
+        "lon": 8.8937692
+    },
+    {
+        "id": "node/6538490998",
+        "name": "Karlsbader Weg 2",
+        "lat": 52.2918893,
+        "lon": 8.8939221
+    },
+    {
+        "id": "node/6538490999",
         "name": "Bismarckstraße",
         "lat": 52.2914275,
         "lon": 8.8988265
     },
     {
-        "id": 94,
-        "name": "Bismarckstraße",
+        "id": "node/6538491000",
+        "name": "Bismarckstraße 2",
         "lat": 52.2915431,
         "lon": 8.8983491
     },
     {
-        "id": 95,
+        "id": "node/6538491004",
         "name": "Hardenbergstraße",
         "lat": 52.2877008,
         "lon": 8.9053416
     },
     {
-        "id": 96,
-        "name": "Hardenbergstraße",
+        "id": "node/6538491005",
+        "name": "Hardenbergstraße 2",
         "lat": 52.2878993,
         "lon": 8.9049688
     }
