@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: vk-computing
+  labels:
+    run: vk-computing
+spec:
+  ports:
+  - port: 55001
+    name: "55001"
+    protocol: TCP
+    targetPort: 55001
+  selector:
+    run: vk-computing

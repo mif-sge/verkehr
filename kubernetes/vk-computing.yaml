@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vk-computing
+spec: 
+  selector:
+    matchLabels: 
+      run: vk-computing
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: vk-computing
+    spec:
+      containers:
+      - env:
+        - name: GRPC_SERVER_ENDPOINT
+          valueFrom:
+            configMapKeyRef:
+              key: GRPC_SERVER_ENDPOINT
+              name: vk-computing-config
+        - name: NEO4J_URI
+          valueFrom:
+            configMapKeyRef:
+              key: NEO4J_URI
+              name: vk-computing-config
+        - name: NEO4J_USERNAME
+          valueFrom:
+            configMapKeyRef:
+              key: NEO4J_USERNAME
+              name: vk-computing-config
+        - name: NEO4J_PASSWORD
+          valueFrom:
+            configMapKeyRef:
+              key: NEO4J_PASSWORD
+              name: vk-computing-config
+        name: vk-computing
+        image: 558558437971.dkr.ecr.eu-central-1.amazonaws.com/verkehr_computing:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 55001

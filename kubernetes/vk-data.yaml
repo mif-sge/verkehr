@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: vk-data
+spec: 
+  template:
+    metadata:
+      labels:
+        run: vk-data
+    spec:
+      containers:
+      - name: vk-data
+        image: 558558437971.dkr.ecr.eu-central-1.amazonaws.com/verkehr_data:latest
+      restartPolicy: Never
