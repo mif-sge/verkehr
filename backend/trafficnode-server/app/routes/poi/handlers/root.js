@@ -42,14 +42,14 @@ let handler = (request, h) => {
     let data = new DataService();
     if(!request.query.types) {
       let allPois=[];
-      return data.getAll('Hospital').then(result => {
+      return data.getAllWithRelations('Hospital').then(result => {
         allPois.push(result);
         console.log("--Hospital");
-        return data.getAll('Shop');
+        return data.getAllWithRelations('Shop');
       }).then(result => {
         allPois.push(result);
           console.log("--Shop");
-        return data.getAll('School');
+        return data.getAllWithRelations('School');
       }).then(result => {
         allPois.push(result);
         console.log("--School");
