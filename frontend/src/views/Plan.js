@@ -19,17 +19,21 @@ function Plan(props) {
             setTubemapIsSet(true);
             var container = d3.select('#tubeMap');
 
-            var width = tubeMapRef.current.clientWidth;
-            var height = tubeMapRef.current.clientHeight;
+            let width = tubeMapRef.current.clientWidth;
+            let height = tubeMapRef.current.clientHeight;
+            let topOffset = height / 50;
+            let rightOffset = width / 5;
+            let bottomOffsett = height / 10;
+            let leftOffset = width / 5;
 
             var map = tubeMap.tubeMap()
                 .width(width)
                 .height(height)
                 .margin({
-                    top: height / 50,
-                    right: width / 7,
-                    bottom: height / 10,
-                    left: width / 7,
+                    top: topOffset,
+                    right: rightOffset,
+                    bottom: bottomOffsett,
+                    left: leftOffset,
                 });
 
             container.datum(tubeData).call(map);

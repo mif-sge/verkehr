@@ -26,6 +26,8 @@ const routeNames = {
   "/plan": "Plan"
 }
 
+const SHORTFETCH = "short";
+
 /**
  * creates the main screen
  */
@@ -57,7 +59,7 @@ function App(props) {
 
   const fetchData = useCallback(async () => {
     const tempBusstops = await fetchBusstops();
-    const tempBuslines = await fetchBuslines("short");
+    const tempBuslines = await fetchBuslines(SHORTFETCH);
     if (isSubscribed) {
       setBusstops(tempBusstops);
       setBuslines(tempBuslines);

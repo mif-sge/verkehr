@@ -46,32 +46,13 @@ function StreetMap(props) {
         return () => (setIsSubscribed(false));
     }, [fetchData]);
 
-    function setBusstop(newBusstop) {
-        var tempBusstops = busstops.filter(function (busstop) {
-            return busstop["id"] !== newBusstop["id"];
-        });
-        tempBusstops.push(newBusstop);
-        setBusstops(tempBusstops);
-    }
-
-    function getBusstopFromID(id) {
-        let tempBusstops = busstops.filter(function (busstop) {
-            return busstop["id"] === id;
-        })
-        return tempBusstops[0];
-    }
-
-    function generateBuslineColors() {
-
-        var newBusstops = [];
+    function generateColoredBuslines() {
         return buslines.filter(function (busline, index) {
             busline["colorIndex"] = index;
             if (selectedBusline > 0) {
                 if (busline["id"] === selectedBusline) {
                     busline.busstops.forEach(busstopID => {
-                        var newBusstop = getBusstopFromID(busstopID);
-                        newBusstop["colorIndex"] = index;
-                        newBusstops.push(newBusstop);
+                        coloredBusstops[busstopID] = index;
                     });
                     return true;
                 } else {
@@ -84,6 +65,7 @@ function StreetMap(props) {
     }
 
     let buslineColors = generateColors(buslines.length);
+    var coloredBusstops = {};
 
     return (
         <Map center={position} zoom={13} className={classes.map}>
@@ -91,9 +73,9 @@ function StreetMap(props) {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
             />
-            {buslines.length > 0 ? generateBuslineColors().map(busline =>
+            {buslines.length > 0 ? generateColoredBuslines().map(busline =>
                 (<Polyline positions={busline["coordinates"].map(waypoint => [waypoint.lat, waypoint.lon])} color={buslineColors[busline.colorIndex]} />)) : null}
-            {busstops.length > 0 && showBusstops === true ? busstops.map(busstop => (<Marker icon={busstopIcon(busstop.colorIndex)} position={[busstop.lat, busstop.lon]}>
+            {busstops.length > 0 && showBusstops === true ? busstops.map(busstop => (<Marker icon={busstopIcon(buslineColors[coloredBusstops[busstop.id]])} position={[busstop.lat, busstop.lon]}>
                 <Popup>{busstop.name}</Popup>
             </Marker>)) : null}
             {malls.length > 0 && showMalls === true ? malls.map(mall => (<Marker icon={mallIcon()} position={[mall.lat, mall.lon]}>
