@@ -21,6 +21,8 @@ const position = [52.2965164, 8.9057191];
 function StreetMap(props) {
     const { classes, selectedBusline, showBusstops, showMalls, showHospitals } = props;
 
+    console.log(selectedBusline);
+
     const [buslines, setBuslines] = useState([]);
     const [busstops, setBusstops] = useState([]);
     const [malls, setMalls] = useState([]);
@@ -49,7 +51,7 @@ function StreetMap(props) {
     function generateColoredBuslines() {
         return buslines.filter(function (busline, index) {
             busline["colorIndex"] = index;
-            if (selectedBusline > 0) {
+            if (selectedBusline !== 0) {
                 if (busline["id"] === selectedBusline) {
                     busline.busstops.forEach(busstopID => {
                         coloredBusstops[busstopID] = index;
@@ -74,7 +76,13 @@ function StreetMap(props) {
                 attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
             />
             {buslines.length > 0 ? generateColoredBuslines().map(busline =>
-                (<Polyline positions={busline["coordinates"].map(waypoint => [waypoint.lat, waypoint.lon])} color={buslineColors[busline.colorIndex]} />)) : null}
+                (<Polyline positions={busline["coordinates"].map(function (element) {
+                    if (element.lat && element.lon) {
+                        return [element.lat, element.lon];
+                    } else {
+                        return element.map(subelement => [subelement.lat, subelement.lon]);
+                    }
+                })} color={buslineColors[busline.colorIndex]} />)) : null}
             {busstops.length > 0 && showBusstops === true ? busstops.map(busstop => (<Marker icon={busstopIcon(buslineColors[coloredBusstops[busstop.id]])} position={[busstop.lat, busstop.lon]}>
                 <Popup>{busstop.name}</Popup>
             </Marker>)) : null}
