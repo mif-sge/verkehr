@@ -25,7 +25,15 @@ module.exports = {
      * @type {function}
      */
     onMessage: (payload, eventSystem) => {
-        let json = JSON.parse(payload.toString());
+        
+        let json = null;
+
+        try {
+            json = JSON.parse(payload.toString());
+        } catch {
+            logger.warn("Wrong format.");
+            return;
+        }
 
         let dates = {
             begin: moment(json.begin, dateFormat),
