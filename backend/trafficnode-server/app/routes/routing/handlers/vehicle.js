@@ -11,27 +11,25 @@ const Navigation = require('./../../../lib/computing/navigation');
  */
 let handler = (request, h) => {
 
-    if(!request.query.from || !request.query.to) {
-        return h.response().code(400);
-    }
-
     return new Promise((resolve, reject) => {
-        Navigation.busRoute({
-            start: request.query.from,
-            end: request.query.to
+        Navigation.vehicleRoute({
+            current: {
+              lat: request.query.currentlat,
+              lon: request.query.currentlon
+            },
+            hasTargetPosition: request.query.hasTargetPosition,
+            targetPosition: {
+                lat: request.query.targetlat,
+                lon: request.query.targetlon
+            },
+            targetLocation: request.query.targetLocation
         }, (err, response) => {
             if(err) {
                 logger.error(err.details);
                 return reject(err);
             }
 
-            return resolve(response.steps.map(s => {
-                return {
-                    id: s.id,
-                    from: s.start,
-                    to: s.end
-                }
-            }));
+            return resolve(response);
         });
     });
 };

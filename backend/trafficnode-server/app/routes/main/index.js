@@ -39,11 +39,6 @@ let plugin = {
             },
             {
                 method: 'GET',
-                path: '/occupancy',
-                options: require('./handlers/occupancy')
-            },
-            {
-                method: 'GET',
                 path: '/{any*}',
                 options: {
                     handler: (request, h) => {

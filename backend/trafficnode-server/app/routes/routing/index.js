@@ -29,6 +29,11 @@ let plugin = {
         server.route([
             {
                 method: 'GET',
+                path: '/vehicle',
+                options: require('./handlers/vehicle')
+            },
+            {
+                method: 'GET',
                 path: '/',
                 options: require('./handlers/root')
             },
@@ -48,6 +53,6 @@ let plugin = {
 module.exports = {
     plugin,
     routes: {
-        prefix: '/api/routes'
+        prefix: '/api/route'
     }
 };
