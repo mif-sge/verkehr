@@ -14,6 +14,10 @@ service RoutePlanning {
  */
 service Navigation {
   rpc shortestPath(NavigationRequest) returns (NavigationResponse) {}
+
+  rpc busRoute(BusNavigationRequest) returns (BusNavigationResponse) {}
+
+  rpc vehicleRoute(RouteNavigationRequest) returns (RouteNavigationResponse) {}
 }
 
 /*
@@ -82,9 +86,67 @@ message NavigationRequest {
 }
 
 /*
+ * NavigationStep represents one step in a calculated navigation route.
+ */
+message NavigationStep {
+    string street = 1;
+    string intersection = 2;
+    float lat = 3;
+    float lon = 4;
+}
+
+/*
  * NavigationResponse represents a response from the navigation engine.
  */
 message NavigationResponse {
-    int32 distance = 1;
-    repeated Node nodes = 2;
+    repeated NavigationStep steps = 1;
+}
+
+/*
+ * BusNavigationRequest represents a request to the bus navigation engine.
+ */
+message BusNavigationRequest {
+    int64 start = 1;
+    int64 end = 2;
+}
+
+/*
+ * BusNavigationStep represents one step in a calculated bus route.
+ */
+message BusNavigationStep {
+    int64 id = 1;
+    int64 start = 2;
+    int64 end = 3;
+}
+
+/*
+ * BusNavigationResponse represents a response from the bus navigation engine.
+ */
+message BusNavigationResponse {
+    repeated BusNavigationStep steps = 1;
+}
+
+/*
+ * Position represents a position with latitude and longitude.
+ */
+message Position {
+    float lat = 1;
+    float lon = 2;
+}
+
+/*
+ * RouteNavigationRequest represents a request to the route navigation engine.
+ */
+message RouteNavigationRequest {
+    Position current = 1;
+    bool hasTargetPosition = 2;
+    Position targetPosition = 3;
+    string targetLocation = 4;
+}
+
+/*
+ * RouteNavigationResponse represents a response from the route navigation engine.
+ */
+message RouteNavigationResponse {
+    repeated NavigationStep steps = 1;
 }
