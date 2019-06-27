@@ -5,16 +5,16 @@ WITH e,
   UNWIND buslines as bl
   MERGE (busline:Bus_Line {id: bl.id})	ON CREATE
     SET busline.name = coalesce(bl.tags.name, "Unknown"), busline.from = coalesce(bl.tags.from, "Unknown"),
-    busline.to = coalesce(bl.tags.to, "Unknown"), busline.ref = coalesce(bl.tags.ref, "Unknown"),
+    busline.to = coalesce(bl.tags.to, "Unknown"), busline.number = coalesce(bl.tags.ref, "Unknown"),
     busline.note = coalesce(bl.tags.note, ""), busline.via = coalesce(bl.tags.via, "")
     WITH bl, busline, bl.members as members
     UNWIND members as m
-    MATCH(n:Nodes) WHERE n.id=m.ref
-    MERGE (busline)-[rn:VIA]->(n)
+    MATCH(p:Position) WHERE p.id=m.ref
+    MERGE (busline)-[rn:VIA]->(p)
     WITH busline, members
     UNWIND members as m
-    MATCH(w:Ways) WHERE w.id=m.ref
-    MERGE (busline)-[rn:VIA]->(w)
+    MATCH(s:Street) WHERE s.id=m.ref
+    MERGE (busline)-[rn:VIA]->(s)
     WITH busline
-    match (busline)-[v:VIA]-(n:Nodes)-[l:LOCATES_ON]-(bs:Bus_Stops)
-    MERGE (busline)-[so:STOPS_ON]->(bs)
+    MATCH(busline)-[v:VIA]-(p:Position)-[l:LOCATES_ON]-(bs:Bus_Stop)
+    MERGE (busline)-[h:SERVES]-(bs)

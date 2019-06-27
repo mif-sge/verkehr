@@ -655,15 +655,15 @@ export async function fetchBuslines(requestMode) {
                 "id": 1,
                 "name": "Vom Campus zum Bahnhof",
                 "busstops": [
-                    1,
-                    2
+                    90,
+                    45
                 ]
             }, {
                 "id": 2,
                 "name": "Vom Bahnhof zum Campus",
                 "busstops": [
-                    2,
-                    3
+                    45,
+                    89
                 ]
             }
         ]
@@ -673,8 +673,8 @@ export async function fetchBuslines(requestMode) {
             "id": 1,
             "name": "Vom Campus zum Bahnhof",
             "busstops": [
-                1,
-                2
+                90,
+                45
             ],
             "coordinates": [
                 {
@@ -1194,8 +1194,8 @@ export async function fetchBuslines(requestMode) {
             "id": 2,
             "name": "Vom Bahnhof zum Campus",
             "busstops": [
-                2,
-                3
+                45,
+                89
             ],
             "coordinates": [
                 {
@@ -1694,5 +1694,16 @@ export async function fetchRoute(busstopFrom, busstopTo) {
         }
     });
     //return await answer.json();*/
-    return [];
+    return [
+        {
+            "id": 1, //Buslinie
+            "from": 90,
+            "to": 45,
+        },
+        {
+            "id": 2, //Buslinie
+            "from": 45,
+            "to": 89,
+        },
+    ];
 }

@@ -7,12 +7,19 @@ const style = {
         width: '100%',
     },
     container: {
-        padding: "4px",
+        padding: "10px",
     },
     map: {
-        width: '100%', 
+        width: '100%',
         height: '100%',
     },
+    route: {
+        height: "100%",
+        width: "100%",
+    },
+    routeContent: {
+        marginLeft: "10px",
+    }
 };
 
 export default style;

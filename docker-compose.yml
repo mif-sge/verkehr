@@ -25,4 +25,11 @@ services:
     ports:
       - 7474:7474
       - 7687:7687
+  vk-importer:
+    build:
+      context: ./backend/map-data-parser
+    links:
+      - neo4j
+    depends_on:
+      - neo4j
 

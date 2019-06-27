@@ -26,6 +26,8 @@ const routeNames = {
   "/plan": "Plan"
 }
 
+const SHORTFETCH = "short";
+
 /**
  * creates the main screen
  */
@@ -53,11 +55,13 @@ function App(props) {
 
   const [busstops, setBusstops] = useState([]);
 
+  const [calulatedRoute, setCalculatedRoute] = useState([]);
+
   const [isSubscribed, setIsSubscribed] = useState(true);
 
   const fetchData = useCallback(async () => {
     const tempBusstops = await fetchBusstops();
-    const tempBuslines = await fetchBuslines("short");
+    const tempBuslines = await fetchBuslines(SHORTFETCH);
     if (isSubscribed) {
       setBusstops(tempBusstops);
       setBuslines(tempBuslines);
@@ -77,8 +81,18 @@ function App(props) {
   }
 
   //onclick
-  function calculateRouteClicked() {
-    fetchRoute(busstopFrom, busstopTo);
+  async function calculateRouteClicked() {
+    let route = await fetchRoute(busstopFrom, busstopTo);
+    var routeWithNames = [];
+    route.forEach(partOfTheRoute => {
+      var partWithNames = {};
+      partWithNames["name"] = buslines.filter(busline => busline.id === partOfTheRoute.id)[0].name;
+      partWithNames["from"] = busstops.filter(busstop => busstop.id === partOfTheRoute.from)[0].name;
+      partWithNames["to"] = busstops.filter(busstop => busstop.id === partOfTheRoute.to)[0].name;
+      routeWithNames.push(partWithNames);
+    })
+    console.log(routeWithNames)
+    setCalculatedRoute(routeWithNames);
   }
 
   function checkIfRouteCalculationButtonShouldBeDisabled() {
@@ -214,7 +228,7 @@ function App(props) {
           <Switch>
             <Route key={0} path={"/"} exact={true} render={(props) => <Home {...props} />} />
             <Route key={1} path={"/map"} exact={false} render={(props) => <StreetMap {...props} selectedBusline={busline} showHospitals={hospitalMarker} showMalls={mallMarker} showBusstops={busStopMarker} />} />
-            <Route key={2} path={"/plan"} exact={false} render={(props) => <Plan {...props} />} />
+            <Route key={2} path={"/plan"} exact={false} render={(props) => <Plan {...props} calculatedRoute={calulatedRoute} />} />
           </Switch>
         </Grid>
       </div>
