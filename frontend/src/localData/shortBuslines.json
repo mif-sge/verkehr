@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "Vom Campus zum Bahnhof",
+        "busstops": [
+            90,
+            45
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Vom Bahnhof zum Campus",
+        "busstops": [
+            45,
+            89
+        ]
+    }
+]

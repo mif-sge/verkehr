@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Obermarktpassage",
+        "lat": 52.2857872,
+        "lon": 8.9152269
+    },
+    {
+        "id": 2,
+        "name": "E-Center",
+        "lat": 52.2623475,
+        "lon": 8.9010628
+    },
+    {
+        "id": 3,
+        "name": "Porta Markt",
+        "lat": 52.2600871,
+        "lon": 8.8997814
+    }
+]

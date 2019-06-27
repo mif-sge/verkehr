@@ -1,0 +1,577 @@
+[
+    {
+        "id": 1,
+        "name": "Parkhotel",
+        "lat": 52.3040848,
+        "lon": 8.9159483
+    },
+    {
+        "id": 2,
+        "name": "Lichtenbergstraße",
+        "lat": 52.28867,
+        "lon": 8.897962
+    },
+    {
+        "id": 3,
+        "name": "Gertrudstraße",
+        "lat": 52.285966,
+        "lon": 8.8976136
+    },
+    {
+        "id": 4,
+        "name": "Gertrudstraße",
+        "lat": 52.2860843,
+        "lon": 8.8974831
+    },
+    {
+        "id": 5,
+        "name": "Ringstraße/Königstraße",
+        "lat": 52.2879623,
+        "lon": 8.9025578
+    },
+    {
+        "id": 6,
+        "name": "Ringstraße/Königstraße",
+        "lat": 52.2881181,
+        "lon": 8.9021904
+    },
+    {
+        "id": 7,
+        "name": "Königswall",
+        "lat": 52.2873156,
+        "lon": 8.9079099
+    },
+    {
+        "id": 8,
+        "name": "Wilhelmstraße/Oberstadt",
+        "lat": 52.2980487,
+        "lon": 8.9115853
+    },
+    {
+        "id": 9,
+        "name": "Steinstraße",
+        "lat": 52.2962903,
+        "lon": 8.9123538
+    },
+    {
+        "id": 10,
+        "name": "Bildungszentrum",
+        "lat": 52.286341,
+        "lon": 8.9086159
+    },
+    {
+        "id": 11,
+        "name": "Königswall / Aula",
+        "lat": 52.2880588,
+        "lon": 8.9106874
+    },
+    {
+        "id": 12,
+        "name": "Königswall / Aula",
+        "lat": 52.2880387,
+        "lon": 8.9106601
+    },
+    {
+        "id": 13,
+        "name": "Kanzlers Weide",
+        "lat": 52.2877592,
+        "lon": 8.9264768
+    },
+    {
+        "id": 14,
+        "name": "Hafenstraße",
+        "lat": 52.2900617,
+        "lon": 8.9301318
+    },
+    {
+        "id": 15,
+        "name": "Kaiserstraße",
+        "lat": 52.2893201,
+        "lon": 8.9273886
+    },
+    {
+        "id": 16,
+        "name": "Friedrich-Wilhelm-Str./Bahnhof",
+        "lat": 52.2892983,
+        "lon": 8.9320435
+    },
+    {
+        "id": 17,
+        "name": "Kaiserstraße",
+        "lat": 52.289475,
+        "lon": 8.9274205
+    },
+    {
+        "id": 18,
+        "name": "Grimpenwall",
+        "lat": 52.2922169,
+        "lon": 8.9187173
+    },
+    {
+        "id": 19,
+        "name": "Grimpenwall",
+        "lat": 52.2918234,
+        "lon": 8.9210917
+    },
+    {
+        "id": 20,
+        "name": "Domschule",
+        "lat": 52.2933709,
+        "lon": 8.9147603
+    },
+    {
+        "id": 21,
+        "name": "Hermannstraße",
+        "lat": 52.2939446,
+        "lon": 8.9235053
+    },
+    {
+        "id": 22,
+        "name": "Dorotheenstraße",
+        "lat": 52.2956905,
+        "lon": 8.9235865
+    },
+    {
+        "id": 23,
+        "name": "Marienstraße",
+        "lat": 52.2930297,
+        "lon": 8.915825
+    },
+    {
+        "id": 24,
+        "name": "Werftstraße",
+        "lat": 52.297764,
+        "lon": 8.9248527
+    },
+    {
+        "id": 25,
+        "name": "Agentur für Arbeit",
+        "lat": 52.2918075,
+        "lon": 8.9223509
+    },
+    {
+        "id": 26,
+        "name": "Omnibusbetriebshof",
+        "lat": 52.3004392,
+        "lon": 8.9259639
+    },
+    {
+        "id": 27,
+        "name": "Minden ZOB",
+        "lat": 52.2868361,
+        "lon": 8.9172131
+    },
+    {
+        "id": 28,
+        "name": "Minden ZOB",
+        "lat": 52.2865595,
+        "lon": 8.9174432
+    },
+    {
+        "id": 29,
+        "name": "Minden ZOB",
+        "lat": 52.2865981,
+        "lon": 8.9171944
+    },
+    {
+        "id": 30,
+        "name": "Minden ZOB",
+        "lat": 52.2870979,
+        "lon": 8.917544
+    },
+    {
+        "id": 31,
+        "name": "Minden ZOB",
+        "lat": 52.2864378,
+        "lon": 8.9168083
+    },
+    {
+        "id": 32,
+        "name": "Minden ZOB",
+        "lat": 52.2868258,
+        "lon": 8.9174721
+    },
+    {
+        "id": 33,
+        "name": "Minden ZOB",
+        "lat": 52.2869711,
+        "lon": 8.9179278
+    },
+    {
+        "id": 34,
+        "name": "Minden ZOB",
+        "lat": 52.2869575,
+        "lon": 8.9180499
+    },
+    {
+        "id": 35,
+        "name": "Minden ZOB",
+        "lat": 52.2871281,
+        "lon": 8.9177682
+    },
+    {
+        "id": 36,
+        "name": "Agentur für Arbeit",
+        "lat": 52.2919307,
+        "lon": 8.9225075
+    },
+    {
+        "id": 37,
+        "name": "Goebenstraße",
+        "lat": 52.2923474,
+        "lon": 8.919667
+    },
+    {
+        "id": 38,
+        "name": "Brühlstraße",
+        "lat": 52.2965962,
+        "lon": 8.9196563
+    },
+    {
+        "id": 39,
+        "name": "Rosentalstraße",
+        "lat": 52.2948223,
+        "lon": 8.9195514
+    },
+    {
+        "id": 40,
+        "name": "Brühlstraße",
+        "lat": 52.2967888,
+        "lon": 8.9198799
+    },
+    {
+        "id": 41,
+        "name": "Simeonsplatz",
+        "lat": 52.2844915,
+        "lon": 8.9122078
+    },
+    {
+        "id": 42,
+        "name": "Simeonsplatz",
+        "lat": 52.2846327,
+        "lon": 8.9130071
+    },
+    {
+        "id": 43,
+        "name": "Minden, Bahnhof",
+        "lat": 52.2899065,
+        "lon": 8.9355967
+    },
+    {
+        "id": 44,
+        "name": "Minden, Bahnhof",
+        "lat": 52.2900991,
+        "lon": 8.9355701
+    },
+    {
+        "id": 45,
+        "name": "Minden, Bahnhof",
+        "lat": 52.2899632,
+        "lon": 8.9354813
+    },
+    {
+        "id": 46,
+        "name": "Bleekstraße",
+        "lat": 52.2858981,
+        "lon": 8.9025054
+    },
+    {
+        "id": 47,
+        "name": "Kuhlenstraße",
+        "lat": 52.2849867,
+        "lon": 8.8989973
+    },
+    {
+        "id": 48,
+        "name": "Minden ZOB",
+        "lat": 52.2863146,
+        "lon": 8.9171109
+    },
+    {
+        "id": 49,
+        "name": "Parkstraße",
+        "lat": 52.2855659,
+        "lon": 8.9064685
+    },
+    {
+        "id": 50,
+        "name": "Alsenweg",
+        "lat": 52.2890831,
+        "lon": 8.9423487
+    },
+    {
+        "id": 51,
+        "name": "Gabelsberger Straße",
+        "lat": 52.3030007,
+        "lon": 8.9117097
+    },
+    {
+        "id": 52,
+        "name": "Stiftstraße",
+        "lat": 52.2941367,
+        "lon": 8.9131374
+    },
+    {
+        "id": 53,
+        "name": "Nettelbeckstraße",
+        "lat": 52.2949344,
+        "lon": 8.9006016
+    },
+    {
+        "id": 54,
+        "name": "Nettelbeckstraße",
+        "lat": 52.2948766,
+        "lon": 8.901353
+    },
+    {
+        "id": 55,
+        "name": "Hahler Straße",
+        "lat": 52.2959283,
+        "lon": 8.8983747
+    },
+    {
+        "id": 56,
+        "name": "Gerichtszentrum",
+        "lat": 52.2913595,
+        "lon": 8.9121043
+    },
+    {
+        "id": 57,
+        "name": "Greisenbruchstraße",
+        "lat": 52.2897503,
+        "lon": 8.9120926
+    },
+    {
+        "id": 58,
+        "name": "Steinstraße",
+        "lat": 52.2934336,
+        "lon": 8.9065121
+    },
+    {
+        "id": 59,
+        "name": "Bachstraße",
+        "lat": 52.2890782,
+        "lon": 8.9376879
+    },
+    {
+        "id": 60,
+        "name": "Karlstraße",
+        "lat": 52.2981655,
+        "lon": 8.9361604
+    },
+    {
+        "id": 61,
+        "name": "Nordbrücke",
+        "lat": 52.297987,
+        "lon": 8.9385298
+    },
+    {
+        "id": 62,
+        "name": "Karlstraße",
+        "lat": 52.297155,
+        "lon": 8.9362731
+    },
+    {
+        "id": 63,
+        "name": "Kornhaus",
+        "lat": 52.2939171,
+        "lon": 8.9339297
+    },
+    {
+        "id": 64,
+        "name": "Windmühlenstraße",
+        "lat": 52.3012297,
+        "lon": 8.9343823
+    },
+    {
+        "id": 65,
+        "name": "Karolingerring",
+        "lat": 52.3030728,
+        "lon": 8.9056246
+    },
+    {
+        "id": 66,
+        "name": "Hermann-Schoppe-Straße",
+        "lat": 52.3007725,
+        "lon": 8.9094882
+    },
+    {
+        "id": 67,
+        "name": "Hermann-Schoppe-Straße",
+        "lat": 52.3009304,
+        "lon": 8.9095332
+    },
+    {
+        "id": 68,
+        "name": "Königswall",
+        "lat": 52.2874269,
+        "lon": 8.9069865
+    },
+    {
+        "id": 69,
+        "name": "Immanuelstraße",
+        "lat": 52.2925284,
+        "lon": 8.9139828
+    },
+    {
+        "id": 70,
+        "name": "Paulinenstraße",
+        "lat": 52.2946617,
+        "lon": 8.9154127
+    },
+    {
+        "id": 71,
+        "name": "Wilhelmstraße",
+        "lat": 52.2981458,
+        "lon": 8.9158145
+    },
+    {
+        "id": 72,
+        "name": "Bachstraße",
+        "lat": 52.2889429,
+        "lon": 8.937677
+    },
+    {
+        "id": 73,
+        "name": "Dorotheenstraße",
+        "lat": 52.2954586,
+        "lon": 8.9234167
+    },
+    {
+        "id": 74,
+        "name": "Hermannstraße",
+        "lat": 52.2940653,
+        "lon": 8.9233448
+    },
+    {
+        "id": 75,
+        "name": "Werftstraße",
+        "lat": 52.2978168,
+        "lon": 8.9246892
+    },
+    {
+        "id": 76,
+        "name": "Rosentalstraße",
+        "lat": 52.2948181,
+        "lon": 8.9197228
+    },
+    {
+        "id": 77,
+        "name": "Paulinenstraße",
+        "lat": 52.2952711,
+        "lon": 8.9151209
+    },
+    {
+        "id": 78,
+        "name": "Wilhelmstraße",
+        "lat": 52.2970383,
+        "lon": 8.9155248
+    },
+    {
+        "id": 79,
+        "name": "Kuhlenstraße",
+        "lat": 52.2850542,
+        "lon": 8.898958
+    },
+    {
+        "id": 80,
+        "name": "Nordbrücke",
+        "lat": 52.2977949,
+        "lon": 8.9377776
+    },
+    {
+        "id": 81,
+        "name": "Alsenweg",
+        "lat": 52.2891774,
+        "lon": 8.9419993
+    },
+    {
+        "id": 82,
+        "name": "Minden ZOB",
+        "lat": 52.2863865,
+        "lon": 8.9162957
+    },
+    {
+        "id": 83,
+        "name": "Minden ZOB",
+        "lat": 52.2865637,
+        "lon": 8.9165613
+    },
+    {
+        "id": 84,
+        "name": "Martin-Luther-Straße",
+        "lat": 52.3038997,
+        "lon": 8.8984349
+    },
+    {
+        "id": 85,
+        "name": "Martin-Luther-Straße",
+        "lat": 52.303689,
+        "lon": 8.8978019
+    },
+    {
+        "id": 86,
+        "lat": 52.2845997,
+        "lon": 8.9153744
+    },
+    {
+        "id": 87,
+        "name": "Marienglacis",
+        "lat": 52.2913676,
+        "lon": 8.9072674
+    },
+    {
+        "id": 88,
+        "name": "Gesamtschule",
+        "lat": 52.28954,
+        "lon": 8.9114517
+    },
+    {
+        "id": 89,
+        "name": "Fachhochschule",
+        "lat": 52.2979367,
+        "lon": 8.904148
+    },
+    {
+        "id": 90,
+        "name": "Fachhochschule",
+        "lat": 52.2973757,
+        "lon": 8.9038758
+    },
+    {
+        "id": 91,
+        "name": "Steinstraße",
+        "lat": 52.293424,
+        "lon": 8.906385
+    },
+    {
+        "id": 92,
+        "name": "Steinstraße",
+        "lat": 52.2934748,
+        "lon": 8.9065741
+    },
+    {
+        "id": 93,
+        "name": "Bismarckstraße",
+        "lat": 52.2914275,
+        "lon": 8.8988265
+    },
+    {
+        "id": 94,
+        "name": "Bismarckstraße",
+        "lat": 52.2915431,
+        "lon": 8.8983491
+    },
+    {
+        "id": 95,
+        "name": "Hardenbergstraße",
+        "lat": 52.2877008,
+        "lon": 8.9053416
+    },
+    {
+        "id": 96,
+        "name": "Hardenbergstraße",
+        "lat": 52.2878993,
+        "lon": 8.9049688
+    }
+]
