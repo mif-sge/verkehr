@@ -106,8 +106,8 @@ message NavigationResponse {
  * BusNavigationRequest represents a request to the bus navigation engine.
  */
 message BusNavigationRequest {
-    int64 start = 1;
-    int64 end = 2;
+    string start = 1;
+    string end = 2;
 }
 
 /*
@@ -115,8 +115,8 @@ message BusNavigationRequest {
  */
 message BusNavigationStep {
     int64 id = 1;
-    int64 start = 2;
-    int64 end = 3;
+    string start = 2;
+    string end = 3;
 }
 
 /*

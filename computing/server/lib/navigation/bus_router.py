@@ -2,7 +2,7 @@ from lib.proto import computing_pb2
 from lib.database import driver
 
 def exec_get_route(tx, args):
-    records = tx.run("MATCH (p1:Position { id: $b1 }), (p2:Position { id: $b2 }), (p1)-[:LOCATES_ON]-(b1:Bus_Stop), (p2)-[:LOCATES_ON]-(b2:Bus_Stop), path = shortestPath((b1)-[:STOPS_ON*]-(b2)) RETURN path", args)
+    records = tx.run("MATCH (b1:Bus_Stop { id: $b1 }), (b2:Bus_Stop { id: $b2 }), path = shortestPath((b1)-[:SERVES*]-(b2)) RETURN path", args)
 
     result = []
 
@@ -18,13 +18,13 @@ def exec_get_route(tx, args):
 
                 if stop != None and line != None:
 
-                    recs = tx.run("MATCH (b:Bus_Stop { name: $n }), (p:Position)-[:LOCATES_ON]-(b) RETURN collect(p)[0] as i", {'n': stop.get('name')})
+                    recs = tx.run("MATCH (b:Bus_Stop { id: $id }) RETURN b.id as i", {'id': stop.get('id')})
                     for r in recs:
-                        n1 = r["i"].get('id')
+                        n1 = r["i"]
 
-                    recs = tx.run("MATCH (b:Bus_Stop { name: $n }), (p:Position)-[:LOCATES_ON]-(b) RETURN collect(p)[0] as i", {'n': node.get('name')})
+                    recs = tx.run("MATCH (b:Bus_Stop { id: $id }) RETURN b.id as i", {'id': node.get('id')})
                     for r in recs:
-                        n2 = r["i"].get('id')
+                        n2 = r["i"]
 
                     result.append(computing_pb2.BusNavigationStep(id=line.get('id'), start=n1, end=n2))
                     line = None
