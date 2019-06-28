@@ -5,20 +5,13 @@ class DataFassade {
 
  constructor(){
     this.data = new DataService();
-  }
- getAllBusLinesShort(){
-    //let busLines = this.data.getAllWithRelations();
-  }
-  getAllBusLines(){
-
-  }
-
-  getAllBusStopsShort(){
-
-  }
-
-  getAllBusStops(){
-
+    this.jsonKeysMap = {
+      "Hospital": "hospitals",
+      "Shop": "shops",
+      "School": "schools",
+      "Bus_Line": "buslines",
+      "Bus_Stop": "busstops"
+    }
   }
   /**
    * Formats data to JSON with PoIs
@@ -42,7 +35,7 @@ class DataFassade {
    * Requests DataService for all PoIs, formats and returns these
    * @return {Promise} A promise to all records. returned format: formated json with Entities  or error
    */
-  getAllPoI(){
+  async getAllPoI(){
     return new Promise((resolve,reject) => {
       let allPois={};
       this.data.getAllWithRelations('Hospital').then(result => {
@@ -56,7 +49,7 @@ class DataFassade {
         return this.data.getAllWithRelations('Bus_Line');
       }).then(result => {
         allPois["busstops"] = this.formatePoIs(result, "Bus_Stop");
-        return  allPois;
+        return allPois;
       }).then(result => {
         resolve(result);
       })
@@ -66,16 +59,65 @@ class DataFassade {
       });
     });
   }
-  getAllHospitals(){
 
+  async getPoIByLabel(labelName){
+    try{
+      let pois={};
+      let result = await this.data.getAllWithRelations(labelName);
+      pois[this.jsonKeysMap[labelName]] = this.formatePoIs(result, labelName);
+      return pois;
+    }catch(err){
+      console.log(err);
+      return err;
+    }
   }
 
-  getAllShops(){
-
+  /**
+   * Requests DataService for all bus lines, formats and returns these
+   * @param  {[type]} data [description]
+   * @return {[type]}      [description]
+   */
+  formateBuslines(data){
+    let lines = [];
+    data.forEach(r => {
+      let h = r["Bus_Line"];
+      if(r.serves != null){
+        h.busstops=[];
+        r.serves.forEach(bs => {
+          h.busstops.push(bs.id);
+        })
+      }
+      h.coordinates=[];
+      if(r.viaPosition != null){
+        r.viaPosition.forEach(c => {
+          h.coordinates.push({lat: c.latitude , lon: c.longitude});
+        })
+      }
+      if(r.viaStreet != null){
+        r.viaPosition.forEach(s => {
+          h.coordinates.push({streetId: s.id , streetName: s.name});
+        })
+      }
+    lines.push(h);
+    })
+    return lines;
   }
 
-  getAllSchools(){
-
+  /**
+   * Formats data to JSON with bus lines
+   * @return {Promise} [description]
+   */
+  async getAllBuslines(){
+    let labelName = "Bus_Line";
+    try{
+      let lines=[];
+      let result = await this.data.getAllWithRelations(labelName);
+      lines =this.formateBuslines(result);
+      return lines;
+    }catch(err){
+      console.log(err);
+      return err;
+    }
   }
 
 }

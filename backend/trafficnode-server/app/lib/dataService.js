@@ -45,10 +45,9 @@ class DataService {
      * @param  {[type]}  relations     array with required names of relationships
      * @return {Promise} A promise to all records. returns json with Entities  or error
      */
-    async pickObjectsWithRelations(objCollection, relations){
-      console.log(relations);
+    pickObjectsWithRelations(objCollection, relations){
       let objects =  [];
-      objCollection.forEach(async (e) => {
+      objCollection.forEach((e) => {
         let ename = e.model().name();
         let json = {
         }
@@ -61,19 +60,18 @@ class DataService {
           }
           let relationModel = e.get(relName);
           if(relation.type() == "relationships" ) {
-            json[relation.name()] = await this.pickRelationships(relationModel);
+            json[relation.name()] = this.pickRelationships(relationModel);
           } else {
             if(relation.direction() == 'DIRECTION_IN'){
-              json[relation.name()] = await this.pickRelationship(relationModel, "start");
+              json[relation.name()] = this.pickRelationship(relationModel, "start");
             } else{
-              json[relation.name()] = await this.pickRelationship(relationModel, "end");
+              json[relation.name()] = this.pickRelationship(relationModel, "end");
             }
           }
         }
-
         objects.push(json);
       });
-        return objects;
+      return objects;
     }
     /**
      * Picks Objects from given neode Collection without relations
@@ -93,7 +91,7 @@ class DataService {
    * @param  {[type]}  relCollection neode Collection of relationships
    * @return {Promise}               A promise to all records. Returns json with Relations or error
    */
-    async pickRelationships(relCollection) {
+    pickRelationships(relCollection) {
       let list = [];
       relCollection.forEach((r) => {
         let startNode = r.startNode();
@@ -109,7 +107,7 @@ class DataService {
      * @param  {[type]}  direction     direction of relationship ('end' or 'start':  startNode -> endNode)
      * @return {Promise}                A promise to record. Returns json with Relation  or error
      */
-    async pickRelationship(relationModel, direction) {
+  pickRelationship(relationModel, direction) {
       if(relationModel==null || relationModel==undefined ){
         return null;
       }
