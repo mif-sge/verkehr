@@ -1,5 +1,5 @@
 'use strict';
-const DataService = require('./../../../lib/dataService');
+const DataFassade = require('./../../../lib/dataFassade');
 /**
  * Returns all stops.
  * @param {Request} request The request object.
@@ -7,15 +7,15 @@ const DataService = require('./../../../lib/dataService');
  * @returns {Response} The response object.
  */
 let handler = (request, h) => {
-    let data = new DataService();
+    let data = new DataFassade();
     if(request.query.requestMode === 'short') {
-      return data.getAllWithRelations('Bus_Stop').then(result => {
+      return data.getPoIByLabel('Bus_Stop').then(result => {
           return h.response(result).code(200);
       }).catch(err => {
           return h.response(err).code(500);
       });
     }
-  return data.getAllWithRelations('Bus_Stop').then(result => {
+  return data.getPoIByLabel('Bus_Stop').then(result => {
         return h.response(result).code(200);
     }).catch(err => {
         console.log(err);
