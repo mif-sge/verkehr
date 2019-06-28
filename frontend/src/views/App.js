@@ -63,8 +63,12 @@ function App(props) {
     const tempBusstops = await fetchBusstops(SHORTFETCH);
     const tempBuslines = await fetchBuslines(SHORTFETCH);
     if (isSubscribed) {
-      setBusstops(tempBusstops);
-      setBuslines(tempBuslines);
+      setBusstops(tempBusstops.sort(function (fristBusstop, secondBusstop) {
+        return fristBusstop.name.localeCompare(secondBusstop.name);
+      }));
+      setBuslines(tempBuslines.sort(function (fristBusline, secondBusline) {
+        return fristBusline.name.localeCompare(secondBusline.name);
+      }));
     }
   }, [isSubscribed]);
 
@@ -91,7 +95,6 @@ function App(props) {
       partWithNames["to"] = busstops.filter(busstop => busstop.id === partOfTheRoute.to)[0].name;
       routeWithNames.push(partWithNames);
     })
-    console.log(routeWithNames)
     setCalculatedRoute(routeWithNames);
   }
 
