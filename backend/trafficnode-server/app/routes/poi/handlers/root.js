@@ -1,5 +1,5 @@
 'use strict';
-const DataService = require('./../../../lib/dataService');
+const DataFassade = require('./../../../lib/dataFassade');
 
 /**
  * Returns POIs.
@@ -8,30 +8,14 @@ const DataService = require('./../../../lib/dataService');
  * @returns {Response} The response object.
  */
 let handler = (request, h) => {
-    let data = new DataService();
+    let data = new DataFassade();
     if(!request.query.types) {
-      let allPois=[];
-      return data.getAllWithRelations('Hospital').then(result => {
-        allPois.push(result);
-        console.log("--Hospital");
-        return data.getAllWithRelations('Shop');
-      }).then(result => {
-        allPois.push(result);
-          console.log("--Shop");
-        return data.getAllWithRelations('School');
-      }).then(result => {
-        allPois.push(result);
-        console.log("--School");
-        return  allPois;
-      }).then(result => {
-        console.log("--return");
+      return data.getAllPoI().then(result => {
         return h.response(result).code(200);
-      })
-      .catch(err => {
-          console.log(err);
+      }).catch(err => {
           return h.response(err).code(500);
       });
-    } 
+    }
 };
 
 module.exports = {
